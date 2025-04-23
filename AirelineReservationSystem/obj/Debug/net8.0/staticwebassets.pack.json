@@ -1,0 +1,53 @@
+{
+  "Files": [
+    {
+      "Id": "/workspaces/e-pro/AirelineReservationSystem/obj/Debug/net8.0/scopedcss/projectbundle/AirelineReservationSystem.bundle.scp.css",
+      "PackagePath": "staticwebassets/AirelineReservationSystem.bundle.scp.css"
+    },
+    {
+      "Id": "/workspaces/e-pro/AirelineReservationSystem/wwwroot/css/site.css",
+      "PackagePath": "staticwebassets/css/site.css"
+    },
+    {
+      "Id": "/workspaces/e-pro/AirelineReservationSystem/wwwroot/favicon.ico",
+      "PackagePath": "staticwebassets/favicon.ico"
+    },
+    {
+      "Id": "/workspaces/e-pro/AirelineReservationSystem/wwwroot/images/airplane.jpg",
+      "PackagePath": "staticwebassets/images/airplane.jpg"
+    },
+    {
+      "Id": "/workspaces/e-pro/AirelineReservationSystem/wwwroot/images/airplane1.jpg",
+      "PackagePath": "staticwebassets/images/airplane1.jpg"
+    },
+    {
+      "Id": "/workspaces/e-pro/AirelineReservationSystem/wwwroot/images/airplane2.jpg",
+      "PackagePath": "staticwebassets/images/airplane2.jpg"
+    },
+    {
+      "Id": "/workspaces/e-pro/AirelineReservationSystem/wwwroot/images/images.jpg",
+      "PackagePath": "staticwebassets/images/images.jpg"
+    },
+    {
+      "Id": "/workspaces/e-pro/AirelineReservationSystem/wwwroot/js/site.js",
+      "PackagePath": "staticwebassets/js/site.js"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.AirelineReservationSystem.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.build.AirelineReservationSystem.props",
+      "PackagePath": "build\\AirelineReservationSystem.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.AirelineReservationSystem.props",
+      "PackagePath": "buildMultiTargeting\\AirelineReservationSystem.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.AirelineReservationSystem.props",
+      "PackagePath": "buildTransitive\\AirelineReservationSystem.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
