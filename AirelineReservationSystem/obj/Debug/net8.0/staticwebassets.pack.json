@@ -25,10 +25,6 @@
       "PackagePath": "staticwebassets/images/airplane2.jpg"
     },
     {
-      "Id": "/workspaces/e-pro/AirelineReservationSystem/wwwroot/images/images.jpg",
-      "PackagePath": "staticwebassets/images/images.jpg"
-    },
-    {
       "Id": "/workspaces/e-pro/AirelineReservationSystem/wwwroot/js/site.js",
       "PackagePath": "staticwebassets/js/site.js"
     },

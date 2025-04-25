@@ -1,5 +1,4 @@
 using AirelineReservationSystem.Models;
-// namespace AirelineReservationSystem.ViewModel;
 using AirelineReservationSystem.ViewModel;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Authentication;
@@ -8,7 +7,7 @@ using System.Security.Claims;
 using Npgsql;
 using System.Threading.Tasks;
 using System.Collections.Generic;
-using BCrypt.Net; // Make sure BCrypt.Net-Next package is installed
+using BCrypt.Net;
 
 namespace AirelineReservationSystem.Controllers
 {
@@ -87,11 +86,13 @@ namespace AirelineReservationSystem.Controllers
                 var storedHash = reader.GetString(reader.GetOrdinal("password_hash"));
                 if (BCrypt.Net.BCrypt.Verify(model.Password, storedHash))
                 {
+                    var role = reader["role"]?.ToString();
+
                     var claims = new List<Claim>
                     {
                         new Claim(ClaimTypes.NameIdentifier, reader["user_id"]?.ToString() ?? ""),
                         new Claim(ClaimTypes.Name, reader["full_name"]?.ToString() ?? ""),
-                        new Claim(ClaimTypes.Role, reader["role"]?.ToString() ?? "")
+                        new Claim(ClaimTypes.Role, role ?? "")
                     };
 
                     var identity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
@@ -99,7 +100,15 @@ namespace AirelineReservationSystem.Controllers
 
                     await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, principal);
 
-                    return RedirectToAction("Index", "Home");
+                    // Redirect based on role
+                    if (role == "Admin")
+                    {
+                        return RedirectToAction("Dashboard", "Admin");
+                    }
+                    else
+                    {
+                        return RedirectToAction("Dashboard", "Home");
+                    }
                 }
             }
 

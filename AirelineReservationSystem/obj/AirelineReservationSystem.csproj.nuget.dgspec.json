@@ -13,12 +13,8 @@
         "packagesPath": "/home/codespace/.nuget/packages/",
         "outputPath": "/workspaces/e-pro/AirelineReservationSystem/obj/",
         "projectStyle": "PackageReference",
-        "configFilePaths": [
-          "/home/codespace/.nuget/NuGet/NuGet.Config"
-        ],
-        "originalTargetFrameworks": [
-          "net8.0"
-        ],
+        "configFilePaths": ["/home/codespace/.nuget/NuGet/NuGet.Config"],
+        "originalTargetFrameworks": ["net8.0"],
         "sources": {
           "https://api.nuget.org/v3/index.json": {}
         },
@@ -29,9 +25,7 @@
           }
         },
         "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
+          "warnAsError": ["NU1605"]
         },
         "restoreAuditProperties": {
           "enableAudit": "true",

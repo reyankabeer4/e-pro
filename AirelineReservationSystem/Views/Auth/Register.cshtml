@@ -1,7 +1,121 @@
-<form method="post">
-    <input name="FullName" placeholder="Full Name" />
-    <input name="Email" type="email" placeholder="Email" />
-    <input name="Password" type="password" placeholder="Password" />
-    <input name="PhoneNumber" placeholder="Phone Number" />
-    <button type="submit">Register</button>
-</form>
+@{
+    ViewData["Title"] = "Register";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section Styles {
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+            outline: none;
+        }
+
+        .register-container {
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0;
+        }
+
+        form {
+            height: 70vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: -1px 1px 20px 1px lightgray;
+        }
+
+        .first-child {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 20px;
+            width: 500px;
+            height: 100%;
+            background-color: white;
+        }
+
+        .first-child .input-field {
+            padding: 10px 20px;
+            border: none;
+            width: 300px;
+            outline: none;
+            border-radius: 3px;
+            font-size: 15px;
+            border: 1px solid lightgray;
+        }
+
+        .first-child a {
+            font-size: 14px;
+            text-decoration: none;
+            color: #222222;
+        }
+
+        h2 {
+            font-size: 30px;
+        }
+
+        .submit-btn {
+            padding: 10px 50px;
+            background-color: #152c55;
+            color: white;
+            border-radius: 25px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .signup-btn {
+            padding: 10px 40px;
+            background-color: #152c55;
+            color: white;
+            border: 1px solid white;
+            border-radius: 25px;
+            cursor: pointer;
+        }
+
+        .second-child p {
+            font-size: 15px;
+        }
+
+        .second-child {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            background-color: #152c55;
+            gap: 30px;
+            color: white;
+            width: 300px;
+            padding: 20px;
+            height: 100%;
+        }
+    </style>
+}
+
+<div class="register-container">
+    <form asp-controller="Auth" asp-action="Register" method="post">
+        <div class="first-child">
+            <h2>Register</h2>
+            <input type="text" class="input-field" name="FullName" placeholder="Full Name" required />
+            <input type="email" class="input-field" name="Email" placeholder="Email" required />
+            <input type="password" class="input-field" name="Password" placeholder="Password" required />
+            <input type="text" class="input-field" name="PhoneNumber" placeholder="Phone Number" required />
+
+            <input type="submit" value="Register" class="submit-btn" />
+        </div>
+        <div class="second-child">
+            <h2>Already have an account?</h2>
+            <p>Login to your account</p>
+            <button type="button" class="signup-btn" onclick="window.location.href='@Url.Action("Login", "Auth")'">Login</button>
+        </div>
+    </form>
+</div>

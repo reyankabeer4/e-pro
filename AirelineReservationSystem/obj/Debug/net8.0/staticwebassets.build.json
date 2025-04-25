@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Hq9uikRnjuMGkvV9WkOTFgbbkGCXJmbQUoFg5SzKAlQ=",
+  "Hash": "ZQGUisAAZBB71DlpFC77m+F0R/RDxUXHePJ0XnfxegM=",
   "Source": "AirelineReservationSystem",
   "BasePath": "_content/AirelineReservationSystem",
   "Mode": "Default",
@@ -148,25 +148,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/images/airplane2.jpg"
-    },
-    {
-      "Identity": "/workspaces/e-pro/AirelineReservationSystem/wwwroot/images/images.jpg",
-      "SourceId": "AirelineReservationSystem",
-      "SourceType": "Discovered",
-      "ContentRoot": "/workspaces/e-pro/AirelineReservationSystem/wwwroot/",
-      "BasePath": "_content/AirelineReservationSystem",
-      "RelativePath": "images/images.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/images/images.jpg"
     },
     {
       "Identity": "/workspaces/e-pro/AirelineReservationSystem/wwwroot/js/site.js",
