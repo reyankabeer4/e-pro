@@ -6,7 +6,9 @@ using AirelineReservationSystem.Models;
 
 namespace AirelineReservationSystem.Controllers;
 
-[Authorize(Roles = "Customer")]
+// [Authorize(Roles = "Customer")]
+[AllowAnonymous]  // <--- Add this
+
 public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
@@ -38,6 +40,7 @@ public class HomeController : Controller
 
     public IActionResult Dashboard()
     {
+        
         return View();
     }
 

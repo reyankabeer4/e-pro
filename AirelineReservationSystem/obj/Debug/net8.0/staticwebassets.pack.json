@@ -13,6 +13,22 @@
       "PackagePath": "staticwebassets/favicon.ico"
     },
     {
+      "Id": "/workspaces/e-pro/AirelineReservationSystem/wwwroot/images/Banner-en-plane.jpg",
+      "PackagePath": "staticwebassets/images/Banner-en-plane.jpg"
+    },
+    {
+      "Id": "/workspaces/e-pro/AirelineReservationSystem/wwwroot/images/ChatGPT-Image.png",
+      "PackagePath": "staticwebassets/images/ChatGPT-Image.png"
+    },
+    {
+      "Id": "/workspaces/e-pro/AirelineReservationSystem/wwwroot/images/Economy-seat-collection.jpg",
+      "PackagePath": "staticwebassets/images/Economy-seat-collection.jpg"
+    },
+    {
+      "Id": "/workspaces/e-pro/AirelineReservationSystem/wwwroot/images/airline-logo.jpg",
+      "PackagePath": "staticwebassets/images/airline-logo.jpg"
+    },
+    {
       "Id": "/workspaces/e-pro/AirelineReservationSystem/wwwroot/images/airplane.jpg",
       "PackagePath": "staticwebassets/images/airplane.jpg"
     },
@@ -23,6 +39,34 @@
     {
       "Id": "/workspaces/e-pro/AirelineReservationSystem/wwwroot/images/airplane2.jpg",
       "PackagePath": "staticwebassets/images/airplane2.jpg"
+    },
+    {
+      "Id": "/workspaces/e-pro/AirelineReservationSystem/wwwroot/images/airport-assist.jpg",
+      "PackagePath": "staticwebassets/images/airport-assist.jpg"
+    },
+    {
+      "Id": "/workspaces/e-pro/AirelineReservationSystem/wwwroot/images/baggage.jpg",
+      "PackagePath": "staticwebassets/images/baggage.jpg"
+    },
+    {
+      "Id": "/workspaces/e-pro/AirelineReservationSystem/wwwroot/images/islamabad.jpg",
+      "PackagePath": "staticwebassets/images/islamabad.jpg"
+    },
+    {
+      "Id": "/workspaces/e-pro/AirelineReservationSystem/wwwroot/images/islamabad1.jpg",
+      "PackagePath": "staticwebassets/images/islamabad1.jpg"
+    },
+    {
+      "Id": "/workspaces/e-pro/AirelineReservationSystem/wwwroot/images/mazarequaid-karachi.jpg",
+      "PackagePath": "staticwebassets/images/mazarequaid-karachi.jpg"
+    },
+    {
+      "Id": "/workspaces/e-pro/AirelineReservationSystem/wwwroot/images/minar-e-pakistan.jpeg",
+      "PackagePath": "staticwebassets/images/minar-e-pakistan.jpeg"
+    },
+    {
+      "Id": "/workspaces/e-pro/AirelineReservationSystem/wwwroot/images/pre-book-meals.jpg",
+      "PackagePath": "staticwebassets/images/pre-book-meals.jpg"
     },
     {
       "Id": "/workspaces/e-pro/AirelineReservationSystem/wwwroot/js/site.js",

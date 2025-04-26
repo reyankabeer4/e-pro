@@ -1,5 +1,8 @@
 /* Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
+*[b-s5qcwi2ozg]{
+  font-family: 'poppins', sans-serif;
+}
 
 a.navbar-brand[b-s5qcwi2ozg] {
   white-space: normal;
@@ -46,4 +49,127 @@ button.accept-policy[b-s5qcwi2ozg] {
   width: 100%;
   white-space: nowrap;
   line-height: 60px;
+}
+
+
+
+/* .banner-img{
+  height: 50vh;
+  object-fit: cover;
+  width: 100%;
+} */
+
+
+
+#cards-container[b-s5qcwi2ozg] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  /* padding: 0px 50px; */
+  /* gap: 30px; */
+}
+
+.card[b-s5qcwi2ozg] {
+  /* height: 100%; */
+  /* width: 300px; */
+  border: 1px solid #ebebeb;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: .5s ease-in;
+}
+
+.card:hover[b-s5qcwi2ozg]{
+  transform: translateY(-10px);
+  cursor: pointer;
+}
+
+.card .p-title[b-s5qcwi2ozg] {
+  font-size: 22px;
+}
+
+.card img[b-s5qcwi2ozg] {
+  height: 200px;
+  width:100%;
+  object-fit: cover;
+}
+
+.card .card-content[b-s5qcwi2ozg] {
+  padding: 20px;
+}
+
+.card .card-content p[b-s5qcwi2ozg] {
+  font-size: 13px;
+}
+
+
+
+
+/* Footer */
+
+footer[b-s5qcwi2ozg] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-color: #272727;
+  padding: 30px;
+  color: #cac9c9;
+  gap: 20px;
+  /* position: relative;
+  bottom: 10%; */
+}
+
+footer p[b-s5qcwi2ozg] {
+  font-size: 13px;
+}
+
+.footer-list-items[b-s5qcwi2ozg] {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  flex-wrap: wrap;
+  gap: 100px;
+}
+
+.footer-list-items ul h2[b-s5qcwi2ozg] {
+  font-size: 20px;
+  text-align: start;
+  padding: 20px 0%;
+  color: white;
+  text-transform: uppercase;
+}
+
+.footer-list-items ul li[b-s5qcwi2ozg] {
+  list-style: none;
+  text-align: start;
+  font-size: 13px;
+  line-height: 3;
+}
+
+.footer-list-items ul form button[b-s5qcwi2ozg] {
+  border-radius: 50px;
+  padding: 10px 20px;
+  border: none;
+  font-size: 15px;
+  color: #e0e0e0;
+  background-color: #4361ee;
+}
+
+.footer-list-items ul form input[b-s5qcwi2ozg] {
+  background: transparent;
+  margin: 20px 0;
+  border: none;
+  font-size: 15px;
+  color: #e0e0e0;
+  padding: 5px;
+  width: 200px;
+  border-bottom: 1px solid grey;
+  outline: none;
+}
+
+.footer-icons[b-s5qcwi2ozg] {
+  display: flex;
+  gap: 20px;
 }
