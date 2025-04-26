@@ -71,13 +71,14 @@ button.accept-policy[b-s5qcwi2ozg] {
 }
 
 .card[b-s5qcwi2ozg] {
-  /* height: 100%; */
-  /* width: 300px; */
+  height: 100%;
+  width: 300px;
   border: 1px solid #ebebeb;
   border-radius: 10px;
   overflow: hidden;
   transition: .5s ease-in;
 }
+
 
 .card:hover[b-s5qcwi2ozg]{
   transform: translateY(-10px);

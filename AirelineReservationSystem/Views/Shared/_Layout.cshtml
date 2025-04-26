@@ -125,28 +125,28 @@
         <h2 class="text-center p-3">Our <span style="color:orange">Services</span></h2>
 
         <div id="cards-container" class="gap-2">
-            <div class="card col-md-4">
+            <div class="card">
                 <img src="~/images/pre-book-meals.jpg" style="height: 200px; width:100%; object-fit: cover;" alt="" />
                 <div class="card-content">
                     <h2 class="p-title">Pre-Book Meal</h2>
                     <p>Indulge in anticipation with our Pre-booked Meals – a culinary journey designed to elevate your dining experience, ensuring a delightful feast awaits you at your destination."</p>
                 </div>
             </div>
-            <div class="card col-md-7">
+            <div class="card">
                 <img src="~/images/Economy-seat-collection.jpg" style="height: 200px; width:100%; object-fit: cover;" alt="" />
                 <div class="card-content">
                     <h2 class="p-title">Seat Selection</h2>
                     <p>Tailor your travel experience with our Seat Selection feature, where comfort meets choice. Choose your preferred seat and embark on a journey personalized just for you."</p>
                 </div>
             </div>
-            <div class="card col-md-7">
+            <div class="card">
                 <img src="~/images/baggage.jpg" style="height: 200px; width:100%; object-fit: cover;" alt="" />
                 <div class="card-content">
                     <h2 class="p-title">Pre-book Baggage</h2>
                     <p>Simplify your travel with ease and foresight by opting for our Pre-book Baggage service. Secure your peace of mind by reserving your luggage space in advance, ensuring a seamless journey from check-in to arrival.</p>
                 </div>
             </div>
-            <div class="card col-md-4">
+            <div class="card">
                 <img src="~/images/airport-assist.jpg" style="height: 200px; width:100%; object-fit: cover;" alt="" />
                 <div class="card-content">
                     <h2 class="p-title">Special Assistance</h2>
@@ -157,54 +157,125 @@
 
 
   <h2 class="text-center p-3">Best Offers</h2>
-   <div id="cards-container" class="gap-3">
-            <div class="card col-md-4">
-                <img src="~/images/pre-book-meals.jpg" style="height: 200px; width:100%; object-fit: cover;" alt="" />
+  
+  <!-- Best Offer -->
+
+   <!-- <div id="cards-container" class="gap-3">
+            <div class="best-offers col-md-2">
+                <img src="~/images/mazarequaid-karachi.jpg" style="height: 200px; width:100%; object-fit: cover;" alt="" />
                 <div class="card-content">
-                    <h2 class="p-title">Pre-Book Meal</h2>
-                    <p>Indulge in anticipation with our Pre-booked Meals – a culinary journey designed to elevate your dining experience, ensuring a delightful feast awaits you at your destination."</p>
+                    <h2 class="p-title">Karachi</h2>
                 </div>
             </div>
-            <div class="card col-md-7">
-                <img src="~/images/Economy-seat-collection.jpg" style="height: 200px; width:100%; object-fit: cover;" alt="" />
+            <div class="best-offers col-md-8">
+                <img src="~/images/minar-e-pakistan.jpeg"  alt="" />
                 <div class="card-content">
-                    <h2 class="p-title">Seat Selection</h2>
-                    <p>Tailor your travel experience with our Seat Selection feature, where comfort meets choice. Choose your preferred seat and embark on a journey personalized just for you."</p>
+                    <h2 class="p-title">Lahore</h2>
                 </div>
             </div>
-            <div class="card col-md-7">
-                <img src="~/images/baggage.jpg" style="height: 200px; width:100%; object-fit: cover;" alt="" />
+            <div class="best-offers col-md-10">
+                <img src="~/images/islamabad.jpg" style="height: 200px; width:100%; object-fit: cover;" alt="" />
                 <div class="card-content">
-                    <h2 class="p-title">Pre-book Baggage</h2>
-                    <p>Simplify your travel with ease and foresight by opting for our Pre-book Baggage service. Secure your peace of mind by reserving your luggage space in advance, ensuring a seamless journey from check-in to arrival.</p>
+                    <h2 class="p-title">Islamabad</h2>
                 </div>
             </div>
-            <div class="card col-md-4">
-                <img src="~/images/airport-assist.jpg" style="height: 200px; width:100%; object-fit: cover;" alt="" />
+            <div class="best-offers col-md-2">
+                <img src="~/images/islamabad1.jpg" style="height: 200px; width:100%; object-fit: cover;" alt="" />
                 <div class="card-content">
-                    <h2 class="p-title">Special Assistance</h2>
-                    <p>Elevate your journey with our Special Assistance services, including personalized wheelchair support. Ensuring a smooth and accessible travel experience, we prioritize your comfort and convenience every step of the way.</p>
+                    <h2 class="p-title">Rawalpindi</h2>
                 </div>
             </div>
+            <div class="best-offers row-md-2">
+                <img src="~/images/islamabad1.jpg" style="height: 200px; width:100%; object-fit: cover;" alt="" />
+                <div class="card-content">
+                    <h2 class="p-title">Rawalpindi</h2>
+                </div>
+            </div>
+        </div> -->
+<style>
+    #bo-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+        grid-auto-rows: 200px; /* every row 200px fixed height */
+        gap: 16px; /* space between cards */
+        padding: 16px; /* space around the whole grid */
+        background: #f5f5f5; /* light background to show cards nicely */
+    }
+
+    .best-offers {
+        background: #fff;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        display: flex;
+        flex-direction: column;
+        padding: 8px; /* inner space inside card */
+    }
+
+    .best-offers img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 6px; /* slight curve on images */
+        flex-grow: 1;
+    }
+
+    .card-content {
+        padding-top: 8px;
+        text-align: center;
+    }
+
+    .p-title {
+        font-size: 1.1rem;
+        margin: 0;
+        color: #333;
+    }
+
+    /* Different card sizes */
+    .wide {
+        grid-column: span 2; /* span 2 columns */
+    }
+
+    .tall {
+        grid-row: span 2; /* span 2 rows */
+    }
+
+    .big {
+        grid-column: span 2;
+        grid-row: span 2; /* span 2x2 */
+    }
+</style>
+
+<div id="bo-container">
+    <div class="best-offers big">
+        <img src="~/images/mazarequaid-karachi.jpg" alt="Karachi" />
+        <div class="card-content">
+            <h2 class="p-title">Karachi</h2>
         </div>
-<div class="grid-container">
-    <div class="grid-item bg-success">
-        Skardu<br />Lahore<br />Skardu<br />PKR25,170.00
     </div>
-    <div class="grid-item bg-danger">
-        Skardu<br />Lahore<br />Skardu<br />PKR25,170.00
+    <div class="best-offers wide">
+        <img src="~/images/minar-e-pakistan.jpeg" alt="Lahore" />
+        <div class="card-content">
+            <h2 class="p-title">Lahore</h2>
+        </div>
     </div>
-    <div class="grid-item bg-success">
-        Skardu<br />Lahore<br />Skardu<br />PKR25,170.00
+    <div class="best-offers">
+        <img src="~/images/islamabad.jpg" alt="Islamabad" />
+        <div class="card-content">
+            <h2 class="p-title">Islamabad</h2>
+        </div>
     </div>
-    <div class="grid-item bg-danger">
-        Skardu<br />Lahore<br />Skardu<br />PKR25,170.00
+    <div class="best-offers tall">
+        <img src="~/images/islamabad1.jpg" alt="Rawalpindi" />
+        <div class="card-content">
+            <h2 class="p-title">Rawalpindi</h2>
+        </div>
     </div>
-    <div class="grid-item bg-success">
-        Skardu<br />Lahore<br />Skardu<br />PKR25,170.00
-    </div>
-    <div class="grid-item bg-danger">
-        Skardu<br />Lahore<br />Skardu<br />PKR25,170.00
+    <div class="best-offers">
+        <img src="~/images/islamabad1.jpg" alt="Rawalpindi" />
+        <div class="card-content">
+            <h2 class="p-title">Rawalpindi</h2>
+        </div>
     </div>
 </div>
 
