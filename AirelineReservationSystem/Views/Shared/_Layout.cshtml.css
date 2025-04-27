@@ -43,22 +43,50 @@ button.accept-policy {
   line-height: inherit;
 }
 
-.footer {
-  position: absolute;
-  bottom: 0;
+
+#bo-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 200px;
+  gap: 20px;
+  padding: 50px;
+}
+.best-offers {
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.best-offers img {
   width: 100%;
-  white-space: nowrap;
-  line-height: 60px;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+  transition: 0.5s;
+}
+.best-offers img:hover {
+  transform: translateY(-10px);
+}
+.wide { grid-column: span 2; }
+.tall { grid-row: span 2; }
+.big { grid-column: span 2; grid-row: span 2; }
+
+
+
+
+
+select{
+  padding: 5px 10px;
+  border: 1px solid #d3d3d3;
+  cursor: pointer;
+  width: 250px;
 }
 
-
-
-/* .banner-img{
-  height: 50vh;
-  object-fit: cover;
-  width: 100%;
-} */
-
+input[type=date]{
+  padding: 5px 10px;
+  border: 1px solid #d3d3d3;
+  cursor: pointer;
+}
 
 
 #cards-container {
@@ -66,8 +94,6 @@ button.accept-policy {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  /* padding: 0px 50px; */
-  /* gap: 30px; */
 }
 
 .card {
@@ -104,14 +130,11 @@ button.accept-policy {
 }
 
 
-form-box{
-
-}
-
-
 
 
 /* Footer */
+
+
 
 footer {
   display: flex;
@@ -123,8 +146,6 @@ footer {
   padding: 30px;
   color: #cac9c9;
   gap: 20px;
-  /* position: relative;
-  bottom: 10%; */
 }
 
 footer p {
