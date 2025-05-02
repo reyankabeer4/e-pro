@@ -1,113 +1,172 @@
 @{
     ViewData["Title"] = "Admin Dashboard";
 }
-<h2>Welcome, Admin!</h2>
-<p>Manage flights, bookings, and users here.</p>
-
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dashboard</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+          rel="stylesheet" />
     <style>
-      .active-nav {
-        background-color: #5f1899;
-        padding: 10px 0;
-        border-radius: 5px;
-        color: white;
-      }
+        .active-nav {
+            background-color: #5f1899;
+            padding: 10px 0;
+            border-radius: 5px;
+            color: white;
+        }
 
-      .sideBar {
-        width: 300px;
-        background-color: #f0f0f0;
-      }
-      .shadow-sm{
-        /* border: 1px solid #5f1899; */
-        box-shadow: 10px 10px 10px 10px grey;
-      }
+        .sideBar {
+            width: 300px;
+            background-color: #f0f0f0;
+        }
+
+        .shadow-sm {
+            box-shadow: 10px 10px 10px 10px grey;
+        }
+
+        .user-img {
+            border-radius: 50%;
+        }
     </style>
-  </head>
-  <body class="m-0 p-0">
-    <div class="d-flex vh-100">
-      <!-- Sidebar -->
-      <div class="sideBar d-flex flex-column p-3">
-        <a href="" class="text-decoration-none h2 my-5">ARS</a>
-        <ul class="navbar-nav gap-3">
-          <li class="nav-item p-2 active-nav"><a href="" class="nav-link">Dashboard</a></li>
-          <li class="nav-item p-2"><a href="" class="nav-link">Component</a></li>
-          <li class="nav-item p-2"><a href="" class="nav-link">Extra Component</a></li>
-          <li class="nav-item p-2"><a href="" class="nav-link">Layout</a></li>
-          <li class="nav-item p-2"><a href="" class="nav-link">Sign Out</a></li>
-        </ul>
-      </div>
-      <!-- Main content -->
-      <div class="mainContent d-flex flex-column bg-light flex-grow-1 min-vh-100 p-4">
-        <main class="flex-grow-1">
-          <h2 class="py-3">Profile Statistics</h2>
-          <div class="row g-2">
-            <!-- Your stats boxes here -->
-            <div class="col bg-white text-black rounded shadow-sm m-1 p-3">
-              Profile View
-              <p>112.000</p>
-            </div>
-            <div class="col bg-white text-black rounded shadow-sm m-1 p-3">
-              Followers
-              <p>183.000</p>
-            </div>
-            <div class="col bg-white text-black rounded shadow-sm m-1 p-3">
-              Following
-              <p>80.000</p>
-            </div>
-            <div class="col bg-white text-black rounded shadow-sm m-1 p-3">
-              Save Post
-              <p>112</p>
-            </div>
-            <div class="col bg-white text-black rounded shadow-sm m-1 p-3">
-              John Duck
-            </div>
-          </div>
+</head>
+<body class="m-0 p-0">
+    <div class="d-flex">
+        <!-- Sidebar -->
+        <div class="sideBar d-flex flex-column p-3">
+            <a href="" class="text-decoration-none h2 my-5">ARS</a>
+            <ul class="navbar-nav gap-3">
+                <li class="nav-item p-2 active-nav">
+                    <a asp-controller="Admin" asp-action="Dashboard" class="nav-link">Dashboard</a>
+                </li>
+                <li class="nav-item p-2">
+                    <a asp-controller="Admin" asp-action="Flight" class="nav-link">Flights</a>
+                </li>
 
-          <div class="row g-3 mt-3">
-            <!-- Your two-column layout here -->
-            <div class="col-md-8">
-              <div class="bg-white p-5 rounded shadow-sm">
-                <h3>Profile Visit</h3>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="bg-white p-5 rounded shadow-sm">
-                <h3>Recent Messages</h3>
-              </div>
-            </div>
-          </div>
-        </main>
+                <li class="nav-item p-2">
+                    <a href="" class="nav-link">Component</a>
+                </li>
+                <li class="nav-item p-2">
+                    <a href="" class="nav-link">Extra Component</a>
+                </li>
+                <li class="nav-item p-2"><a href="" class="nav-link">Layout</a></li>
+                <li class="nav-item p-2"><a href="" class="nav-link">Sign Out</a></li>
+            </ul>
+        </div>
+        <!-- Main content -->
+        <div class="mainContent d-flex flex-column bg-light flex-grow-1 min-vh-100 p-4">
+            <main class="flex-grow-1">
+                <h2 class="py-3">Profile Statistics</h2>
+                <div class="row g-2">
+                    <!-- Your stats boxes here -->
+                    <div class="col bg-white text-black rounded shadow-sm m-1 p-3">
+                        <li class="d-flex">
+                            <img src="~/images/view_profile.png" class="user-img" height="50" alt="" />
+                            <div>
+                                <p>Profile View</p>
+                                <p>112.000</p>
+                            </div>
+                        </li>
+                    </div>
+                    <div class="col bg-white text-black rounded shadow-sm m-1 p-3">
+                        <li class="d-flex">
+                            <img src="~/images/followers-icon.png" class="user-img" height="50" alt="" />
+                            <div>
+                                <p>Followers</p>
+                                <p>183.000</p>
+                            </div>
+                        </li>
+                    </div>
+                    <div class="col bg-white text-black rounded shadow-sm m-1 p-3">
+                        <li class="d-flex">
+                            <img src="~/images/icon-follow.png" class="user-img" height="50" alt="" />
+                            <div>
+                                <p>Following</p>
+                                <p>80.000</p>
+                            </div>
+                        </li>
+                    </div>
+                    <div class="col bg-white text-black rounded shadow-sm m-1 p-3">
+                        <li class="d-flex">
+                            <img src="~/images/save-post.png" class="user-img" height="40" alt="" />
+                            <div>
+                                <p>Save Post</p>
+                                <p>112</p>
+                            </div>
+                        </li>
+                    </div>
+                    <div class="d-flex gap-3 col bg-white text-black rounded shadow-sm m-1 p-3">
+                        <img src="~/images/2.jpg" class="user-img" height="50" alt="" />
+                        <p>John Duck johnducky</p>
 
-        <footer class="bg-dark text-white text-center py-3 mt-auto">
-          © 2025 Your Website. All rights reserved.
-        </footer>
-      </div>
+                    </div>
+                </div>
 
-      <!-- Main content -->
-      <!-- <div
-        class="flex-grow-1 mainContent p-4"
-        class="d-flex flex-column min-vh-100"
-      >
-        <h2 class="py-3">Profile Statistics</h2>
-        <div class="row g-2"></div>
+                <div class="row g-3 mt-3">
+                    <!-- Your two-column layout here -->
+                    <div class="col-md-8">
+                        <div class="bg-white p-5 rounded shadow-sm">
+                            <h3>Profile Visit</h3>
+                            <canvas id="salesChart" width="600" height="400"></canvas>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="bg-white p-5 rounded shadow-sm">
+                            <h3>Recent Messages</h3>
+                            <li class="d-flex">
+                                <img src="~/images/1.jpg" class="user-img" height="50" alt="" />
+                                <p class="px-3">Hank Schrader johnducky</p>
+                            </li>
+                            <li class="d-flex">
+                                <img src="~/images/2.jpg" class="user-img" height="50" alt="" />
+                                <p class="px-3">John Dodol dodoljohn</p>
+                            </li>
+                            <li class="d-flex">
+                                <img src="~/images/3.jpg" class="user-img" height="50" alt="" />
+                                <p class="px-3">Dean Winchester imdean</p>
+                            </li>
+                        </div>
+                    </div>
+                </div>
+            </main>
 
-        <div class="row g-3 mt-3"></div>
-        <footer class="bg-dark text-white text-center py-3">
-          © 2025 Your Website. All rights reserved.
-        </footer>
-      </div> -->
+            <footer class="bg-dark text-white text-center py-3 mt-auto">
+                © 2025 Your Website. All rights reserved.
+            </footer>
+        </div>
     </div>
+    <!-- Add Chart.js CDN BEFORE your own script -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script>
+        const ctx = document.getElementById("salesChart").getContext("2d");
+        const salesChart = new Chart(ctx, {
+            type: "bar", // vertical bar chart
+            data: {
+                labels: ["January", "February", "March", "April", "May"],
+                datasets: [
+                    {
+                        label: "Sales",
+                        data: [100, 150, 80, 200, 170],
+                        backgroundColor: "rgba(54, 162, 235, 0.7)",
+                        borderColor: "rgba(54, 162, 235, 1)",
+                        borderWidth: 1,
+                    },
+                ],
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                    },
+                },
+            },
+        });
+    </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
-  </body>
+</body>
 </html>
+

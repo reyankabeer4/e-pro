@@ -6,16 +6,18 @@ using AirelineReservationSystem.Models;
 
 namespace AirelineReservationSystem.Controllers;
 
-// [Authorize(Roles = "Customer")]
-[AllowAnonymous]  // <--- Add this
+[AllowAnonymous]
 
 public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
+    private readonly NeondbContext _context;
 
-    public HomeController(ILogger<HomeController> logger)
+
+    public HomeController(NeondbContext context, ILogger<HomeController> logger)
     {
         _logger = logger;
+        _context = context;
     }
 
  public IActionResult Index()
@@ -44,10 +46,24 @@ public class HomeController : Controller
         return View();
     }
 
+    public IActionResult Booking()
+    {
+        var flights = _context.Flights.ToList();
+        return View(flights);
+    }
+
+
+   
     public IActionResult Privacy()
     {
         return View();
     }
+
+    public IActionResult Contact()
+    {
+        return View();
+    }
+
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()

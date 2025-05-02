@@ -18,12 +18,11 @@
     @RenderSection("Styles", required: false)
 
     <!-- Bootstrap Bundle JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-sm navbar-light border-bottom box-shadow p-3 " style="background-color: #343a40; color: white ">
             <div class="container-fluid">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
                     <img src="~/images/airline-logo.jpg" height="30" alt="Logo">
@@ -34,19 +33,29 @@
 
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item"><a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
-                        <li class="nav-item"><a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a></li>
-
+                        <li class="nav-item"><a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Booking">Booking</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" asp-controller="Home" asp-action="Flights">Flights</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" asp-controller="Home" asp-action="Contact">Contact</a></li>
                         @if (User.Identity.IsAuthenticated)
                         {
-                            <li class="nav-item"><a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Dashboard">Dashboard</a></li>
-                            <li class="nav-item"><a class="nav-link text-dark" asp-area="" asp-controller="Auth" asp-action="LogOut">LogOut</a></li>
+                        @if (User.IsInRole("Admin"))
+                        {
+                        <a class="nav-link text-white" href="@Url.Action("Dashboard", "Admin")">Admin Dashboard</a>
+                        }
+
+                        <li class="nav-item"><a class="nav-link text-white" asp-area="" asp-controller="User" asp-action="Dashboard">Dashboard</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" asp-area="" asp-controller="Auth" onclick="confirmLogout(event)" asp-action="LogOut">LogOut</a></li>
+                        <li class="nav-item nav-link text-white">Welcome, @User.Identity.Name!</li>
                         }
                         else
                         {
-                            <li class="nav-item"><a class="nav-link text-dark" asp-area="" asp-controller="Auth" asp-action="Register">Register</a></li>
-                            <li class="nav-item"><a class="nav-link text-dark" asp-area="" asp-controller="Auth" asp-action="Login">Login</a></li>
+
+                        <li class="nav-item"><a class="nav-link text-dark" asp-area="" asp-controller="Auth" asp-action="Register">Register</a></li>
+                        <li class="nav-item"><a class="nav-link text-dark" asp-area="" asp-controller="Auth" asp-action="Login">Login</a></li>
                         }
+
                     </ul>
                 </div>
             </div>
@@ -54,194 +63,23 @@
     </header>
 
     <main role="main">
-      @if (Context.Request.Path == "/" || Context.Request.Path.StartsWithSegments("/Home"))
-    {
-        <!-- Carousel Section -->
-        <div style="position: relative; height: auto;">
-            <div id="carouselExampleIndicators" class="carousel slide" style="padding-bottom:100px">
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></button>
-                </div>
-
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="~/images/airplane2.jpg" class="d-block w-100" style="height:90vh; object-fit:cover" alt="Airplane 2">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="~/images/airplane1.jpg" class="d-block w-100" style="height:90vh; object-fit:cover" alt="Airplane 1">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="~/images/airplane.jpg" class="d-block w-100" style="height:90vh; object-fit:cover" alt="Airplane">
-                    </div>
-                </div>
-
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon"></span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                    <span class="carousel-control-next-icon"></span>
-                </button>
-            </div>
-
-            <!-- Booking Form -->
-            <div class="d-flex justify-content-center align-items-center">
-                <form class="form-box" style="position: absolute; top: 350px; background-color: #fff; border-radius: 10px; padding: 30px;">
-                    <div class="d-flex justify-content-between align-items-center pb-4" style="font-weight:500; font-size: 20px">
-                        <div style="border-right:1px solid grey; padding-right:10px">Flight</div>
-                        <div style="border-right:1px solid grey; padding-right:10px">Web Check-In</div>
-                        <div style="border-right:1px solid grey; padding-right:10px">My Booking</div>
-                        <div style="border-right:1px solid grey; padding-right:10px">Flight Status</div>
-                        <div style="border-right:1px solid grey; padding-right:10px">Schedules</div>
-                    </div>
-
-                    <div class="d-flex gap-2 py-2">
-                        <input type="radio" id="Oneway" class="mx-2">
-                        <label for="Oneway">Oneway</label>
-                        <input type="radio" id="Roundtrip" class="mx-2">
-                        <label for="Roundtrip">Roundtrip</label>
-                        <input type="radio" id="Multicity" class="mx-2">
-                        <label for="Multicity">Multicity</label>
-                    </div>
-                    <div class="d-flex gap-2 py-2">
-                        <select value="">
-                        <option value="" selected>FROM</option>
-                        <option value="">KARACHI</option>
-                        <option value="">ISLAMABAD</option>
-                    </select>
-                       <select value="">
-                        <option value="" selected>TO</option>
-                        <option value="">BAKU</option>
-                        <option value="">TOKYO</option>
-                    </select>
-                    <!-- Departure Date -->
-                    <input type="date">
-                    <!-- Return Date -->
-                    <input type="date">
-                    </div>
-                    <div class="d-flex justify-content-center align-items-center gap-2 py-2">
-                        <select value="" style="width:350px">
-                            <option value="" selected>1 ADULT</option>
-                            <option value="">CHILD</option>
-                            <option value="">INFANT</option>
-                            <option value="">ECONOMY</option>
-                    </select>
-                    <select value="" style="width:350px">
-                        <option value="" selected>All</option>
-                        <option value="">BUSINESS</option>
-                        <option value="">EXECUTIVE ECONOMY</option>
-                        <option value="">ECONOMY</option>
-                    </select>
-                    <select value="" style="width:100px">
-                        <option value="" selected>PKR</option>
-                        <option value="">USD</option>
-                        <option value="">AUD</option>
-                        <option value="">CAD</option>
-                        <option value="">AFN</option>
-                        <option value="">INR</option>
-                        <option value="">AZN</option>
-                    </select>
-                    <div class="bg-success p-2 text-white rounded">
-                        <i class="fas fa-search"></i>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-
-        <!-- Welcome Section -->
-        <section class="text-center p-3">
-            <h2>Get <span style="color:orange">Fly</span> With Us</h2>
-            <div class="container">
-                <img src="~/images/Banner-en-plane.jpg" class="w-100" style="height: 50vh; object-fit: cover;" alt="Banner Plane">
-            </div>
-        </section>
-
-        <!-- Services Section -->
-        <section class="text-center p-3">
-            <h2>Our <span style="color:orange">Services</span></h2>
-
-            <div id="cards-container" class="d-flex flex-wrap justify-content-center gap-3">
-                @foreach (var service in new[] { 
-                    new { Title = "Pre-Book Meal", Image = "pre-book-meals.jpg", Desc = "Indulge in anticipation with our Pre-booked Meals..." },
-                    new { Title = "Seat Selection", Image = "Economy-seat-collection.jpg", Desc = "Tailor your travel experience with our Seat Selection feature..." },
-                    new { Title = "Pre-book Baggage", Image = "baggage.jpg", Desc = "Simplify your travel with ease and foresight..." },
-                    new { Title = "Special Assistance", Image = "airport-assist.jpg", Desc = "Elevate your journey with our Special Assistance services..." }
-                })
-                {
-                    <div class="card" style="width: 18rem;">
-                        <img src="~/images/@service.Image" class="card-img-top" style="height: 200px; object-fit: cover;" alt="@service.Title">
-                        <div class="card-body">
-                            <h5 class="card-title">@service.Title</h5>
-                            <p class="card-text">@service.Desc</p>
-                        </div>
-                    </div>
-                }
-            </div>
-        </section>
-
-        <!-- Best Offers Section -->
-        <section class="text-center p-3">
-            <h2>Best Offers</h2>
-            <div id="bo-container">
-                <div class="best-offers big"><img src="~/images/mazarequaid-karachi.jpg" alt="Karachi"></div>
-                <div class="best-offers wide"><img src="~/images/minar-e-pakistan.jpeg" alt="Lahore"></div>
-                <div class="best-offers"><img src="~/images/islamabad.jpg" alt="Islamabad"></div>
-                <div class="best-offers tall"><img src="~/images/islamabad1.jpg" alt="Rawalpindi"></div>
-                <div class="best-offers wide"><img src="~/images/islamabad1.jpg" alt="Rawalpindi"></div>
-                <div class="best-offers"><img src="~/images/islamabad1.jpg" alt="Rawalpindi"></div>
-            </div>
-        </section>
-    }
         @RenderBody()
-
     </main>
 
-    <footer>
-        <div class="footer-list-items d-flex justify-content-around">
-            <ul>
-                <h2>Categories</h2>
-                <li>Men</li>
-                <li>Women</li>
-                <li>Shoes</li>
-                <li>Watches</li>
-            </ul>
-            <ul>
-                <h2>Help</h2>
-                <li>Track Order</li>
-                <li>Returns</li>
-                <li>Shipping</li>
-                <li>FAQs</li>
-            </ul>
-            <ul>
-                <h2>Get In Touch</h2>
-                <li style="width: 300px;">Any questions? Let us know in store at 8th floor, 379 Hudson St, New York, NY 10018 or call (+1) 96 716 6879</li>
-            </ul>
-            <ul>
-                <h2>Subscribe</h2>
-                <form>
-                    <input type="text" class="form-control mb-2" placeholder="email@example.com" />
-                    <button class="btn btn-warning w-100">Subscribe</button>
-                </form>
-            </ul>
-        </div>
-
-        <div class="footer-icons my-3">
-            <i class="fa-regular fa-heart mx-2"></i>
-            <i class="fa-solid fa-magnifying-glass mx-2"></i>
-            <i class="fa-solid fa-cart-shopping mx-2"></i>
-            <i class="fa-regular fa-heart mx-2"></i>
-        </div>
-
-        <p>&copy; 2025 - AirlineReservationSystem - All rights reserved</p>
-    </footer>
 
     <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
-
+    <script>
+function confirmLogout(event) {
+    event.preventDefault();
+    if (confirm("Are you sure you want to log out?")) {
+        window.location.href = '@Url.Action("Logout", "Auth")';
+    }
+}
+    </script>
 </body>
 </html>

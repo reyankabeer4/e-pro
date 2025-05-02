@@ -105,10 +105,11 @@ namespace AirelineReservationSystem.Controllers
                     {
                         return RedirectToAction("Dashboard", "Admin");
                     }
-                    else
+                    else if (role == "Customer")
                     {
-                        return RedirectToAction("Dashboard", "Home");
+                        return RedirectToAction("Dashboard", "User");
                     }
+                   
                 }
             }
 

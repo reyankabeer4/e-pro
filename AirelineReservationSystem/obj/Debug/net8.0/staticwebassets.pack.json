@@ -1,91 +1,139 @@
 {
   "Files": [
     {
-      "Id": "/workspaces/e-pro/AirelineReservationSystem/obj/Debug/net8.0/scopedcss/projectbundle/AirelineReservationSystem.bundle.scp.css",
-      "PackagePath": "staticwebassets/AirelineReservationSystem.bundle.scp.css"
+      "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\AirelineReservationSystem.bundle.scp.css",
+      "PackagePath": "staticwebassets\\AirelineReservationSystem.zpauw08s9t.bundle.scp.css"
     },
     {
-      "Id": "/workspaces/e-pro/AirelineReservationSystem/wwwroot/css/site.css",
-      "PackagePath": "staticwebassets/css/site.css"
+      "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
-      "Id": "/workspaces/e-pro/AirelineReservationSystem/wwwroot/favicon.ico",
-      "PackagePath": "staticwebassets/favicon.ico"
+      "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "/workspaces/e-pro/AirelineReservationSystem/wwwroot/images/Banner-en-plane.jpg",
-      "PackagePath": "staticwebassets/images/Banner-en-plane.jpg"
+      "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\1.jpg",
+      "PackagePath": "staticwebassets\\images\\1.jpg"
     },
     {
-      "Id": "/workspaces/e-pro/AirelineReservationSystem/wwwroot/images/ChatGPT-Image.png",
-      "PackagePath": "staticwebassets/images/ChatGPT-Image.png"
+      "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\11338040.png",
+      "PackagePath": "staticwebassets\\images\\11338040.png"
     },
     {
-      "Id": "/workspaces/e-pro/AirelineReservationSystem/wwwroot/images/Economy-seat-collection.jpg",
-      "PackagePath": "staticwebassets/images/Economy-seat-collection.jpg"
+      "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\2.jpg",
+      "PackagePath": "staticwebassets\\images\\2.jpg"
     },
     {
-      "Id": "/workspaces/e-pro/AirelineReservationSystem/wwwroot/images/airline-logo.jpg",
-      "PackagePath": "staticwebassets/images/airline-logo.jpg"
+      "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\3.jpg",
+      "PackagePath": "staticwebassets\\images\\3.jpg"
     },
     {
-      "Id": "/workspaces/e-pro/AirelineReservationSystem/wwwroot/images/airplane.jpg",
-      "PackagePath": "staticwebassets/images/airplane.jpg"
+      "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\4.jpg",
+      "PackagePath": "staticwebassets\\images\\4.jpg"
     },
     {
-      "Id": "/workspaces/e-pro/AirelineReservationSystem/wwwroot/images/airplane1.jpg",
-      "PackagePath": "staticwebassets/images/airplane1.jpg"
+      "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\5.jpg",
+      "PackagePath": "staticwebassets\\images\\5.jpg"
     },
     {
-      "Id": "/workspaces/e-pro/AirelineReservationSystem/wwwroot/images/airplane2.jpg",
-      "PackagePath": "staticwebassets/images/airplane2.jpg"
+      "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\6.jpg",
+      "PackagePath": "staticwebassets\\images\\6.jpg"
     },
     {
-      "Id": "/workspaces/e-pro/AirelineReservationSystem/wwwroot/images/airport-assist.jpg",
-      "PackagePath": "staticwebassets/images/airport-assist.jpg"
+      "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\7.jpg",
+      "PackagePath": "staticwebassets\\images\\7.jpg"
     },
     {
-      "Id": "/workspaces/e-pro/AirelineReservationSystem/wwwroot/images/baggage.jpg",
-      "PackagePath": "staticwebassets/images/baggage.jpg"
+      "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\8.jpg",
+      "PackagePath": "staticwebassets\\images\\8.jpg"
     },
     {
-      "Id": "/workspaces/e-pro/AirelineReservationSystem/wwwroot/images/islamabad.jpg",
-      "PackagePath": "staticwebassets/images/islamabad.jpg"
+      "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\Banner-en-plane.jpg",
+      "PackagePath": "staticwebassets\\images\\Banner-en-plane.jpg"
     },
     {
-      "Id": "/workspaces/e-pro/AirelineReservationSystem/wwwroot/images/islamabad1.jpg",
-      "PackagePath": "staticwebassets/images/islamabad1.jpg"
+      "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\ChatGPT-Image.png",
+      "PackagePath": "staticwebassets\\images\\ChatGPT-Image.png"
     },
     {
-      "Id": "/workspaces/e-pro/AirelineReservationSystem/wwwroot/images/mazarequaid-karachi.jpg",
-      "PackagePath": "staticwebassets/images/mazarequaid-karachi.jpg"
+      "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\Economy-seat-collection.jpg",
+      "PackagePath": "staticwebassets\\images\\Economy-seat-collection.jpg"
     },
     {
-      "Id": "/workspaces/e-pro/AirelineReservationSystem/wwwroot/images/minar-e-pakistan.jpeg",
-      "PackagePath": "staticwebassets/images/minar-e-pakistan.jpeg"
+      "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\airline-logo.jpg",
+      "PackagePath": "staticwebassets\\images\\airline-logo.jpg"
     },
     {
-      "Id": "/workspaces/e-pro/AirelineReservationSystem/wwwroot/images/pre-book-meals.jpg",
-      "PackagePath": "staticwebassets/images/pre-book-meals.jpg"
+      "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\airplane.jpg",
+      "PackagePath": "staticwebassets\\images\\airplane.jpg"
     },
     {
-      "Id": "/workspaces/e-pro/AirelineReservationSystem/wwwroot/js/site.js",
-      "PackagePath": "staticwebassets/js/site.js"
+      "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\airplane1.jpg",
+      "PackagePath": "staticwebassets\\images\\airplane1.jpg"
     },
     {
-      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.AirelineReservationSystem.Microsoft.AspNetCore.StaticWebAssets.props",
+      "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\airplane2.jpg",
+      "PackagePath": "staticwebassets\\images\\airplane2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\airport-assist.jpg",
+      "PackagePath": "staticwebassets\\images\\airport-assist.jpg"
+    },
+    {
+      "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\baggage.jpg",
+      "PackagePath": "staticwebassets\\images\\baggage.jpg"
+    },
+    {
+      "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\followers-icon.png",
+      "PackagePath": "staticwebassets\\images\\followers-icon.png"
+    },
+    {
+      "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\icon-follow.png",
+      "PackagePath": "staticwebassets\\images\\icon-follow.png"
+    },
+    {
+      "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\islamabad.jpg",
+      "PackagePath": "staticwebassets\\images\\islamabad.jpg"
+    },
+    {
+      "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\islamabad1.jpg",
+      "PackagePath": "staticwebassets\\images\\islamabad1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\mazarequaid-karachi.jpg",
+      "PackagePath": "staticwebassets\\images\\mazarequaid-karachi.jpg"
+    },
+    {
+      "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\minar-e-pakistan.jpeg",
+      "PackagePath": "staticwebassets\\images\\minar-e-pakistan.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\pre-book-meals.jpg",
+      "PackagePath": "staticwebassets\\images\\pre-book-meals.jpg"
+    },
+    {
+      "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.AirelineReservationSystem.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.AirelineReservationSystem.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },
     {
-      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.build.AirelineReservationSystem.props",
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.AirelineReservationSystem.props",
       "PackagePath": "build\\AirelineReservationSystem.props"
     },
     {
-      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.AirelineReservationSystem.props",
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.AirelineReservationSystem.props",
       "PackagePath": "buildMultiTargeting\\AirelineReservationSystem.props"
     },
     {
-      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.AirelineReservationSystem.props",
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.AirelineReservationSystem.props",
       "PackagePath": "buildTransitive\\AirelineReservationSystem.props"
     }
   ],

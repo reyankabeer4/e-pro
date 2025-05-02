@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
+          crossorigin="anonymous" />
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+          integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer" />
+</head>
+<style>
+
+    .contact-container {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        /* margin: 100px; */
+        padding: 50px;
+        flex-wrap: wrap;
+    }
+
+    .contact-content-icons {
+        display: flex;
+        gap: 20px;
+        justify-content: start;
+        align-items: start;
+    }
+
+        .contact-content-icons i {
+            font-size: 20px;
+        }
+
+    .contact-img {
+        height: 200px;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .contact-container h2 {
+        font-size: 25px;
+        font-weight: 300;
+    }
+
+    .contact-container form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+        padding: 50px;
+    }
+
+    .contact-content {
+        border-left: 1px solid grey;
+        padding: 50px;
+    }
+
+        .contact-content p {
+            color: grey;
+        }
+
+        .contact-content h3 {
+            font-size: 23px;
+            font-weight: 300;
+        }
+
+    .contact-container form input {
+        padding: 10px 20px;
+        border: none;
+        width: 450px;
+        border: 1px solid lightgrey;
+        border-radius: 5px;
+        font-size: 15px;
+        color: #272727;
+    }
+
+    .contact-container form textarea {
+        font-size: 15px;
+        padding: 10px 20px;
+        border: none;
+        width: 450px;
+        height: 200px;
+        border: 1px solid lightgrey;
+        border-radius: 5px;
+        color: #272727;
+    }
+
+    .contact-container form button {
+        padding: 10px;
+        font-size: 13px;
+        color: #fcfcfc;
+        width: 100%;
+        border: none;
+        background-color: #272727;
+        border-radius: 50px;
+        text-transform: uppercase;
+    }
+
+    /* Footer */
+
+    footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+        background-color: #272727;
+        padding: 30px;
+        color: #cac9c9;
+        gap: 20px;
+    }
+
+        footer p {
+            font-size: 13px;
+        }
+
+    .footer-list-items {
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+        flex-wrap: wrap;
+        gap: 100px;
+    }
+
+        .footer-list-items ul h2 {
+            font-size: 20px;
+            text-align: start;
+            padding: 20px 0%;
+            color: white;
+            text-transform: uppercase;
+        }
+
+        .footer-list-items ul li {
+            list-style: none;
+            text-align: start;
+            font-size: 12px;
+            line-height: 3;
+        }
+
+        .footer-list-items ul form button {
+            border-radius: 50px;
+            padding: 10px 20px;
+            border: none;
+            font-size: 12px;
+            color: #e0e0e0;
+            background-color: #4361ee;
+        }
+
+        .footer-list-items ul form input {
+            background: transparent;
+            margin: 20px 0;
+            border: none;
+            font-size: 12px;
+            color: #e0e0e0;
+            padding: 5px;
+            width: 200px;
+            border-bottom: 1px solid grey;
+        }
+
+    .footer-icons {
+        display: flex;
+        gap: 20px;
+    }
+
+</style>
+<body>
+    
+    <main>
+        <img src="./assets/images/premium_photo.png" class="contact-img" alt="" />
+        <div class="contact-container">
+            <form action="">
+                <h2>Send Us A Message</h2>
+                <input type="text" placeholder="Your Email Address" />
+                <textarea name="" id="" placeholder="How Can We Help?"></textarea>
+                <button>Submit</button>
+            </form>
+            <div class="contact-content">
+                <div class="contact-content-icons">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <div>
+                        <h3>Address</h3>
+                        <p>Karachi, Pakistan</p>
+                    </div>
+                </div>
+                <div class="contact-content-icons">
+                    <i class="fa-solid fa-phone"></i>
+                    <div>
+                        <h3>Let's Talk</h3>
+                        <p>+13456789</p>
+                    </div>
+                </div>
+                <div class="contact-content-icons">
+                    <i class="fa-regular fa-envelope"></i>
+                    <div>
+                        <h3>Sale Support</h3>
+                        <p>contact@example.com.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-list-items">
+            <ul>
+                <h2>Categories</h2>
+                <li>Men</li>
+                <li>Women</li>
+                <li>Shoes</li>
+                <li>Watches</li>
+            </ul>
+            <ul>
+                <h2>Help</h2>
+                <li>Track Order</li>
+                <li>Returns</li>
+                <li>Shipping</li>
+                <li>FAQs</li>
+            </ul>
+            <ul>
+                <h2>Get In Touch</h2>
+                <li style="width: 300px">
+                    Any questions? Let us know in store at 8th floor, 379 Hudson St, New
+                    York, NY 10018 or call us on (+1) 96 716 6879
+                </li>
+            </ul>
+            <ul>
+                <h2>Categories</h2>
+                <form action="">
+                    <input type="text" placeholder="email@example.com" id="" />
+                    <button>Subscribe</button>
+                </form>
+            </ul>
+        </div>
+        <div class="footer-icons">
+            <i class="fa-regular fa-heart"></i>
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <i class="fa-solid fa-cart-shopping"></i>
+            <i class="fa-regular fa-heart"></i>
+        </div>
+        <div>
+            <p>
+                Copyright
+                All rights reserved
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+            crossorigin="anonymous"></script>
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>

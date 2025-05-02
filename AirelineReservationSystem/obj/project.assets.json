@@ -7809,20 +7809,31 @@
     ]
   },
   "packageFolders": {
-    "/home/codespace/.nuget/packages/": {}
+    "C:\\Users\\affan\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/workspaces/e-pro/AirelineReservationSystem/AirelineReservationSystem.csproj",
+      "projectUniqueName": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\AirelineReservationSystem.csproj",
       "projectName": "AirelineReservationSystem",
-      "projectPath": "/workspaces/e-pro/AirelineReservationSystem/AirelineReservationSystem.csproj",
-      "packagesPath": "/home/codespace/.nuget/packages/",
-      "outputPath": "/workspaces/e-pro/AirelineReservationSystem/obj/",
+      "projectPath": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\AirelineReservationSystem.csproj",
+      "packagesPath": "C:\\Users\\affan\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\obj\\",
       "projectStyle": "PackageReference",
-      "configFilePaths": ["/home/codespace/.nuget/NuGet/NuGet.Config"],
-      "originalTargetFrameworks": ["net8.0"],
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\affan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net8.0"
+      ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -7832,13 +7843,16 @@
         }
       },
       "warningProperties": {
-        "warnAsError": ["NU1605"]
+        "warnAsError": [
+          "NU1605"
+        ]
       },
       "restoreAuditProperties": {
         "enableAudit": "true",
         "auditLevel": "low",
         "auditMode": "direct"
-      }
+      },
+      "SdkAnalysisLevel": "9.0.200"
     },
     "frameworks": {
       "net8.0": {
@@ -7896,7 +7910,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.407/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
