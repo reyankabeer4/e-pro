@@ -1,20 +1,18 @@
 ﻿@model IEnumerable<AirelineReservationSystem.Models.Flight>
-
-
     @{
     ViewData["Title"] = "Booking Page";
-
     }
-
-
-
     <!DOCTYPE html>
     <html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Flight Booking UI</title>
+        <title>Flight Booking</title>
         <style>
+            body {
+                background-color: #f0f2f5;
+                font-family: Arial, sans-serif;
+            }
 
             .header {
                 background-color: #0052cc;
@@ -51,11 +49,11 @@
 
                 .tab img {
                     width: 20px;
-                    filter: brightness(0) invert(1); /* For white icons */
+                    filter: brightness(0) invert(1);
                 }
 
                 .tab.active img {
-                    filter: none; /* For black icons in active tab */
+                    filter: none;
                 }
 
             .content {
@@ -81,14 +79,14 @@
                 }
 
                 .trip-options input[type="radio"] {
-                    width: 20px;
-                    height: 20px;
+                    width: 18px;
+                    height: 18px;
                 }
 
-                    .trip-options input[type="radio"]:checked + span {
-                        color: #f5c518;
-                        font-weight: bold;
-                    }
+                .trip-options input:checked + span {
+                    color: #f5c518;
+                    font-weight: bold;
+                }
 
             .form-grid {
                 display: grid;
@@ -102,7 +100,6 @@
                     padding: 10px;
                     border: 1px solid #ccc;
                     border-radius: 4px;
-                    box-sizing: border-box;
                 }
 
                 .form-grid .swap-icon {
@@ -117,17 +114,13 @@
                 gap: 10px;
             }
 
-                .buttons button {
-                    padding: 10px 20px;
-                    border: none;
-                    border-radius: 4px;
-                    cursor: pointer;
-                }
-
             .promo-btn {
                 background-color: white;
                 border: 1px solid #f5c518;
                 color: #f5c518;
+                padding: 10px 20px;
+                border-radius: 4px;
+                cursor: pointer;
             }
 
             .show-flights-btn {
@@ -136,6 +129,10 @@
                 display: flex;
                 align-items: center;
                 gap: 5px;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
             }
 
                 .show-flights-btn img {
@@ -145,22 +142,24 @@
             .row {
                 display: flex;
                 gap: 20px;
-                margin: 20px;
+                margin: 20px auto;
                 flex-wrap: wrap;
+                max-width: 1200px;
+                padding: 0 20px;
             }
 
             .sidebar {
-                flex: 0 0 25%;
-                max-width: 300px;
+                flex: 1 1 300px;
                 background-color: white;
                 padding: 20px;
                 border-radius: 8px;
-                box-shadow: 1px 1px 10px rgba(0,0,0,0.1);
+                box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+                min-width: 250px;
             }
 
             .main-section {
-                flex: 1;
-                min-width: 0;
+                flex: 3 1 600px;
+                padding: 0 10px;
             }
 
             .flight-card {
@@ -168,51 +167,77 @@
                 padding: 20px;
                 margin-bottom: 20px;
                 border-radius: 8px;
-                box-shadow: 1px 1px 10px rgba(0,0,0,0.1);
+                box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
+            }
+
+                .flight-card img {
+                    width: 50px;
+                    height: 50px;
+                }
+
+            .filter-button {
+                background-color: #b3245e;
+                color: white;
+                padding: 6px 12px;
+                border: none;
+                border-radius: 4px;
+            }
+
+            .departure-grid {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 10px;
+            }
+
+                .departure-grid div {
+                    background-color: #f1f1f1;
+                    padding: 8px;
+                    text-align: center;
+                    border-radius: 4px;
+                }
+
+            .price {
+                color: red;
+                font-size: 1.2em;
+                font-weight: bold;
+            }
+
+            .select-btn {
+                background-color: #f5c518;
+                padding: 8px 12px;
+                border: none;
+                border-radius: 4px;
+                margin-top: 8px;
+                cursor: pointer;
             }
         </style>
     </head>
     <body>
         <div class="header">
             <h1>Booking List</h1>
-            <a href="#">Home</a> <span>|</span> <a href="#" style="color: #f5c518;">Booking List</a>
+            <a href="#">Home</a> | <a href="#" style="color: #f5c518;">Booking List</a>
         </div>
+
         <div class="tabs">
             <div class="tab active">
                 <img src="https://img.icons8.com/ios-filled/50/airplane-take-off.png" alt="Airplane Icon">
                 AIR BOOKING
             </div>
-            <div class="tab">
-                <img src="https://img.icons8.com/ios-filled/50/suitcase.png" alt="Suitcase Icon">
-                MY TRIPS
-            </div>
-            <div class="tab">
-                <img src="https://img.icons8.com/ios-filled/50/check.png" alt="Check Icon">
-                CHECK-IN
-            </div>
-            <div class="tab">
-                <img src="https://img.icons8.com/ios-filled/50/pin.png" alt="Pin Icon">
-                FLIGHT STATUS
-            </div>
+            <div class="tab"><img src="https://img.icons8.com/ios-filled/50/suitcase.png" alt="Suitcase Icon"> MY TRIPS</div>
+            <div class="tab"><img src="https://img.icons8.com/ios-filled/50/check.png" alt="Check Icon"> CHECK-IN</div>
+            <div class="tab"><img src="https://img.icons8.com/ios-filled/50/pin.png" alt="Pin Icon"> FLIGHT STATUS</div>
         </div>
+
         <div class="content">
             <div class="trip-options">
-                <label>
-                    <input type="radio" name="trip-type" value="roundtrip">
-                    <span>Roundtrip</span>
-                </label>
-                <label>
-                    <input type="radio" name="trip-type" value="one-way">
-                    <span>One-way</span>
-                </label>
-                <label>
-                    <input type="radio" name="trip-type" value="multi-city" checked>
-                    <span>Multi-city</span>
-                </label>
+                <label><input type="radio" name="trip-type" value="roundtrip"><span>Roundtrip</span></label>
+                <label><input type="radio" name="trip-type" value="one-way"><span>One-way</span></label>
+                <label><input type="radio" name="trip-type" value="multi-city" checked><span>Multi-city</span></label>
             </div>
+
             <div class="form-grid">
                 <div>
                     <label>From</label>
@@ -225,9 +250,7 @@
                 </div>
                 <div>
                     <label>Trip type</label>
-                    <select>
-                        <option>Tour type</option>
-                    </select>
+                    <select><option>Tour type</option></select>
                 </div>
                 <div>
                     <label>Depart</label>
@@ -242,6 +265,7 @@
                     <input type="text" value="1 Passenger, Economy" readonly>
                 </div>
             </div>
+
             <div class="buttons">
                 <button class="promo-btn">+ ADD PROMO CODE</button>
                 <button class="show-flights-btn">
@@ -252,57 +276,50 @@
         </div>
 
         <div class="row">
-            <!-- Sidebar Filters -->
             <aside class="sidebar">
-                <h2 class="text-xl font-semibold mb-4">Filters</h2>
+                <h2>Filters</h2>
                 <div class="mb-6">
-                    <h3 class="font-medium mb-2">Price Range</h3>
-                    <input type="range" min="1000" max="4500" class="w-full">
-                    <p class="mt-1">Price: <span class="font-semibold text-red-600">$1000 - $4500</span></p>
-                    <button class="mt-2" style="background-color:#b3245e;color:white;padding:6px 12px;border:none;border-radius:4px;">Filter</button>
+                    <h3>Price Range</h3>
+                    <input type="range" min="1000" max="4500">
+                    <p>Price: <span class="price">$1000 - $4500</span></p>
+                    <button class="filter-button">Filter</button>
                 </div>
                 <div>
-                    <h3 class="font-medium mb-2">Departure Time</h3>
-                    <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
-                        <div class="bg-gray-100 p-2 rounded text-center">00:00 - 05:59</div>
-                        <div class="bg-gray-100 p-2 rounded text-center">06:00 - 11:59</div>
-                        <div class="bg-gray-100 p-2 rounded text-center">12:00 - 17:59</div>
-                        <div class="bg-gray-100 p-2 rounded text-center">18:00 - 23:59</div>
+                    <h3>Departure Time</h3>
+                    <div class="departure-grid">
+                        <div>00:00 - 05:59</div>
+                        <div>06:00 - 11:59</div>
+                        <div>12:00 - 17:59</div>
+                        <div>18:00 - 23:59</div>
                     </div>
                 </div>
             </aside>
 
-            <!-- Airline Cards -->
             <section class="main-section">
-                @foreach(var flights in Model){
+                @foreach (var flight in Model)
+            {
                 <div class="flight-card">
                     <div style="display:flex;gap:20px;align-items:center;">
-                        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/e/e8/Etihad_Airways_Logo.svg/1280px-Etihad_Airways_Logo.svg.png" alt="Etihad" style="width:50px;height:50px;">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/e/e8/Etihad_Airways_Logo.svg/1280px-Etihad_Airways_Logo.svg.png" alt="Airline Logo">
                         <div>
-                            <h3 class="text-lg font-semibold">@flights.AirlineName</h3>
-                            <p class="text-sm text-gray-500">Operated by Emirates</p>
+                            <h3>@flight.AirlineName</h3>
+                            <p style="color:gray;font-size:0.9em;">Operated by Emirates</p>
                         </div>
                     </div>
                     <div style="text-align:center;">
-                        <p class="font-semibold">Thursday, Jun 16</p>
-                        <p class="text-lg font-bold">12:55</p>
-                        <p class="text-sm">22h • 2 Stops</p>
-                        <p class="text-xs text-gray-400">DAC</p>
+                        <p>Thursday, Jun 16</p>
+                        <p style="font-weight:bold;font-size:1.2em;">12:55</p>
+                        <p>22h • 2 Stops</p>
+                        <p style="font-size:0.8em;color:gray;">DAC</p>
                     </div>
                     <div style="text-align:right;">
-                        <p class="text-xl font-bold" style="color:red;">US$ 1,056.40</p>
-                        <button style="margin-top:8px;background-color:#f5c518;padding:8px 12px;border:none;border-radius:4px;">Select ✈️</button>
-                        <p class="text-xs text-gray-500 mt-1">Incl. taxes & fees</p>
+                        <p class="price">US$ 1,056.40</p>
+                        <button class="select-btn">Select ✈️</button>
+                        <p style="font-size:0.8em;color:gray;">Incl. taxes & fees</p>
                     </div>
                 </div>
-
-
             }
             </section>
         </div>
-
-
     </body>
 </html>
-
-
