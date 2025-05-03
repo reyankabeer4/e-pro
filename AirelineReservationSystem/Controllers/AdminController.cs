@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 public class AdminController : Controller
 {
     private readonly NeondbContext _context;
-    
+
     public AdminController(NeondbContext context)
     {
         _context = context;
@@ -28,7 +28,8 @@ public class AdminController : Controller
 
     public IActionResult Flight(Flight flight)
     {
-        if (ModelState.IsValid) {
+        if (ModelState.IsValid)
+        {
 
             _context.Flights.Add(flight);
             _context.SaveChanges();

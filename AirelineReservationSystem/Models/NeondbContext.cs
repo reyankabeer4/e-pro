@@ -27,9 +27,9 @@ public partial class NeondbContext : DbContext
 
     public virtual DbSet<User> Users { get; set; }
 
-//     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-// #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
-//         => optionsBuilder.UseNpgsql("Host=ep-proud-grass-a4junec8-pooler.us-east-1.aws.neon.tech;Database=neondb;Username=neondb_owner;Password=npg_lGyNPXmoA92H;SSL Mode=Require;Trust Server Certificate=true");
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
+        => optionsBuilder.UseNpgsql("Host=ep-proud-grass-a4junec8-pooler.us-east-1.aws.neon.tech;Database=neondb;Username=neondb_owner;Password=npg_lGyNPXmoA92H;SSL Mode=Require;Trust Server Certificate=true");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -190,6 +190,9 @@ public partial class NeondbContext : DbContext
             entity.Property(e => e.PhoneNumber)
                 .HasMaxLength(20)
                 .HasColumnName("phone_number");
+            entity.Property(e => e.ProfilePic)
+                .HasMaxLength(255)
+                .HasColumnName("profile_pic");
             entity.Property(e => e.Role)
                 .HasMaxLength(20)
                 .HasColumnName("role");

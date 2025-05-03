@@ -85,6 +85,10 @@
       "PackagePath": "staticwebassets\\images\\baggage.jpg"
     },
     {
+      "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\default-avatar-profile.jpg",
+      "PackagePath": "staticwebassets\\images\\default-avatar-profile.jpg"
+    },
+    {
       "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\followers-icon.png",
       "PackagePath": "staticwebassets\\images\\followers-icon.png"
     },
@@ -111,6 +115,10 @@
     {
       "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\pre-book-meals.jpg",
       "PackagePath": "staticwebassets\\images\\pre-book-meals.jpg"
+    },
+    {
+      "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\premium_photo.png",
+      "PackagePath": "staticwebassets\\images\\premium_photo.png"
     },
     {
       "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\js\\site.js",

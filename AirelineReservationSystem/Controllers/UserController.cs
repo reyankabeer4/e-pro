@@ -22,4 +22,10 @@ public class UserController : Controller
 
     }
 
+
+    //public IActionResult DeleteAccount()
+    //{
+    //    //return 
+    //}
+
 }

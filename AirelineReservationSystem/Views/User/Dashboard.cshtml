@@ -1,5 +1,7 @@
 @{
     ViewData["Title"] = "User Dashboard";
+   var currentAction = ViewContext.RouteData.Values["action"]?.ToString();
+    var currentController = ViewContext.RouteData.Values["controller"]?.ToString();
 }
 
 <!DOCTYPE html>
@@ -46,7 +48,9 @@
                 }
 
                 .sidebar a.active {
-                    background-color: #3498db;
+                    background-color: #edf2f4;
+                    color: black;
+                    border-radius: 50px 0px 0px 50px;
                 }
 
         .content {
@@ -128,13 +132,16 @@
 </head>
 <body>
     <div class="sidebar">
-        <h2 class="my-3">User Portal</h2>
-        <a asp-controller="User" asp-action="Dashboard" class="active"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
-        <a asp-controller="User" asp-action="Profile"><i class="fas fa-user"></i> Profile</a>
-        <a href="#"><i class="fas fa-shopping-cart"></i> Orders</a>
-        <a href="#"><i class="fas fa-user"></i> Bookings</a>
+        <h2 class="my-3">User Dashboard</h2>
+        <a asp-controller="User" asp-action="Dashboard" class="@(currentAction == "Dashboard" && currentController == "User" ? "active" : "")">
+            <i class="fas fa-tachometer-alt"></i> Dashboard
+        </a>
+        <a asp-controller="User" asp-action="Profile" class="@(currentAction == "Profile" && currentController == "User" ? "active" : "")">
+            <i class="fas fa-user"></i> Profile
+        </a>
+        <a href="#"><i class="fas fa-ticket-alt"></i> Bookings</a>
         <a href="#"><i class="fas fa-headset"></i> Support</a>
-        <a href="#" style=""><i class="fas fa-headset"></i> Logout</a>
+        <a href="#"><i class="fas fa-sign-out-alt"></i></i> Logout</a>
     </div>
     <div class="content">
         <h1>Welcome, User</h1>
