@@ -12,18 +12,19 @@
             font-family: "Poppins", sans-serif;
             outline: none;
         }
-
+   
         .register-container {
-            height: 100vh;
+            height: 150vh;
             width: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
             background-color: #f0f0f0;
+/*            padding:50px;*/
         }
 
         form {
-            height: 70vh;
+            height: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -105,7 +106,12 @@
     <form asp-controller="Auth" asp-action="Register" method="post">
         <div class="first-child">
             <h2>Register</h2>
-            <input type="text" class="input-field" name="FullName" placeholder="Full Name" required />
+            <input type="text" class="input-field" name="FirstName" placeholder="First Name" required />
+            <input type="text" class="input-field" name="LastName" placeholder="Last Name" required />
+            <input type="text" class="input-field" name="Username" placeholder="Phone" required />
+            <input type="text" class="input-field" name="Address" placeholder="Address" required />
+            <input type="text" class="input-field" name="Sex" placeholder="Male/Female" required />
+            <input type="text" class="input-field" name="Age" placeholder="Age" required />
             <input type="email" class="input-field" name="Email" placeholder="Email" required />
             <input type="password" class="input-field" name="Password" placeholder="Password" required />
             <input type="text" class="input-field" name="PhoneNumber" placeholder="Phone Number" required />

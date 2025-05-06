@@ -216,6 +216,18 @@
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-PyGcZsTnUwvL86A35WHmfGrT8vVuUH\u002BVj37taTTkcj4="}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"74438"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022PyGcZsTnUwvL86A35WHmfGrT8vVuUH\u002BVj37taTTkcj4=\u0022"},{"Name":"Last-Modified","Value":"Mon, 28 Apr 2025 18:58:51 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/AirelineReservationSystem/images/Bangkok-Boat-Tours.0z19c0i6p6.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\Bangkok-Boat-Tours.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"0z19c0i6p6"},{"Name":"integrity","Value":"sha256-PJ7vUmrLjJAvf6vo4AIg0/pgnBRoBZbQmpXicfBme1U="},{"Name":"label","Value":"_content/AirelineReservationSystem/images/Bangkok-Boat-Tours.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"285455"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022PJ7vUmrLjJAvf6vo4AIg0/pgnBRoBZbQmpXicfBme1U=\u0022"},{"Name":"Last-Modified","Value":"Tue, 06 May 2025 10:27:39 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/AirelineReservationSystem/images/Bangkok-Boat-Tours.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\Bangkok-Boat-Tours.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-PJ7vUmrLjJAvf6vo4AIg0/pgnBRoBZbQmpXicfBme1U="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"285455"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022PJ7vUmrLjJAvf6vo4AIg0/pgnBRoBZbQmpXicfBme1U=\u0022"},{"Name":"Last-Modified","Value":"Tue, 06 May 2025 10:27:39 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/AirelineReservationSystem/images/Banner-en-plane.jpg">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\Banner-en-plane.jpg'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
@@ -288,6 +300,30 @@
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"wsbxvd0nb9"},{"Name":"integrity","Value":"sha256-ALPM0ArFTZ7ZT53RQbAO/tQye67s9JoC39EafgPyUrs="},{"Name":"label","Value":"_content/AirelineReservationSystem/images/icon-follow.png"}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"80236"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022ALPM0ArFTZ7ZT53RQbAO/tQye67s9JoC39EafgPyUrs=\u0022"},{"Name":"Last-Modified","Value":"Mon, 28 Apr 2025 12:01:50 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/AirelineReservationSystem/images/image-turkey.a4g3v5fx2p.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\image-turkey.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"a4g3v5fx2p"},{"Name":"integrity","Value":"sha256-pqj/iZJqykfYFb6bGwadt5vnrSGpwf6EXT6UFCCgbkU="},{"Name":"label","Value":"_content/AirelineReservationSystem/images/image-turkey.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"84368"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022pqj/iZJqykfYFb6bGwadt5vnrSGpwf6EXT6UFCCgbkU=\u0022"},{"Name":"Last-Modified","Value":"Tue, 06 May 2025 10:27:06 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/AirelineReservationSystem/images/image-turkey.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\image-turkey.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-pqj/iZJqykfYFb6bGwadt5vnrSGpwf6EXT6UFCCgbkU="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"84368"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022pqj/iZJqykfYFb6bGwadt5vnrSGpwf6EXT6UFCCgbkU=\u0022"},{"Name":"Last-Modified","Value":"Tue, 06 May 2025 10:27:06 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/AirelineReservationSystem/images/images.heoq9booo5.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\images.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"heoq9booo5"},{"Name":"integrity","Value":"sha256-98xFrCayrT/9WNilSQa5xfFdIJPKAb/R/XQC6BQnEEA="},{"Name":"label","Value":"_content/AirelineReservationSystem/images/images.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"9873"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u002298xFrCayrT/9WNilSQa5xfFdIJPKAb/R/XQC6BQnEEA=\u0022"},{"Name":"Last-Modified","Value":"Tue, 06 May 2025 10:28:08 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/AirelineReservationSystem/images/images.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\images.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-98xFrCayrT/9WNilSQa5xfFdIJPKAb/R/XQC6BQnEEA="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"9873"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u002298xFrCayrT/9WNilSQa5xfFdIJPKAb/R/XQC6BQnEEA=\u0022"},{"Name":"Last-Modified","Value":"Tue, 06 May 2025 10:28:08 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/AirelineReservationSystem/images/islamabad.ajq7b5ev45.jpg">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\islamabad.jpg'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
@@ -311,6 +347,18 @@
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-Ijya3X7nqVLLxbJcQIHoEFNUz6ki3vs/nNLcvfTRxhI="}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"107911"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022Ijya3X7nqVLLxbJcQIHoEFNUz6ki3vs/nNLcvfTRxhI=\u0022"},{"Name":"Last-Modified","Value":"Mon, 28 Apr 2025 18:58:51 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/AirelineReservationSystem/images/markus-winkler.3lampgzkvt.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\markus-winkler.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"3lampgzkvt"},{"Name":"integrity","Value":"sha256-Fwh6HydRl8ggBftpMt3Tg5z2a1V1UvQm0A9A8MHdD00="},{"Name":"label","Value":"_content/AirelineReservationSystem/images/markus-winkler.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1524460"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022Fwh6HydRl8ggBftpMt3Tg5z2a1V1UvQm0A9A8MHdD00=\u0022"},{"Name":"Last-Modified","Value":"Mon, 05 May 2025 11:28:52 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/AirelineReservationSystem/images/markus-winkler.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\markus-winkler.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-Fwh6HydRl8ggBftpMt3Tg5z2a1V1UvQm0A9A8MHdD00="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"1524460"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022Fwh6HydRl8ggBftpMt3Tg5z2a1V1UvQm0A9A8MHdD00=\u0022"},{"Name":"Last-Modified","Value":"Mon, 05 May 2025 11:28:52 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/AirelineReservationSystem/images/mazarequaid-karachi.jpg">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\mazarequaid-karachi.jpg'))</AssetFile>
@@ -336,6 +384,18 @@
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-Sffx0gQX\u002BXX4CLFrG3mGtsVn0M\u002BkU82wk1EgD4gAgDI="}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"47135"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022Sffx0gQX\u002BXX4CLFrG3mGtsVn0M\u002BkU82wk1EgD4gAgDI=\u0022"},{"Name":"Last-Modified","Value":"Mon, 28 Apr 2025 18:58:51 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/AirelineReservationSystem/images/photo-1553877522-43269d4ea984.5e9gbc1o1t.avif">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\photo-1553877522-43269d4ea984.avif'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"5e9gbc1o1t"},{"Name":"integrity","Value":"sha256-c8GwQoyIjJzCeK4pksooDWt\u002BNnc7K1fJFi0Anxjtp/k="},{"Name":"label","Value":"_content/AirelineReservationSystem/images/photo-1553877522-43269d4ea984.avif"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"170337"},{"Name":"Content-Type","Value":"application/octet-stream"},{"Name":"ETag","Value":"\u0022c8GwQoyIjJzCeK4pksooDWt\u002BNnc7K1fJFi0Anxjtp/k=\u0022"},{"Name":"Last-Modified","Value":"Mon, 05 May 2025 11:30:59 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/AirelineReservationSystem/images/photo-1553877522-43269d4ea984.avif">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\photo-1553877522-43269d4ea984.avif'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-c8GwQoyIjJzCeK4pksooDWt\u002BNnc7K1fJFi0Anxjtp/k="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"170337"},{"Name":"Content-Type","Value":"application/octet-stream"},{"Name":"ETag","Value":"\u0022c8GwQoyIjJzCeK4pksooDWt\u002BNnc7K1fJFi0Anxjtp/k=\u0022"},{"Name":"Last-Modified","Value":"Mon, 05 May 2025 11:30:59 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/AirelineReservationSystem/images/pre-book-meals.42e5slqpo3.jpg">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\pre-book-meals.jpg'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
@@ -359,6 +419,54 @@
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-ZnsaO97QWk/n6KyUNKCNz02V4khpQeU7KAwUGrKBGlQ="}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"28251"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022ZnsaO97QWk/n6KyUNKCNz02V4khpQeU7KAwUGrKBGlQ=\u0022"},{"Name":"Last-Modified","Value":"Mon, 14 Apr 2025 07:02:12 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/AirelineReservationSystem/images/roma-best-italy-tour-1.go77uwv4k5.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\roma-best-italy-tour-1.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"go77uwv4k5"},{"Name":"integrity","Value":"sha256-YI/B3gAJg5GKxbkoOuXUXH9VgyQXeM1Vk1Nxv9R6N4Q="},{"Name":"label","Value":"_content/AirelineReservationSystem/images/roma-best-italy-tour-1.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"615453"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022YI/B3gAJg5GKxbkoOuXUXH9VgyQXeM1Vk1Nxv9R6N4Q=\u0022"},{"Name":"Last-Modified","Value":"Tue, 06 May 2025 10:31:09 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/AirelineReservationSystem/images/roma-best-italy-tour-1.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\roma-best-italy-tour-1.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-YI/B3gAJg5GKxbkoOuXUXH9VgyQXeM1Vk1Nxv9R6N4Q="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"615453"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022YI/B3gAJg5GKxbkoOuXUXH9VgyQXeM1Vk1Nxv9R6N4Q=\u0022"},{"Name":"Last-Modified","Value":"Tue, 06 May 2025 10:31:09 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/AirelineReservationSystem/images/ticket-booking-software.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\ticket-booking-software.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-Sc3lhPNXsdHJ9q74\u002BB/Qvb7idxy7BLbrf5MON06gS\u002B4="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"60660"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022Sc3lhPNXsdHJ9q74\u002BB/Qvb7idxy7BLbrf5MON06gS\u002B4=\u0022"},{"Name":"Last-Modified","Value":"Mon, 05 May 2025 11:25:02 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/AirelineReservationSystem/images/ticket-booking-software.ng2pmpgmwo.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\ticket-booking-software.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"ng2pmpgmwo"},{"Name":"integrity","Value":"sha256-Sc3lhPNXsdHJ9q74\u002BB/Qvb7idxy7BLbrf5MON06gS\u002B4="},{"Name":"label","Value":"_content/AirelineReservationSystem/images/ticket-booking-software.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"60660"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022Sc3lhPNXsdHJ9q74\u002BB/Qvb7idxy7BLbrf5MON06gS\u002B4=\u0022"},{"Name":"Last-Modified","Value":"Mon, 05 May 2025 11:25:02 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/AirelineReservationSystem/images/time-square.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\time-square.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-tn/qKHTZAbZCAtRiQAuRG9rbB2VJoDYMsX67\u002B4gamiE="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"93578"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022tn/qKHTZAbZCAtRiQAuRG9rbB2VJoDYMsX67\u002B4gamiE=\u0022"},{"Name":"Last-Modified","Value":"Tue, 06 May 2025 10:38:41 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/AirelineReservationSystem/images/time-square.yx7yjc0egt.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\time-square.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"yx7yjc0egt"},{"Name":"integrity","Value":"sha256-tn/qKHTZAbZCAtRiQAuRG9rbB2VJoDYMsX67\u002B4gamiE="},{"Name":"label","Value":"_content/AirelineReservationSystem/images/time-square.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"93578"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022tn/qKHTZAbZCAtRiQAuRG9rbB2VJoDYMsX67\u002B4gamiE=\u0022"},{"Name":"Last-Modified","Value":"Tue, 06 May 2025 10:38:41 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/AirelineReservationSystem/images/Times_Square_(Tall).7gjielza7z.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\Times_Square_(Tall).jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"7gjielza7z"},{"Name":"integrity","Value":"sha256-CdtrMw1nLUnZ6\u002BCV\u002BvyZ6A1yyB76afw0v1lORMkV7Gw="},{"Name":"label","Value":"_content/AirelineReservationSystem/images/Times_Square_(Tall).jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"639225"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022CdtrMw1nLUnZ6\u002BCV\u002BvyZ6A1yyB76afw0v1lORMkV7Gw=\u0022"},{"Name":"Last-Modified","Value":"Tue, 06 May 2025 10:36:59 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/AirelineReservationSystem/images/Times_Square_(Tall).jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\Times_Square_(Tall).jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-CdtrMw1nLUnZ6\u002BCV\u002BvyZ6A1yyB76afw0v1lORMkV7Gw="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"639225"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022CdtrMw1nLUnZ6\u002BCV\u002BvyZ6A1yyB76afw0v1lORMkV7Gw=\u0022"},{"Name":"Last-Modified","Value":"Tue, 06 May 2025 10:36:59 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/AirelineReservationSystem/js/site.js">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\site.js'))</AssetFile>

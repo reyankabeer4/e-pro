@@ -51,7 +51,11 @@ public class HomeController : Controller
         return View(flights);
     }
 
+    public IActionResult ShowFlight()
+    {
+        return View();
 
+    }
    
     public IActionResult Privacy()
     {

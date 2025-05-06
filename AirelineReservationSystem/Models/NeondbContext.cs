@@ -173,7 +173,13 @@ public partial class NeondbContext : DbContext
 
             entity.HasIndex(e => e.Email, "users_email_key").IsUnique();
 
+            entity.HasIndex(e => e.Username, "users_username_key").IsUnique();
+
             entity.Property(e => e.UserId).HasColumnName("user_id");
+            entity.Property(e => e.Address)
+                .HasMaxLength(255)
+                .HasColumnName("address");
+            entity.Property(e => e.Age).HasColumnName("age");
             entity.Property(e => e.CreatedAt)
                 .HasDefaultValueSql("CURRENT_TIMESTAMP")
                 .HasColumnType("timestamp without time zone")
@@ -181,9 +187,12 @@ public partial class NeondbContext : DbContext
             entity.Property(e => e.Email)
                 .HasMaxLength(100)
                 .HasColumnName("email");
-            entity.Property(e => e.FullName)
-                .HasMaxLength(100)
-                .HasColumnName("full_name");
+            entity.Property(e => e.FirstName)
+                .HasMaxLength(50)
+                .HasColumnName("first_name");
+            entity.Property(e => e.LastName)
+                .HasMaxLength(50)
+                .HasColumnName("last_name");
             entity.Property(e => e.PasswordHash)
                 .HasMaxLength(255)
                 .HasColumnName("password_hash");
@@ -196,6 +205,15 @@ public partial class NeondbContext : DbContext
             entity.Property(e => e.Role)
                 .HasMaxLength(20)
                 .HasColumnName("role");
+            entity.Property(e => e.Sex)
+                .HasMaxLength(6)
+                .HasColumnName("sex");
+            entity.Property(e => e.Skymiles)
+                .HasDefaultValue(0)
+                .HasColumnName("skymiles");
+            entity.Property(e => e.Username)
+                .HasMaxLength(50)
+                .HasColumnName("username");
         });
 
         OnModelCreatingPartial(modelBuilder);

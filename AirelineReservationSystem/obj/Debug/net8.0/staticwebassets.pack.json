@@ -49,6 +49,10 @@
       "PackagePath": "staticwebassets\\images\\8.jpg"
     },
     {
+      "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\Bangkok-Boat-Tours.jpg",
+      "PackagePath": "staticwebassets\\images\\Bangkok-Boat-Tours.jpg"
+    },
+    {
       "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\Banner-en-plane.jpg",
       "PackagePath": "staticwebassets\\images\\Banner-en-plane.jpg"
     },
@@ -59,6 +63,10 @@
     {
       "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\Economy-seat-collection.jpg",
       "PackagePath": "staticwebassets\\images\\Economy-seat-collection.jpg"
+    },
+    {
+      "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\Times_Square_(Tall).jpg",
+      "PackagePath": "staticwebassets\\images\\Times_Square_(Tall).jpg"
     },
     {
       "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\airline-logo.jpg",
@@ -97,12 +105,24 @@
       "PackagePath": "staticwebassets\\images\\icon-follow.png"
     },
     {
+      "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\image-turkey.jpg",
+      "PackagePath": "staticwebassets\\images\\image-turkey.jpg"
+    },
+    {
+      "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\images.jpg",
+      "PackagePath": "staticwebassets\\images\\images.jpg"
+    },
+    {
       "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\islamabad.jpg",
       "PackagePath": "staticwebassets\\images\\islamabad.jpg"
     },
     {
       "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\islamabad1.jpg",
       "PackagePath": "staticwebassets\\images\\islamabad1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\markus-winkler.jpg",
+      "PackagePath": "staticwebassets\\images\\markus-winkler.jpg"
     },
     {
       "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\mazarequaid-karachi.jpg",
@@ -113,12 +133,28 @@
       "PackagePath": "staticwebassets\\images\\minar-e-pakistan.jpeg"
     },
     {
+      "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\photo-1553877522-43269d4ea984.avif",
+      "PackagePath": "staticwebassets\\images\\photo-1553877522-43269d4ea984.avif"
+    },
+    {
       "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\pre-book-meals.jpg",
       "PackagePath": "staticwebassets\\images\\pre-book-meals.jpg"
     },
     {
       "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\premium_photo.png",
       "PackagePath": "staticwebassets\\images\\premium_photo.png"
+    },
+    {
+      "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\roma-best-italy-tour-1.jpg",
+      "PackagePath": "staticwebassets\\images\\roma-best-italy-tour-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\ticket-booking-software.jpg",
+      "PackagePath": "staticwebassets\\images\\ticket-booking-software.jpg"
+    },
+    {
+      "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\time-square.jpg",
+      "PackagePath": "staticwebassets\\images\\time-square.jpg"
     },
     {
       "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\js\\site.js",

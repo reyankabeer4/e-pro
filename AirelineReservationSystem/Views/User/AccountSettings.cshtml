@@ -100,14 +100,27 @@
             <div>
                 <p class="p-2"><a asp-controller="User" asp-action="Profile" class="text-decoration-none">Profile ></a> Go to Account Setting</p>
 
-                <form class="p-3 form" method="post">
-                <h1 class="text-center h3">Profile Update</h1>
-                    <input type="text" placeholder="Name" value="User" />
-                    <input type="text" placeholder="Email" value="user@gmail.com" />
-                    <input type="text" placeholder="Phone" value="1234567890" />
-                    <input type="text" placeholder="Address" value="Karachi, Pakistan" />
-                    <button class="btn btn-outline-primary">Update Profile</button>
+                @*<form class="p-3 form" method="post">
+        <h1 class="text-center h3">Profile Update</h1>
+            <input type="text" placeholder="Name" value="User" />
+            <input type="text" placeholder="Email" value="user@gmail.com" />
+            <input type="text" placeholder="Phone" value="1234567890" />
+            <input type="text" placeholder="Address" value="Karachi, Pakistan" />
+            <button class="btn btn-outline-primary">Update Profile</button>
+        </form>*@
+
+                <form method="post" class="form">
+                    @Html.AntiForgeryToken()
+                    <h1 class="text-center h3">Profile Update</h1>
+                    <input type="text" placeholder="Name" name="FirstName" value="@Model.FirstName" />
+                    <input type="text" placeholder="Name" name="LastName" value="@Model.LastName" />
+                    <input type="email" placeholder="Email" name="Email" value="@Model.Email" />
+                    <input type="text" placeholder="Phone" name="PhoneNumber" value="@Model.PhoneNumber" />
+                    <input type="text" placeholder="Address" name="Address" value="@Model.Address" />
+                    <button type="submit" class="btn btn-outline-primary">Update Profile</button>
                 </form>
+
+
             </div>
         </div>
     </div>

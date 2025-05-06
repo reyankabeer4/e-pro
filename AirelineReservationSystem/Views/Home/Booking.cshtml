@@ -268,10 +268,13 @@
 
             <div class="buttons">
                 <button class="promo-btn">+ ADD PROMO CODE</button>
-                <button class="show-flights-btn">
-                    SHOW FLIGHTS
-                    <img src="https://img.icons8.com/ios-filled/50/airplane-take-off.png" alt="Airplane Icon">
-                </button>
+                <a asp-controller="Home" asp-action="ShowFlight">
+
+                    <button class="show-flights-btn">
+                        SHOW FLIGHTS
+                        <img src="https://img.icons8.com/ios-filled/50/airplane-take-off.png" alt="Airplane Icon">
+                    </button>
+                </a>
             </div>
         </div>
 
