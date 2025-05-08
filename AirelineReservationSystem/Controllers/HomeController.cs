@@ -45,18 +45,40 @@ public class HomeController : Controller
         return View();
     }
 
-    public IActionResult Booking()
+    public IActionResult Booking(int id)
+    {
+        var flight = _context.Flights.FirstOrDefault(f => f.FlightId == id);
+        if (flight == null)
+        {
+            return NotFound();
+        }
+
+        return View(flight);
+    }
+
+    public IActionResult Flights()
     {
         var flights = _context.Flights.ToList();
         return View(flights);
     }
 
-    public IActionResult ShowFlight()
-    {
-        return View();
+    //public IActionResult ShowFlight()
+    //{
+    //    var flights = _context.Flights.ToList();
+    //    return View(flights);
+    //}
 
+    public IActionResult ShowFlight(string source, string destination, string departureTime, string arrivalTime)
+    {
+        var filteredFlights = _context.Flights
+            .Where(f => (string.IsNullOrEmpty(source) || f.Source == source) &&
+                        (string.IsNullOrEmpty(destination) || f.Destination == destination))
+       .ToList();
+
+        return View(filteredFlights);
     }
-   
+
+
     public IActionResult Privacy()
     {
         return View();

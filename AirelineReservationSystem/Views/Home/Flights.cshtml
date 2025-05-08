@@ -1,0 +1,794 @@
+﻿
+@{
+    ViewData["Title"] = "Flights";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Booking</title>
+    <style>
+        body {
+            background-color: #e9ecef;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+        }
+
+        .header {
+            background: linear-gradient(90deg, #004aad, #007bff);
+            color: white;
+            padding: 25px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+            .header h1 {
+                margin: 0;
+                font-size: 2rem;
+            }
+
+        .tabs {
+            display: flex;
+            justify-content: center;
+            background-color: #d81b60;
+            padding: 10px 0;
+        }
+
+        .tab {
+            padding: 15px 30px;
+            color: white;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+            .tab:hover {
+                background-color: #e91e63;
+            }
+
+            .tab.active {
+                background-color: #ffc107;
+                color: black;
+            }
+
+            .tab img {
+                width: 20px;
+                filter: brightness(0) invert(1);
+            }
+
+            .tab.active img {
+                filter: none;
+            }
+
+        .content {
+            max-width: 1200px;
+            margin: 30px auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .trip-options {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 25px;
+        }
+
+            .trip-options label {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                cursor: pointer;
+                font-size: 1.1rem;
+            }
+
+            .trip-options input[type="radio"] {
+                width: 20px;
+                height: 20px;
+                accent-color: #ffc107;
+            }
+
+            .trip-options input:checked + span {
+                color: #ffc107;
+                font-weight: 600;
+            }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-bottom: 25px;
+        }
+
+            .form-grid label {
+                font-size: 0.9rem;
+                color: #333;
+                margin-bottom: 5px;
+                display: block;
+            }
+
+            .form-grid input,
+            .form-grid select {
+                width: 100%;
+                padding: 12px;
+                border: 1px solid #ced4da;
+                border-radius: 6px;
+                font-size: 1rem;
+                transition: border-color 0.3s, box-shadow 0.3s;
+                box-sizing: border-box;
+            }
+
+                .form-grid input:focus,
+                .form-grid select:focus {
+                    border-color: #ffc107;
+                    box-shadow: 0 0 5px rgba(255, 193, 7, 0.5);
+                    outline: none;
+                }
+
+            .form-grid .swap-icon {
+                text-align: center;
+                font-size: 24px;
+                color: #007bff;
+                cursor: pointer;
+                transition: color 0.3s;
+            }
+
+                .form-grid .swap-icon:hover {
+                    color: #0056b3;
+                }
+
+        .buttons {
+            display: flex;
+            justify-content: flex-end;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .promo-btn {
+            background-color: white;
+            border: 2px solid #ffc107;
+            color: #ffc107;
+            padding: 12px 25px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: background-color 0.3s, color 0.3s;
+            min-width: 150px;
+        }
+
+            .promo-btn:hover {
+                background-color: #ffc107;
+                color: black;
+            }
+
+        .show-flights-btn {
+            background-color: #ffc107;
+            color: black;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: background-color 0.3s, transform 0.2s;
+            min-width: 150px;
+        }
+
+            .show-flights-btn:hover {
+                background-color: #ffca2c;
+                transform: translateY(-2px);
+            }
+
+            .show-flights-btn img {
+                width: 22px;
+            }
+
+            .show-flights-btn:disabled {
+                background-color: #ccc;
+                cursor: not-allowed;
+                transform: none;
+            }
+
+        .passenger-modal {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            width: 90%;
+            max-width: 400px;
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+
+            .passenger-modal.active {
+                display: block;
+            }
+
+            .passenger-modal h3 {
+                margin-top: 0;
+                font-size: 1.5rem;
+            }
+
+            .passenger-modal div {
+                margin-bottom: 15px;
+            }
+
+            .passenger-modal label {
+                display: block;
+                font-size: 0.9rem;
+                margin-bottom: 5px;
+            }
+
+            .passenger-modal input,
+            .passenger-modal select {
+                width: 100%;
+                padding: 10px;
+                border: 1px solid #ced4da;
+                border-radius: 4px;
+            }
+
+            .passenger-modal button {
+                margin-top: 10px;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                width: 48%;
+            }
+
+            .passenger-modal .save-btn {
+                background-color: #ffc107;
+                color: black;
+            }
+
+            .passenger-modal .cancel-btn {
+                background-color: #dc3545;
+                color: white;
+            }
+
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+
+            .overlay.active {
+                display: block;
+            }
+
+        @@media (max-width: 1024px) {
+            .form-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .content {
+                margin: 20px;
+                padding: 20px;
+            }
+
+            .header h1 {
+                font-size: 1.8rem;
+            }
+        }
+
+        @@media (max-width: 768px) {
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .tabs {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .tab {
+                justify-content: center;
+                width: 100%;
+                max-width: 300px;
+                text-align: center;
+            }
+
+            .trip-options {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .buttons {
+                flex-direction: column;
+                align-items: flex-end;
+            }
+
+            .promo-btn,
+            .show-flights-btn {
+                width: 100%;
+                max-width: 300px;
+            }
+
+            .passenger-modal {
+                width: 95%;
+                padding: 15px;
+            }
+
+                .passenger-modal button {
+                    width: 100%;
+                    margin: 5px 0;
+                }
+        }
+
+        @@media (max-width: 480px) {
+            .header {
+                padding: 15px;
+            }
+
+                .header h1 {
+                    font-size: 1.5rem;
+                }
+
+            .content {
+                margin: 10px;
+                padding: 15px;
+            }
+
+            .form-grid input,
+            .form-grid select {
+                font-size: 0.95rem;
+                padding: 10px;
+            }
+
+            .form-grid .swap-icon {
+                font-size: 20px;
+            }
+
+            .trip-options label {
+                font-size: 1rem;
+            }
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            max-width: 1200px;
+            margin: 20px auto;
+        }
+
+        .sidebar {
+            flex: 1 1 300px;
+            background-color: #fff;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+            .sidebar h2 {
+                font-size: 1.4em;
+                margin-bottom: 20px;
+                color: #b3245e;
+                border-bottom: 2px solid #f5c518;
+                padding-bottom: 5px;
+            }
+
+            .sidebar h3 {
+                margin-bottom: 10px;
+                color: #333;
+                font-size: 1.1em;
+            }
+
+            .sidebar input[type="range"] {
+                width: 100%;
+                margin: 10px 0;
+                accent-color: #b3245e;
+            }
+
+            .sidebar .price {
+                color: #38040e;
+                font-weight: bold;
+            }
+
+        .filter-button {
+            background-color: #f5c518;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            margin-top: 10px;
+            color: #000;
+        }
+
+        .departure-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+
+            .departure-grid div {
+                background-color: #f8f9fa;
+                padding: 10px;
+                text-align: center;
+                border-radius: 6px;
+                border: 1px solid #ddd;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+            }
+
+                .departure-grid div:hover {
+                    background-color: #f5c518;
+                    color: #000;
+                }
+
+        .main-section {
+            flex: 3 1 600px;
+        }
+
+        .flight-card {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            background-color: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.5s ease, box-shadow 0.3s ease;
+        }
+
+            .flight-card:hover {
+                transform: translateY(-3px);
+                box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.15);
+            }
+
+        .flight-info {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .flight-card img {
+            width: 100px;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        .flight-duration,
+        .operated-by {
+            font-size: 0.9em;
+            color: #555;
+        }
+
+        .flight-price {
+            text-align: right;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+
+        .price {
+            color: #38040e;
+            font-size: 1.2em;
+            font-weight: 500;
+        }
+
+        .select-btn {
+            background-color: #656d4a;
+            color: #e9ecef;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            margin-top: 8px;
+            cursor: pointer;
+        }
+
+            .select-btn:hover {
+                background-color: #333d29;
+            }
+
+        .tax-info {
+            font-size: 0.75em;
+            color: #999;
+        }
+
+        @@media (max-width: 768px) {
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .row {
+                flex-direction: column;
+            }
+
+            .flight-card {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .flight-price {
+                align-items: flex-start;
+                text-align: left;
+            }
+        }
+
+        .toggle-btn {
+            border: none;
+            padding: 6px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+            color: black;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Flight Booking</h1>
+    </div>
+
+    <div class="tabs" role="tablist">
+        <div class="tab active" role="tab" aria-selected="true" tabindex="0">
+            <img src="https://img.icons8.com/ios-filled/50/airplane-take-off.png" alt="Airplane Icon">
+            AIR BOOKING
+        </div>
+        <div class="tab" role="tab" aria-selected="false" tabindex="0">
+            <img src="https://img.icons8.com/ios-filled/50/suitcase.png" alt="Suitcase Icon"> MY TRIPS
+        </div>
+        <div class="tab" role="tab" aria-selected="false" tabindex="0">
+            <img src="https://img.icons8.com/ios-filled/50/check.png" alt="Check Icon"> CHECK-IN
+        </div>
+        <div class="tab" role="tab" aria-selected="false" tabindex="0">
+            <img src="https://img.icons8.com/ios-filled/50/pin.png" alt="Pin Icon"> FLIGHT STATUS
+        </div>
+    </div>
+
+    <div class="content">
+        <form asp-controller="Home" asp-action="ShowFlight" method="post" id="flight-search-form">
+            <div class="trip-options">
+                <label><input type="radio" name="trip-type" value="roundtrip" aria-label="Roundtrip"><span>Roundtrip</span></label>
+                <label><input type="radio" name="trip-type" value="one-way" aria-label="One-way"><span>One-way</span></label>
+                <label><input type="radio" name="trip-type" value="multi-city" checked aria-label="Multi-city"><span>Multi-city</span></label>
+            </div>
+
+            <div class="form-grid">
+                <div>
+                    <label for="from">From</label>
+                    <input type="text" id="from" name="from" placeholder="Enter city or airport" required autocomplete="off" list="from-airports">
+                    <datalist id="from-airports">
+                        <option value="New York (JFK)">New York (JFK)</option>
+                        <option value="Los Angeles (LAX)">Los Angeles (LAX)</option>
+                        <option value="London (LHR)">London (LHR)</option>
+                        <option value="Tokyo (NRT)">Tokyo (NRT)</option>
+                        <option value="Dubai (DXB)">Dubai (DXB)</option>
+                    </datalist>
+                </div>
+                <div class="swap-icon" aria-label="Swap departure and destination" tabindex="0">↔</div>
+                <div>
+                    <label for="to">To</label>
+                    <input type="text" id="to" name="to" placeholder="Enter city or airport" required autocomplete="off" list="to-airports">
+                    <datalist id="to-airports">
+                        <option value="New York (JFK)">New York (JFK)</option>
+                        <option value="Los Angeles (LAX)">Los Angeles (LAX)</option>
+                        <option value="London (LHR)">London (LHR)</option>
+                        <option value="Tokyo (NRT)">Tokyo (NRT)</option>
+                        <option value="Dubai (DXB)">Dubai (DXB)</option>
+                    </datalist>
+                </div>
+                <div>
+                    <label for="depart">Depart</label>
+                    <input type="date" id="depart" name="depart" value="@DateTime.Today.ToString("yyyy-MM-dd")" required min="@DateTime.Today.ToString("yyyy-MM-dd")">
+                </div>
+                <div>
+                    <label for="return">Return</label>
+                    <input type="date" id="return" name="return" value="@DateTime.Today.AddDays(1).ToString("yyyy-MM-dd")" min="@DateTime.Today.AddDays(1).ToString("yyyy-MM-dd")">
+                </div>
+                <div>
+                    <label for="passenger-class">Passenger/Class</label>
+                    <input type="text" id="passenger-class" name="passenger-class" value="1 Adult, Economy" readonly>
+                </div>
+            </div>
+
+            <div class="buttons">
+                <button type="button" class="promo-btn">+ ADD PROMO CODE</button>
+                <button type="submit" class="show-flights-btn" id="show-flights">
+                    SHOW FLIGHTS
+                    <img src="https://img.icons8.com/ios-filled/50/airplane-take-off.png" alt="Airplane Icon">
+                </button>
+            </div>
+        </form>
+    </div>
+
+    <div class="overlay" id="overlay"></div>
+    <div class="passenger-modal" id="passenger-modal">
+        <h3>Select Passengers & Class</h3>
+        <div>
+            <label for="adults">Adults (12+)</label>
+            <input type="number" id="adults" min="1" value="1">
+        </div>
+        <div>
+            <label for="children">Children (2-11)</label>
+            <input type="number" id="children" min="0" value="0">
+        </div>
+        <div>
+            <label for="infants">Infants (0-2)</label>
+            <input type="number" id="infants" min="0" value="0">
+        </div>
+        <div>
+            <label for="travel-class">Class</label>
+            <select id="travel-class">
+                <option value="Economy">Economy</option>
+                <option value="Premium Economy">Premium Economy</option>
+                <option value="Business">Business</option>
+                <option value="First">First</option>
+            </select>
+        </div>
+        <button class="save-btn" id="save-passengers">Save</button>
+        <button class="cancel-btn" id="cancel-passengers">Cancel</button>
+    </div>
+
+    <form method="post">
+        <input type="text" name="source" placeholder="Source" />
+        <input type="text" name="destination" placeholder="Destination" />
+        <button type="submit">Filter</button>
+    </form>
+
+    <div class="row">
+        <aside class="sidebar">
+            <h2>Filters</h2>
+            <div>
+                <h3>Price Range</h3>
+                <input type="range" min="1000" max="4500">
+                <p>Price: <span class="price">$1000 - $4500</span></p>
+                <button class="filter-button">Filter</button>
+            </div>
+
+            <div>
+                <h3>Departure Time</h3>
+                <div class="departure-grid">
+                    <div>00:00 - 05:59</div>
+                    <div>06:00 - 11:59</div>
+                    <div>12:00 - 17:59</div>
+                    <div>18:00 - 23:59</div>
+                </div>
+            </div>
+        </aside>
+
+        <section class="main-section">
+            @if (Model != null )
+       {
+           foreach (var flight in Model)
+           {
+            <div class="flight-card">
+                <img src="~/images/@flight.FlightPic" alt="Flight Image" />
+                <div class="flight-info">
+                    <div>
+                        <h3>@flight.AirlineName</h3>
+                        <p class="flight-duration">@flight.Source → @flight.Destination</p>
+
+                        <div class="details-content" style="display:none;">
+                            <p class="operated-by">Operated by @flight.Operatingairline</p>
+                            <p class="flight-duration">Departure: @flight.DepartureTime?.ToString("dddd, MMM dd")</p>
+                            <p class="flight-duration">Time: @flight.DepartureTime?.ToString("hh:mm")</p>
+                            <p class="flight-duration">⏱ Duration: @flight.Flightduration</p>
+                            <p class="flight-duration">Stop(s): @flight.Numberofstops</p>
+                            <p class="flight-duration">25kg Baggage Free</p>
+                        </div>
+
+                        <button class="toggle-btn"><i class="fa-solid fa-circle-chevron-down"></i> Show Details</button>
+                    </div>
+                </div>
+                <div class="flight-price">
+                    <p class="price">US$@flight.Price</p>
+                    <button class="select-btn">Select ✈️</button>
+                    <p class="tax-info">Incl. taxes & fees</p>
+                </div>
+            </div>
+
+           }
+       }
+       else
+       {
+            <p>No flights available at the moment.</p>
+       }
+        </section>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.querySelectorAll(".toggle-btn").forEach(button => {
+                button.addEventListener("click", function () {
+                    const details = this.previousElementSibling;
+                    if (details.style.display === "none") {
+                        details.style.display = "block";
+                        this.textContent = "Hide Details";
+                    } else {
+                        details.style.display = "none";
+                        this.textContent = "Show Details";
+                    }
+                });
+            });
+        });
+    </script>
+
+    <script>
+        // Tab switching
+        document.querySelectorAll('.tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+            });
+        });
+
+        // Swap logic
+        const swapIcon = document.querySelector('.swap-icon');
+        swapIcon.addEventListener('click', () => {
+            const from = document.getElementById('from');
+            const to = document.getElementById('to');
+            [from.value, to.value] = [to.value, from.value];
+        });
+
+        // Date check
+        const depart = document.getElementById('depart');
+        const returnDate = document.getElementById('return');
+        depart.addEventListener('change', () => {
+            returnDate.min = depart.value;
+            if (new Date(returnDate.value) < new Date(depart.value)) {
+                returnDate.value = depart.value;
+            }
+        });
+
+        returnDate.addEventListener('change', () => {
+            if (new Date(returnDate.value) < new Date(depart.value)) {
+                alert('Return date cannot be before departure date.');
+                returnDate.value = depart.value;
+            }
+        });
+
+        // Passenger modal
+        const passengerInput = document.getElementById('passenger-class');
+        const modal = document.getElementById('passenger-modal');
+        const overlay = document.getElementById('overlay');
+
+        passengerInput.addEventListener('click', () => {
+            modal.classList.add('active');
+            overlay.classList.add('active');
+        });
+
+        document.getElementById('cancel-passengers').addEventListener('click', () => {
+            modal.classList.remove('active');
+            overlay.classList.remove('active');
+        });
+
+        document.getElementById('save-passengers').addEventListener('click', () => {
+            const adults = parseInt(document.getElementById('adults').value);
+            const children = parseInt(document.getElementById('children').value);
+            const infants = parseInt(document.getElementById('infants').value);
+            const travelClass = document.getElementById('travel-class').value;
+
+            let total = [];
+            if (adults > 0) total.push(`${adults} Adult${adults > 1 ? 's' : ''}`);
+            if (children > 0) total.push(`${children} Child${children > 1 ? 'ren' : ''}`);
+            if (infants > 0) total.push(`${infants} Infant${infants > 1 ? 's' : ''}`);
+
+            passengerInput.value = total.join(', ') + ', ' + travelClass;
+
+            modal.classList.remove('active');
+            overlay.classList.remove('active');
+        });
+    </script>
+</body>
+</html>

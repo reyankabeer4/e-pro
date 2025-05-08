@@ -85,6 +85,16 @@ public partial class NeondbContext : DbContext
             entity.Property(e => e.FlightNumber)
                 .HasMaxLength(20)
                 .HasColumnName("flight_number");
+            entity.Property(e => e.FlightPic)
+                .HasMaxLength(50)
+                .HasColumnName("flight_pic");
+            entity.Property(e => e.Flightduration)
+                .HasMaxLength(20)
+                .HasColumnName("flightduration");
+            entity.Property(e => e.Numberofstops).HasColumnName("numberofstops");
+            entity.Property(e => e.Operatingairline)
+                .HasMaxLength(50)
+                .HasColumnName("operatingairline");
             entity.Property(e => e.Price)
                 .HasPrecision(10, 2)
                 .HasColumnName("price");

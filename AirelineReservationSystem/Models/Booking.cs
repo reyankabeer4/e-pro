@@ -11,7 +11,7 @@ public partial class Booking
 
     public int? FlightId { get; set; }
 
-    public DateTime? BookingDate { get; set; }
+    public DateTime? BookingDate { get; set; } = DateTime.Now;
 
     public decimal? TotalAmount { get; set; }
 

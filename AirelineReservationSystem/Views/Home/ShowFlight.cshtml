@@ -1,419 +1,436 @@
-﻿<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Booking Page</title>
+﻿@model IEnumerable<AirelineReservationSystem.Models.Flight>
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Bootstrap Icons -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Flight Booking</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Arial">
 
-    <style>
-
-        .breadcrumb {
-            background: transparent;
-            justify-content: center;
-            padding: 0;
-            margin-top: 10px;
-        }
-
-        .breadcrumb-item + .breadcrumb-item::before {
-            color: #fff;
-        }
-
-        .customer-details-section {
-            background-color: #fff;
-            padding: 2rem;
-            border-top: 4px solid #730f1d;
-        }
-
-        .step-tracker {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 60px;
-            margin-top: 20px;
-        }
-
-        .step {
-            text-align: center;
-            position: relative;
-        }
-
-            .step .circle {
-                width: 36px;
-                height: 36px;
-                line-height: 36px;
-                border-radius: 50%;
-                background-color: #ffcc00;
-                color: #730f1d;
-                font-weight: bold;
-                display: inline-block;
-                margin-bottom: 5px;
+        <style>
+            body {
+                margin: 0;
+                background-color: #f0f2f5;
+                font-family: Arial, sans-serif;
             }
 
-        .step-title {
-            font-weight: 500;
-            color: #5c1e2d;
-        }
-
-        .step::after {
-            content: '';
-            position: absolute;
-            top: 18px;
-            left: 100%;
-            width: 60px;
-            height: 2px;
-            background-color: #ddd;
-            z-index: -1;
-        }
-
-        .step:last-child::after {
-            display: none;
-        }
-
-        .warning-message {
-            color: #730f1d;
-            font-weight: 600;
-            margin-top: 1rem;
-        font-size:25px;
-            text-align: center;
-        }
-
-        /* Booking Section */
-        .booking-section {
-            padding: 3rem 1rem;
-            background-color: #f9f9f9;
-        }
-
-        .booking-form .card-header,
-        .booking-info h6 {
-            background-color: #730f1d;
-            color: white;
-            border-radius: 6px 6px 0 0;
-            padding: 0.75rem 1rem;
-        }
-
-        .form-select, .form-control {
-            margin-bottom: 1rem;
-        }
-
-        .payment-icons img {
-            width: 40px;
-            margin-right: 10px;
-        }
-
-        .price-summary td {
-            padding: 4px 0;
-        }
-
-        .card {
-            border: none;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.05);
-            margin-bottom: 2rem;
-        }
-
-        .btn-rounded {
-            border-radius: 50px;
-        }
-
-        .input-group-text {
-            background-color: #f0f0f0;
-        }
-        body {
-            background: #fefbf7;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            color: #333;
-        }
-
-        /* Header */
-        .booking-header {
-            background: url('https://images.unsplash.com/photo-1573164713347-df1e86a68272?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
-            color: white;
-            padding: 80px 0;
-            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
-        }
-
-            .booking-header h1 {
-                font-size: 3.2rem;
-                font-weight: 700;
+            .header {
+                background-color: #0052cc;
+                color: white;
+                padding: 20px;
+                text-align: center;
             }
 
-        /* Steps */
-        .step .circle {
-            transition: background-color 0.3s ease, transform 0.2s ease;
-        }
+                .header a {
+                    color: #f5c518;
+                    margin: 0 10px;
+                    text-decoration: none;
+                }
 
-        .step:hover .circle {
-            background-color: #ffc107;
-            transform: scale(1.1);
-        }
-
-        .step-title {
-            font-size: 0.95rem;
-            font-weight: 600;
-        }
-
-        /* Cards */
-        .card {
-            border: none;
-            border-radius: 12px;
-            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
-            transition: transform 0.2s ease;
-        }
-
-            .card:hover {
-                transform: translateY(-3px);
+            .tabs {
+                display: flex;
+                justify-content: center;
+                background-color: #b3245e;
+                flex-wrap: wrap;
             }
 
-        .card-header {
-            font-size: 1.1rem;
-            font-weight: 600;
-        }
-
-        /* Form Elements */
-        .form-select,
-        .form-control {
-            border-radius: 8px;
-            box-shadow: none !important;
-        }
-
-        .input-group-text {
-            background-color: #fff;
-            border-right: 0;
-        }
-
-        /* Buttons */
-        .btn-rounded {
-            border-radius: 30px;
-            padding: 0.5rem 1.2rem;
-            font-weight: 600;
-        }
-
-        .btn-primary {
-            background-color: #730f1d;
-            border-color: #730f1d;
-            transition: background-color 0.3s ease;
-        }
-
-            .btn-primary:hover {
-                background-color: #5c0c17;
+            .tab {
+                padding: 15px 30px;
+                color: white;
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+                gap: 10px;
             }
 
-        .btn-warning {
-            font-weight: 600;
-        }
+                .tab.active {
+                    background-color: #f5c518;
+                    color: black;
+                }
 
-        /* Payment Icons */
-        .payment-icons img {
-            width: 36px;
-            transition: transform 0.2s ease;
-            cursor: pointer;
-        }
+                .tab img {
+                    width: 20px;
+                    filter: brightness(0) invert(1);
+                }
 
-            .payment-icons img:hover {
-                transform: scale(1.2);
+                .tab.active img {
+                    filter: none;
+                }
+
+            .content {
+                max-width: 1200px;
+                margin: 20px auto;
+                background-color: white;
+                padding: 20px;
+                border-radius: 8px;
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             }
 
-        /* Footer */
-        .card-footer {
-            border-top: none;
-        }
+            .trip-options {
+                display: flex;
+                gap: 20px;
+                margin-bottom: 20px;
+            }
 
-        /* Price Table */
-        .price-summary td {
-            font-size: 0.95rem;
-        }
-        tr{
-            padding:10px
-        }
+                .trip-options label {
+                    display: flex;
+                    align-items: center;
+                    gap: 5px;
+                }
 
+            .form-grid {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap: 20px;
+                margin-bottom: 20px;
+            }
 
-    </style>
-</head>
-<body>
+                .form-grid input,
+                .form-grid select {
+                    width: 100%;
+                    padding: 10px;
+                    border: 1px solid #ccc;
+                    border-radius: 4px;
+                }
 
-    <!-- Header Section -->
-    <div style="height:50vh; width:100%; position:relative; overflow:hidden">
-                    <img src="~/images/ticket-booking-software.jpg" style="height:auto; width:100%; object-fit:cover" alt="" />
-        <h1 style="position: absolute; top:100px;text-align:center">Booking Details</h1>
-    
-    </div>
+            .swap-icon {
+                text-align: center;
+                font-size: 20px;
+                color: #666;
+                padding-top: 30px;
+            }
 
-    <!-- Customer Info + Step Tracker -->
-    <div class="customer-details-section">
-        <div class="container">
-            <div class="row">
-                <div class="col text-center">
-                    @*<img src="https://upload.wikimedia.org/wikipedia/commons/3/36/Logo_placeholder.svg" width="100" alt="Placeholder Logo">*@
-                    <p class="warning-message">Customer Details: Please fill in with valid information.</p>
-                </div>
-            </div>
+            .buttons {
+                display: flex;
+                justify-content: flex-end;
+                gap: 10px;
+            }
 
-            <div class="step-tracker">
-                <div class="step">
-                    <div class="circle">1</div>
-                    <div class="step-title">Guest Information</div>
-                </div>
-                <div class="step">
-                    <div class="circle">2</div>
-                    <div class="step-title">Payment</div>
-                </div>
-                <div class="step">
-                    <div class="circle">3</div>
-                    <div class="step-title">Confirmation</div>
-                </div>
-            </div>
+            .promo-btn,
+            .show-flights-btn {
+                padding: 10px 20px;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+
+            .promo-btn {
+                background-color: white;
+                border: 1px solid #f5c518;
+                color: #f5c518;
+            }
+
+            .show-flights-btn {
+                background-color: #f5c518;
+                border: none;
+                color: black;
+                display: flex;
+                align-items: center;
+                gap: 5px;
+            }
+
+                .show-flights-btn img {
+                    width: 20px;
+                }
+
+            .row {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 20px;
+                max-width: 1200px;
+                margin: 20px auto;
+            }
+
+            .sidebar {
+                flex: 1 1 300px;
+                background-color: #fff;
+                padding: 25px;
+                border-radius: 12px;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            }
+
+                .sidebar h2 {
+                    font-size: 1.4em;
+                    margin-bottom: 20px;
+                    color: #b3245e;
+                    border-bottom: 2px solid #f5c518;
+                    padding-bottom: 5px;
+                }
+
+                .sidebar h3 {
+                    margin-bottom: 10px;
+                    color: #333;
+                    font-size: 1.1em;
+                }
+
+                .sidebar input[type="range"] {
+                    width: 100%;
+                    margin: 10px 0;
+                    accent-color: #b3245e;
+                }
+
+                .sidebar .price {
+                    color: #38040e;
+                    font-weight: bold;
+                }
+
+            .filter-button {
+                background-color: #f5c518;
+                border: none;
+                padding: 8px 16px;
+                border-radius: 6px;
+                cursor: pointer;
+                margin-top: 10px;
+                color: #000;
+            }
+
+            .departure-grid {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 10px;
+            }
+
+                .departure-grid div {
+                    background-color: #f8f9fa;
+                    padding: 10px;
+                    text-align: center;
+                    border-radius: 6px;
+                    border: 1px solid #ddd;
+                    cursor: pointer;
+                    transition: background-color 0.3s ease;
+                }
+
+                    .departure-grid div:hover {
+                        background-color: #f5c518;
+                        color: #000;
+                    }
+
+            .main-section {
+                flex: 3 1 600px;
+            }
+
+            .flight-card {
+                display: flex;
+                justify-content: space-between;
+                align-items: start;
+                background-color: #fff;
+                padding: 20px;
+                margin-bottom: 20px;
+                border-radius: 10px;
+                box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+                transition: transform 0.5s ease, box-shadow 0.3s ease;
+            }
+
+                .flight-card:hover {
+                    transform: translateY(-3px);
+                    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.15);
+                }
+
+            .flight-info {
+                display: flex;
+                gap: 20px;
+                align-items: center;
+            }
+
+            .flight-card img {
+                width: 100px;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 5px;
+            }
+
+            .flight-duration,
+            .operated-by {
+                font-size: 0.9em;
+                color: #555;
+            }
+
+            .flight-price {
+                text-align: right;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+            }
+
+            .price {
+                color: #38040e;
+                font-size: 1.2em;
+                font-weight: 500;
+            }
+
+            .select-btn {
+                background-color: #656d4a;
+                color: #e9ecef;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 4px;
+                margin-top: 8px;
+                cursor: pointer;
+            }
+
+                .select-btn:hover {
+                    background-color: #333d29;
+                }
+
+            .tax-info {
+                font-size: 0.75em;
+                color: #999;
+            }
+
+            @@media (max-width: 768px) {
+                .form-grid {
+                    grid-template-columns: 1fr;
+                }
+
+                .row {
+                    flex-direction: column;
+                }
+
+                .flight-card {
+                    flex-direction: column;
+                    align-items: flex-start;
+                }
+
+                .flight-price {
+                    align-items: flex-start;
+                    text-align: left;
+                }
+            }
+
+            .toggle-btn {
+                border: none;
+                padding: 6px 12px;
+                border-radius: 4px;
+                cursor: pointer;
+                margin-top: 10px;
+                color: black;
+            }
+
+            
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Search Flight</h1>
         </div>
+
+        <div class="tabs">
+            <div class="tab active"><img src="https://img.icons8.com/ios-filled/50/airplane-take-off.png"> AIR BOOKING</div>
+            <div class="tab"><img src="https://img.icons8.com/ios-filled/50/suitcase.png"> MY TRIPS</div>
+            <div class="tab"><img src="https://img.icons8.com/ios-filled/50/check.png"> CHECK-IN</div>
+            <div class="tab"><img src="https://img.icons8.com/ios-filled/50/pin.png"> FLIGHT STATUS</div>
+        </div>
+
+        
+        @*/*  Search Flight */*@
+    <div class="content">
+        <form method="get">
+
+            <div class="trip-options">
+                <label><input type="radio" name="trip-type" value="one-way" checked> <span>One-way</span></label>
+                <label><input type="radio" name="trip-type" value="roundtrip"> <span>Roundtrip</span></label>
+                <label><input type="radio" name="trip-type" value="multi-city" > <span>Multi-city</span></label>
+            </div>
+
+            <div class="form-grid">
+                <div><label>From</label><input type="text" name="source" placeholder="From" />                </div>
+                <div class="swap-icon">↔</div>
+                <div><label>To</label><input type="text" name="destination" placeholder="To"></div>
+                <div><label>Depart</label><input type="date"  value="@DateTime.Today.ToString("yyyy-MM-dd")" required min="@DateTime.Today.ToString("yyyy-MM-dd")"></div>
+                <div><label>Return</label><input type="date" value="@DateTime.Today.AddDays(1).ToString("yyyy-MM-dd")" min="@DateTime.Today.AddDays(1).ToString("yyyy-MM-dd")"></div>
+                <div><label>Passenger/Class</label><input type="text" value="1 Passenger, Economy" readonly></div>
+            </div>
+
+            <div class="buttons">
+                <button class="promo-btn">+ ADD PROMO CODE</button>
+                <button typeof="submit" class="show-flights-btn">SHOW FLIGHTS <img src="https://img.icons8.com/ios-filled/50/airplane-take-off.png" alt="Airplane Icon"></button>
+            </div>
+        </form>
     </div>
 
-    <!-- Booking Section -->
-    <div class="container booking-section">
+
         <div class="row">
-            <!-- Booking Form -->
-            <div class="col-md-8">
-                <div class="card booking-form">
-                    <div class="card-header">
-                        Passenger 1: Ms (Primary Contact)
+            <aside class="sidebar">
+                <h2>Filters</h2>
+                <div>
+                    <h3>Price Range</h3>
+                    <input type="range" min="1000" max="4500">
+                    <p>Price: <span class="price">$1000 - $4500</span></p>
+                    <button class="filter-button">Filter</button>
+                </div>
+
+                <div>
+                    <h3>Departure Time</h3>
+                    <div class="departure-grid">
+                        <div>00:00 - 05:59</div>
+                        <div>06:00 - 11:59</div>
+                        <div>12:00 - 17:59</div>
+                        <div>18:00 - 23:59</div>
                     </div>
-                    <div class="card-body">
-                        <form>
-                            <select class="form-select">
-                                <option>Select Traveller from Favourites</option>
-                            </select>
+                </div>
+            </aside>
 
-                            <div class="row gap-2">
-                                <div class="col-md-3">
-                                    <select class="form-select">
-                                        <option>Mr.</option>
-                                        <option>Ms.</option>
-                                    </select>
-                                </div>
-                                <div class="col-md-4">
-                                    <input type="text" class="form-control" placeholder="Given Name">
-                                </div>
-                                <div class="col-md-5">
-                                    <input type="text" class="form-control" placeholder="Surname *">
-                                </div>
+            <section class="main-section">
+                @if (Model != null && Model.Any())
+            {
+                foreach (var flight in Model)
+                {
+               
+                <div class="flight-card">
+                    <img src="~/images/@flight.FlightPic" alt="Flight Image" />
+                    <div class="flight-info">
+                        <div>
+                            <h3>@flight.AirlineName</h3>
+                            <p class="flight-duration">@flight.Source → @flight.Destination</p>
+
+                            <div class="details-content" style="display:none;">
+                                <p class="operated-by">Operated by @flight.Operatingairline</p>
+                                <p class="flight-duration">Departure: @flight.DepartureTime?.ToString("dddd, MMM dd")</p>
+                                <p class="flight-duration">Time: @flight.DepartureTime?.ToString("hh:mm")</p>
+                                <p class="flight-duration">⏱ Duration: @flight.Flightduration</p>
+                                <p class="flight-duration">Stop(s): @flight.Numberofstops</p>
+                                <p class="flight-duration">25kg Baggage Free</p>
                             </div>
 
-                            <label class="mt-2">Select Your Gender</label>
-                            <div class="d-flex mb-3">
-                                <div class="form-check me-3">
-                                    <input class="form-check-input" type="radio" name="gender" checked>
-                                    <label class="form-check-label">Male</label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="gender">
-                                    <label class="form-check-label">Female</label>
-                                </div>
-                            </div>
-
-                            <div class="input-group">
-                                <span class="input-group-text"><i class="bi bi-globe"></i></span>
-                                <input type="text" class="form-control" placeholder="Nationality: Pakistan">
-                            </div>
-
-                            <div class="input-group">
-                                <span class="input-group-text"><i class="bi bi-phone"></i></span>
-                                <input type="text" class="form-control" placeholder="Mobile Number *">
-                            </div>
-
-                            <div class="input-group">
-                                <span class="input-group-text"><i class="bi bi-calendar-date"></i></span>
-                                <input type="date" class="form-control">
-                            </div>
-
-                            <div class="input-group">
-                                <span class="input-group-text"><i class="bi bi-geo-alt"></i></span>
-                                <input type="text" class="form-control" placeholder="Post Code *">
-                            </div>
-
-                            <div class="input-group">
-                                <span class="input-group-text"><i class="bi bi-envelope"></i></span>
-                                <input type="email" class="form-control" placeholder="Your Email">
-                            </div>
-
-                            <div class="input-group">
-                                <span class="input-group-text"><i class="bi bi-card-heading"></i></span>
-                                <input type="text" class="form-control" placeholder="Flyer Number">
-                            </div>
-
-                            <select class="form-select">
-                                <option>Select meal type (optional)</option>
-                            </select>
-                            <select class="form-select">
-                                <option>Request wheelchair (optional)</option>
-                            </select>
-
-                            <div class="form-check mt-2">
-                                <input class="form-check-input" type="checkbox">
-                                <label class="form-check-label">Add this person to passenger quick pick list</label>
-                            </div>
+                            <button class="toggle-btn"><i class="fa-solid fa-circle-chevron-down"></i> Show Details</button>
+                        </div>
+                    </div>
+                    <div class="flight-price">
+                        <p class="price">US$@flight.Price</p>
+                        @*<p class="price">@flight.FlightId ID</p>*@
+                        @*<button class="select-btn">Select ✈️</button>*@
+                        <form asp-action="Booking" asp-controller="Home" method="get" asp-route-id="@flight.FlightId">
+                            <button type="submit" class="select-btn">Select ✈️</button>
                         </form>
+
+                        <p class="tax-info">Incl. taxes & fees</p>
                     </div>
                 </div>
-            </div>
 
-            <!-- Booking Info Sidebar -->
-            <div class="col-md-4">
-                <div class="card booking-info">
-                    <div class="card-header">
-                        Booking Info
-                    </div>
-                    <div class="card-body">
-                        <p><strong>DXB → IST</strong><br><small>12:00 - 18:30</small></p>
-
-                        <div class="input-group mb-3">
-                            <input type="text" class="form-control" placeholder="Enter Discount Code">
-                            <button class="btn btn-warning btn-rounded">Apply</button>
-                        </div>
-
-                        <h6 class="mt-4">Your Preferred Bank</h6>
-                        <div class="payment-icons mb-3">
-                            <img src="https://img.icons8.com/color/48/000000/paypal.png" class="payment-logo" style="height: 50px; width: auto;" title="PayPal" />
-                            <img src="https://img.icons8.com/color/48/000000/visa.png" class="payment-logo" style="height: 50px; width: auto;" title="Visa" />
-                            <img src="https://img.icons8.com/color/48/000000/mastercard.png" class="payment-logo" style="height: 50px; width: auto;" title="MasterCard" />
-                            <img src="https://img.icons8.com/color/48/000000/hsbc.png" class="payment-logo" style="height: 50px; width: auto;" title="HSBC" />
-                            <img src="https://img.icons8.com/color/48/000000/ebay.png" class="payment-logo" style="height: 50px; width: auto;" title="eBay" />
-                            @*<img src="https://img.icons8.com/color/48/000000/western-union.png" title="Western Union" />*@
-                        </div>
-
-                        <h6 class="mt-4">Price Summary</h6>
-                        <table class="table price-summary">
-                            <tbody>
-                                <tr class="p-2"><td class="p-2">Adult x 1</td><td class="text-end">$1,056</td></tr>
-                                <tr class="p-2"><td class="p-2">Tax x 1</td><td class="text-end">$35</td></tr>
-                                <tr class="p-2"><td class="p-2">Total Airfare:</td><td class="text-end">$1,091</td></tr>
-                                <tr class="p-2"><td class="p-2">Discount</td><td class="text-end text-danger">- $110</td></tr>
-                                <tr class="p-2"><td class="p-2"><strong>Final Price</strong></td><td class="text-end"><strong>$981</strong></td></tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div class="card-footer bg-light text-end">
-                        <button class="btn btn-primary btn-rounded">Proceed to Payment</button>
-                    </div>
-                </div>
-            </div>
+                }
+            }
+            else
+            {
+                <p>No flights available at the moment.</p>
+            }
+            </section>
         </div>
-    </div>
-
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        document.querySelectorAll('.form-control, .form-select').forEach(el => {
-            el.addEventListener('focus', () => {
-                el.style.boxShadow = '0 0 0 0.2rem rgba(115,15,29,0.25)';
-            }); 
-            el.addEventListener('blur', () => {
-                el.style.boxShadow = 'none';
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                document.querySelectorAll(".toggle-btn").forEach(button => {
+                    button.addEventListener("click", function () {
+                        const details = this.previousElementSibling;
+                        if (details.style.display === "none") {
+                            details.style.display = "block";
+                            this.textContent = "Hide Details";
+                        } else {
+                            details.style.display = "none";
+                            this.textContent = "Show Details";
+                        }
+                    });
+                });
             });
-        });
-    </script>
+        </script>
 
-</body>
-</html>
+    </body>
+    </html>

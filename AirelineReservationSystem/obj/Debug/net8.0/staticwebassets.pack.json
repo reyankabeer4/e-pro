@@ -49,6 +49,10 @@
       "PackagePath": "staticwebassets\\images\\8.jpg"
     },
     {
+      "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\9ba47bab-bf17-47ab-87ef-6894fb0cb5c1.jpg",
+      "PackagePath": "staticwebassets\\images\\9ba47bab-bf17-47ab-87ef-6894fb0cb5c1.jpg"
+    },
+    {
       "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\Bangkok-Boat-Tours.jpg",
       "PackagePath": "staticwebassets\\images\\Bangkok-Boat-Tours.jpg"
     },
@@ -67,6 +71,10 @@
     {
       "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\Times_Square_(Tall).jpg",
       "PackagePath": "staticwebassets\\images\\Times_Square_(Tall).jpg"
+    },
+    {
+      "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\ad4d94ab-40d7-4a58-88b5-99ade40eb147.jpg",
+      "PackagePath": "staticwebassets\\images\\ad4d94ab-40d7-4a58-88b5-99ade40eb147.jpg"
     },
     {
       "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\airline-logo.jpg",
@@ -93,8 +101,20 @@
       "PackagePath": "staticwebassets\\images\\baggage.jpg"
     },
     {
+      "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\bbea814d-c3c5-4899-8368-c7d4e83ffbce.jpg",
+      "PackagePath": "staticwebassets\\images\\bbea814d-c3c5-4899-8368-c7d4e83ffbce.jpg"
+    },
+    {
       "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\default-avatar-profile.jpg",
       "PackagePath": "staticwebassets\\images\\default-avatar-profile.jpg"
+    },
+    {
+      "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\f255e748-d7fa-49db-9f52-4c13006966f9.jpg",
+      "PackagePath": "staticwebassets\\images\\f255e748-d7fa-49db-9f52-4c13006966f9.jpg"
+    },
+    {
+      "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\fe2ee4e7-835e-4263-8bde-151e212abf23.jpg",
+      "PackagePath": "staticwebassets\\images\\fe2ee4e7-835e-4263-8bde-151e212abf23.jpg"
     },
     {
       "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\followers-icon.png",

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "YEbc3eHaXXhdGOTsxKi7mglkOxyeL/AM7JhnoPhl9BM=",
+  "Hash": "7k/oQHC0hn2emYUxE6T/JgRkO5z21/tZ5V6rRPN/9WY=",
   "Source": "AirelineReservationSystem",
   "BasePath": "_content/AirelineReservationSystem",
   "Mode": "Default",
@@ -290,6 +290,48 @@
       "OriginalItemSpec": "wwwroot\\images\\8.jpg"
     },
     {
+      "Identity": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\9ba47bab-bf17-47ab-87ef-6894fb0cb5c1.jpg",
+      "SourceId": "AirelineReservationSystem",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\",
+      "BasePath": "_content/AirelineReservationSystem",
+      "RelativePath": "images/9ba47bab-bf17-47ab-87ef-6894fb0cb5c1#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "dwljniz250",
+      "Integrity": "naTraaNiEv5M8LXD306oxQe70c1U+om4gLVx66YcD10=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\9ba47bab-bf17-47ab-87ef-6894fb0cb5c1.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\ad4d94ab-40d7-4a58-88b5-99ade40eb147.jpg",
+      "SourceId": "AirelineReservationSystem",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\",
+      "BasePath": "_content/AirelineReservationSystem",
+      "RelativePath": "images/ad4d94ab-40d7-4a58-88b5-99ade40eb147#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "pmzxxetbez",
+      "Integrity": "oXvW49YnBTdMO44JHy7b2gyquIuy84EIIc+vT6vGbro=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\ad4d94ab-40d7-4a58-88b5-99ade40eb147.jpg"
+    },
+    {
       "Identity": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\airline-logo.jpg",
       "SourceId": "AirelineReservationSystem",
       "SourceType": "Discovered",
@@ -458,6 +500,27 @@
       "OriginalItemSpec": "wwwroot\\images\\Banner-en-plane.jpg"
     },
     {
+      "Identity": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\bbea814d-c3c5-4899-8368-c7d4e83ffbce.jpg",
+      "SourceId": "AirelineReservationSystem",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\",
+      "BasePath": "_content/AirelineReservationSystem",
+      "RelativePath": "images/bbea814d-c3c5-4899-8368-c7d4e83ffbce#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ywf0oglfrm",
+      "Integrity": "bkfpHC+gMrqEG/mtPE3PtbNtKdCiv/VLMkEBMOD2s+g=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\bbea814d-c3c5-4899-8368-c7d4e83ffbce.jpg"
+    },
+    {
       "Identity": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\ChatGPT-Image.png",
       "SourceId": "AirelineReservationSystem",
       "SourceType": "Discovered",
@@ -519,6 +582,48 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\Economy-seat-collection.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\f255e748-d7fa-49db-9f52-4c13006966f9.jpg",
+      "SourceId": "AirelineReservationSystem",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\",
+      "BasePath": "_content/AirelineReservationSystem",
+      "RelativePath": "images/f255e748-d7fa-49db-9f52-4c13006966f9#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "pmzxxetbez",
+      "Integrity": "oXvW49YnBTdMO44JHy7b2gyquIuy84EIIc+vT6vGbro=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\f255e748-d7fa-49db-9f52-4c13006966f9.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\fe2ee4e7-835e-4263-8bde-151e212abf23.jpg",
+      "SourceId": "AirelineReservationSystem",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\",
+      "BasePath": "_content/AirelineReservationSystem",
+      "RelativePath": "images/fe2ee4e7-835e-4263-8bde-151e212abf23#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "pmzxxetbez",
+      "Integrity": "oXvW49YnBTdMO44JHy7b2gyquIuy84EIIc+vT6vGbro=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\fe2ee4e7-835e-4263-8bde-151e212abf23.jpg"
     },
     {
       "Identity": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\followers-icon.png",
@@ -1946,6 +2051,170 @@
       ]
     },
     {
+      "Route": "images/9ba47bab-bf17-47ab-87ef-6894fb0cb5c1.dwljniz250.jpg",
+      "AssetFile": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\9ba47bab-bf17-47ab-87ef-6894fb0cb5c1.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "34207"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"naTraaNiEv5M8LXD306oxQe70c1U+om4gLVx66YcD10=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 07 May 2025 12:32:36 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "dwljniz250"
+        },
+        {
+          "Name": "label",
+          "Value": "images/9ba47bab-bf17-47ab-87ef-6894fb0cb5c1.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-naTraaNiEv5M8LXD306oxQe70c1U+om4gLVx66YcD10="
+        }
+      ]
+    },
+    {
+      "Route": "images/9ba47bab-bf17-47ab-87ef-6894fb0cb5c1.jpg",
+      "AssetFile": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\9ba47bab-bf17-47ab-87ef-6894fb0cb5c1.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "34207"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"naTraaNiEv5M8LXD306oxQe70c1U+om4gLVx66YcD10=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 07 May 2025 12:32:36 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-naTraaNiEv5M8LXD306oxQe70c1U+om4gLVx66YcD10="
+        }
+      ]
+    },
+    {
+      "Route": "images/ad4d94ab-40d7-4a58-88b5-99ade40eb147.jpg",
+      "AssetFile": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\ad4d94ab-40d7-4a58-88b5-99ade40eb147.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "77006"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"oXvW49YnBTdMO44JHy7b2gyquIuy84EIIc+vT6vGbro=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 07 May 2025 15:22:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-oXvW49YnBTdMO44JHy7b2gyquIuy84EIIc+vT6vGbro="
+        }
+      ]
+    },
+    {
+      "Route": "images/ad4d94ab-40d7-4a58-88b5-99ade40eb147.pmzxxetbez.jpg",
+      "AssetFile": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\ad4d94ab-40d7-4a58-88b5-99ade40eb147.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "77006"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"oXvW49YnBTdMO44JHy7b2gyquIuy84EIIc+vT6vGbro=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 07 May 2025 15:22:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "pmzxxetbez"
+        },
+        {
+          "Name": "label",
+          "Value": "images/ad4d94ab-40d7-4a58-88b5-99ade40eb147.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-oXvW49YnBTdMO44JHy7b2gyquIuy84EIIc+vT6vGbro="
+        }
+      ]
+    },
+    {
       "Route": "images/airline-logo.h35g9g93t2.jpg",
       "AssetFile": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\airline-logo.jpg",
       "Selectors": [],
@@ -2602,6 +2871,88 @@
       ]
     },
     {
+      "Route": "images/bbea814d-c3c5-4899-8368-c7d4e83ffbce.jpg",
+      "AssetFile": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\bbea814d-c3c5-4899-8368-c7d4e83ffbce.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "36987"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"bkfpHC+gMrqEG/mtPE3PtbNtKdCiv/VLMkEBMOD2s+g=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 07 May 2025 12:00:24 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-bkfpHC+gMrqEG/mtPE3PtbNtKdCiv/VLMkEBMOD2s+g="
+        }
+      ]
+    },
+    {
+      "Route": "images/bbea814d-c3c5-4899-8368-c7d4e83ffbce.ywf0oglfrm.jpg",
+      "AssetFile": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\bbea814d-c3c5-4899-8368-c7d4e83ffbce.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "36987"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"bkfpHC+gMrqEG/mtPE3PtbNtKdCiv/VLMkEBMOD2s+g=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 07 May 2025 12:00:24 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ywf0oglfrm"
+        },
+        {
+          "Name": "label",
+          "Value": "images/bbea814d-c3c5-4899-8368-c7d4e83ffbce.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-bkfpHC+gMrqEG/mtPE3PtbNtKdCiv/VLMkEBMOD2s+g="
+        }
+      ]
+    },
+    {
       "Route": "images/ChatGPT-Image.ktk6q698ti.png",
       "AssetFile": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\ChatGPT-Image.png",
       "Selectors": [],
@@ -2844,6 +3195,170 @@
         {
           "Name": "integrity",
           "Value": "sha256-QKCu4YH9Q24om3DlHhvzHQaIkwi8l9GnlJIHF19RRk4="
+        }
+      ]
+    },
+    {
+      "Route": "images/f255e748-d7fa-49db-9f52-4c13006966f9.jpg",
+      "AssetFile": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\f255e748-d7fa-49db-9f52-4c13006966f9.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "77006"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"oXvW49YnBTdMO44JHy7b2gyquIuy84EIIc+vT6vGbro=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 07 May 2025 15:28:43 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-oXvW49YnBTdMO44JHy7b2gyquIuy84EIIc+vT6vGbro="
+        }
+      ]
+    },
+    {
+      "Route": "images/f255e748-d7fa-49db-9f52-4c13006966f9.pmzxxetbez.jpg",
+      "AssetFile": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\f255e748-d7fa-49db-9f52-4c13006966f9.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "77006"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"oXvW49YnBTdMO44JHy7b2gyquIuy84EIIc+vT6vGbro=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 07 May 2025 15:28:43 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "pmzxxetbez"
+        },
+        {
+          "Name": "label",
+          "Value": "images/f255e748-d7fa-49db-9f52-4c13006966f9.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-oXvW49YnBTdMO44JHy7b2gyquIuy84EIIc+vT6vGbro="
+        }
+      ]
+    },
+    {
+      "Route": "images/fe2ee4e7-835e-4263-8bde-151e212abf23.jpg",
+      "AssetFile": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\fe2ee4e7-835e-4263-8bde-151e212abf23.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "77006"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"oXvW49YnBTdMO44JHy7b2gyquIuy84EIIc+vT6vGbro=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 07 May 2025 15:14:44 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-oXvW49YnBTdMO44JHy7b2gyquIuy84EIIc+vT6vGbro="
+        }
+      ]
+    },
+    {
+      "Route": "images/fe2ee4e7-835e-4263-8bde-151e212abf23.pmzxxetbez.jpg",
+      "AssetFile": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\fe2ee4e7-835e-4263-8bde-151e212abf23.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "77006"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"oXvW49YnBTdMO44JHy7b2gyquIuy84EIIc+vT6vGbro=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 07 May 2025 15:14:44 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "pmzxxetbez"
+        },
+        {
+          "Name": "label",
+          "Value": "images/fe2ee4e7-835e-4263-8bde-151e212abf23.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-oXvW49YnBTdMO44JHy7b2gyquIuy84EIIc+vT6vGbro="
         }
       ]
     },

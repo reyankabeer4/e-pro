@@ -5,6 +5,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Authentication;
 using System.Security.Claims;
 using System.Threading.Tasks;
+using System.ComponentModel.Design;
+using System;
 
 [Authorize(Roles = "Customer,Admin")]
 public class UserController : Controller
@@ -20,6 +22,53 @@ public class UserController : Controller
     {
         return View();
     }
+
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public async Task<IActionResult> Booking(int flightId, DateTime departureTime, string user)
+    {
+        if (!User.Identity.IsAuthenticated)
+        {
+            TempData["Error"] = "You must be logged in to book a flight.";
+            return RedirectToAction("Login", "Auth");
+        }
+
+        int userId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value ?? "0");
+
+        var flight = await _context.Flights.FirstOrDefaultAsync(f => f.FlightId == flightId);
+        if (flight == null)
+        {
+            TempData["Error"] = "Flight not found.";
+            return RedirectToAction("Dashboard");
+        }
+
+        try
+        {
+            var booking = new Booking
+            {
+                FlightId = flightId,
+                UserId = userId,
+                BookingDate = DateTime.Now,
+                TotalAmount = flight.Price, // Ensure Price is valid in the Flight object
+                Status = "Confirmed"
+            };
+
+            _context.Bookings.Add(booking);
+            await _context.SaveChangesAsync();
+
+            TempData["Success"] = "Booking completed successfully!";
+        }
+        catch (Exception ex)
+        {
+            TempData["Error"] = "An error occurred while booking your flight. Please try again later.";
+            // Log the exception to help debug
+            Console.WriteLine($"Error during booking: {ex.Message}");
+        }
+
+        return RedirectToAction("Dashboard");
+    }
+
+
 
     public async Task<IActionResult> Profile()
     {
