@@ -1,7 +1,8 @@
-using System.Diagnostics;
+﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Authorization;
 using AirelineReservationSystem.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace AirelineReservationSystem.Controllers;
 
@@ -69,29 +70,88 @@ public class HomeController : Controller
 
     }
 
-
-    public IActionResult Flights()
-    {
-        var flights = _context.Flights.ToList();
-        return View(flights);
-    }
-
-    //public IActionResult ShowFlight()
+    //public IActionResult ShowFlight(string source, string destination, string departureTime, string arrivalTime)
     //{
-    //    var flights = _context.Flights.ToList();
-    //    return View(flights);
+    //    // Parse times for filtering
+    //    TimeSpan? departureFilter = null;
+    //    TimeSpan? arrivalFilter = null;
+
+    //    if (TimeSpan.TryParse(departureTime, out var parsedDeparture))
+    //        departureFilter = parsedDeparture;
+
+    //    if (TimeSpan.TryParse(arrivalTime, out var parsedArrival))
+    //        arrivalFilter = parsedArrival;
+
+    //    // Get today's date and tomorrow's date
+    //    var today = DateTime.Today; // Today at 00:00 AM
+    //    var tomorrow = today.AddDays(1); // Tomorrow at 00:00 AM
+
+    //    var filteredFlights = _context.Flights
+    //        .Where(f =>
+    //            (string.IsNullOrEmpty(source) || f.Source == source) &&
+    //            (string.IsNullOrEmpty(destination) || f.Destination == destination) &&
+    //            (!departureFilter.HasValue ||
+    //             (f.DepartureTime.HasValue &&
+    //              Math.Abs(EF.Functions.DateDiffMinute(f.DepartureTime.Value.TimeOfDay, departureFilter.Value)) <= 60)) &&
+    //            (!arrivalFilter.HasValue ||
+    //             (f.ArrivalTime.HasValue &&
+    //              Math.Abs(EF.Functions.DateDiffMinute(f.ArrivalTime.Value.TimeOfDay, arrivalFilter.Value)) <= 60)) &&
+    //            // Filter flights that depart today or tomorrow (ignoring time)
+    //            (f.DepartureTime.HasValue &&
+    //             f.DepartureTime.Value.Date >= today && f.DepartureTime.Value.Date < tomorrow)
+    //        )
+    //        .ToList();
+
+    //    return View(filteredFlights);
     //}
+
 
     public IActionResult ShowFlight(string source, string destination, string departureTime, string arrivalTime)
     {
-        var filteredFlights = _context.Flights
-            .Where(f => (string.IsNullOrEmpty(source) || f.Source == source) &&
-                        (string.IsNullOrEmpty(destination) || f.Destination == destination))
-       .ToList();
+        TimeSpan? departureFilter = null;
+        TimeSpan? arrivalFilter = null;
+
+        if (TimeSpan.TryParse(departureTime, out var parsedDeparture))
+            departureFilter = parsedDeparture;
+
+        if (TimeSpan.TryParse(arrivalTime, out var parsedArrival))
+            arrivalFilter = parsedArrival;
+
+        var today = DateTime.Today;
+
+        // ✅ Change made here
+        var flightQuery = _context.Flights
+            .Where(f =>
+                f.DepartureTime.HasValue &&
+                f.DepartureTime.Value.Date >= today
+            );
+
+        if (!string.IsNullOrEmpty(source))
+        {
+            flightQuery = flightQuery.Where(f => f.Source == source);
+        }
+
+        if (!string.IsNullOrEmpty(destination))
+        {
+            flightQuery = flightQuery.Where(f => f.Destination == destination);
+        }
+
+        if (departureFilter.HasValue)
+        {
+            flightQuery = flightQuery.Where(f => f.DepartureTime.HasValue &&
+                Math.Abs(EF.Functions.DateDiffMinute(f.DepartureTime.Value.TimeOfDay, departureFilter.Value)) <= 60);
+        }
+
+        if (arrivalFilter.HasValue)
+        {
+            flightQuery = flightQuery.Where(f => f.ArrivalTime.HasValue &&
+                Math.Abs(EF.Functions.DateDiffMinute(f.ArrivalTime.Value.TimeOfDay, arrivalFilter.Value)) <= 60);
+        }
+
+        var filteredFlights = flightQuery.ToList();
 
         return View(filteredFlights);
     }
-
 
     public IActionResult Privacy()
     {
