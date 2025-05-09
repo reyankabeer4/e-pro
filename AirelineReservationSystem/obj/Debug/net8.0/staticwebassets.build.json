@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "7k/oQHC0hn2emYUxE6T/JgRkO5z21/tZ5V6rRPN/9WY=",
+  "Hash": "b/JJE4WHX5PXg79DAONnUsMlYEtWKW97iw1H1Uk0R58=",
   "Source": "AirelineReservationSystem",
   "BasePath": "_content/AirelineReservationSystem",
   "Mode": "Default",
@@ -626,6 +626,27 @@
       "OriginalItemSpec": "wwwroot\\images\\fe2ee4e7-835e-4263-8bde-151e212abf23.jpg"
     },
     {
+      "Identity": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\flight-booking.jpg",
+      "SourceId": "AirelineReservationSystem",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\",
+      "BasePath": "_content/AirelineReservationSystem",
+      "RelativePath": "images/flight-booking#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "mf8jjkqd8f",
+      "Integrity": "clQuGA/BZ7pw8JC+fleQVzA1j8mgMBfZOUSitD/tXbs=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\flight-booking.jpg"
+    },
+    {
       "Identity": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\followers-icon.png",
       "SourceId": "AirelineReservationSystem",
       "SourceType": "Discovered",
@@ -897,6 +918,48 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\roma-best-italy-tour-1.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\search_flight-icon.jpg",
+      "SourceId": "AirelineReservationSystem",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\",
+      "BasePath": "_content/AirelineReservationSystem",
+      "RelativePath": "images/search_flight-icon#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "qz70gcnwa0",
+      "Integrity": "iqdZvzO+lEiTB5oQaBfjtBgN1h5mOWiqGSVdYqc3m28=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\search_flight-icon.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\sky.jpg",
+      "SourceId": "AirelineReservationSystem",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\",
+      "BasePath": "_content/AirelineReservationSystem",
+      "RelativePath": "images/sky#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "x569edm86r",
+      "Integrity": "i/Yo6GYuHLuOirXwnF7KPsw6OyfnjoZTLji29TKY/o8=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\sky.jpg"
     },
     {
       "Identity": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\ticket-booking-software.jpg",
@@ -3363,6 +3426,88 @@
       ]
     },
     {
+      "Route": "images/flight-booking.jpg",
+      "AssetFile": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\flight-booking.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "48608"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"clQuGA/BZ7pw8JC+fleQVzA1j8mgMBfZOUSitD/tXbs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 09 May 2025 17:48:54 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-clQuGA/BZ7pw8JC+fleQVzA1j8mgMBfZOUSitD/tXbs="
+        }
+      ]
+    },
+    {
+      "Route": "images/flight-booking.mf8jjkqd8f.jpg",
+      "AssetFile": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\flight-booking.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "48608"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"clQuGA/BZ7pw8JC+fleQVzA1j8mgMBfZOUSitD/tXbs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 09 May 2025 17:48:54 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "mf8jjkqd8f"
+        },
+        {
+          "Name": "label",
+          "Value": "images/flight-booking.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-clQuGA/BZ7pw8JC+fleQVzA1j8mgMBfZOUSitD/tXbs="
+        }
+      ]
+    },
+    {
       "Route": "images/followers-icon.owa08xfe6n.png",
       "AssetFile": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\followers-icon.png",
       "Selectors": [],
@@ -4425,6 +4570,170 @@
         {
           "Name": "integrity",
           "Value": "sha256-YI/B3gAJg5GKxbkoOuXUXH9VgyQXeM1Vk1Nxv9R6N4Q="
+        }
+      ]
+    },
+    {
+      "Route": "images/search_flight-icon.jpg",
+      "AssetFile": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\search_flight-icon.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "9464"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"iqdZvzO+lEiTB5oQaBfjtBgN1h5mOWiqGSVdYqc3m28=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 08 May 2025 19:06:32 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-iqdZvzO+lEiTB5oQaBfjtBgN1h5mOWiqGSVdYqc3m28="
+        }
+      ]
+    },
+    {
+      "Route": "images/search_flight-icon.qz70gcnwa0.jpg",
+      "AssetFile": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\search_flight-icon.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "9464"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"iqdZvzO+lEiTB5oQaBfjtBgN1h5mOWiqGSVdYqc3m28=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 08 May 2025 19:06:32 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "qz70gcnwa0"
+        },
+        {
+          "Name": "label",
+          "Value": "images/search_flight-icon.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-iqdZvzO+lEiTB5oQaBfjtBgN1h5mOWiqGSVdYqc3m28="
+        }
+      ]
+    },
+    {
+      "Route": "images/sky.jpg",
+      "AssetFile": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\sky.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "31755"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"i/Yo6GYuHLuOirXwnF7KPsw6OyfnjoZTLji29TKY/o8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 09 May 2025 17:54:47 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-i/Yo6GYuHLuOirXwnF7KPsw6OyfnjoZTLji29TKY/o8="
+        }
+      ]
+    },
+    {
+      "Route": "images/sky.x569edm86r.jpg",
+      "AssetFile": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\sky.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "31755"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"i/Yo6GYuHLuOirXwnF7KPsw6OyfnjoZTLji29TKY/o8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 09 May 2025 17:54:47 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "x569edm86r"
+        },
+        {
+          "Name": "label",
+          "Value": "images/sky.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-i/Yo6GYuHLuOirXwnF7KPsw6OyfnjoZTLji29TKY/o8="
         }
       ]
     },

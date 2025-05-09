@@ -80,7 +80,7 @@
         }
 
         .warning-message {
-            color: #730f1d;
+            color: #0b132b;
             font-weight: 600;
             margin-top: 1rem;
             font-size: 25px;
@@ -95,7 +95,7 @@
 
         .booking-form .card-header,
         .booking-info h6 {
-            background-color: #730f1d;
+            background-color: #0b132b;
             color: white;
             border-radius: 6px 6px 0 0;
             padding: 0.75rem 1rem;
@@ -121,20 +121,12 @@
             margin-bottom: 2rem;
         }
 
-        .btn-rounded {
-            border-radius: 50px;
-        }
 
         .input-group-text {
             background-color: #f0f0f0;
         }
 
-        body {
-            background: #fefbf7;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            color: #333;
-        }
+       
 
         /* Header */
         .booking-header {
@@ -151,17 +143,20 @@
 
         /* Steps */
         .step .circle {
-            transition: background-color 0.3s ease, transform 0.2s ease;
+/*            background-color:;*/
+            background-color: #0b132b;
+            color: white;
         }
 
         .step:hover .circle {
-            background-color: #ffc107;
             transform: scale(1.1);
+            background-color: #0b134b;
         }
 
         .step-title {
             font-size: 0.95rem;
             font-weight: 600;
+            color: #0b132b;
         }
 
         /* Cards */
@@ -169,16 +164,16 @@
             border: none;
             border-radius: 12px;
             box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
-            transition: transform 0.2s ease;
+/*            transition: transform 0.2s ease;*/
         }
 
-            .card:hover {
-                transform: translateY(-3px);
-            }
+            
 
         .card-header {
             font-size: 1.1rem;
             font-weight: 600;
+            color:white;
+            background-color: #0b132b;
         }
 
         /* Form Elements */
@@ -186,6 +181,7 @@
         .form-control {
             border-radius: 8px;
             box-shadow: none !important;
+            padding:10px;
         }
 
         .input-group-text {
@@ -193,12 +189,7 @@
             border-right: 0;
         }
 
-        /* Buttons */
-        .btn-rounded {
-            border-radius: 30px;
-            padding: 0.5rem 1.2rem;
-            font-weight: 600;
-        }
+  
 
         .btn-primary {
             background-color: #730f1d;
@@ -210,9 +201,7 @@
                 background-color: #5c0c17;
             }
 
-        .btn-warning {
-            font-weight: 600;
-        }
+        
 
         /* Payment Icons */
         .payment-icons img {
@@ -243,9 +232,9 @@
 <body>
 
     <!-- Header Section -->
-    <div style="height:50vh; width:100%; position:relative; overflow:hidden">
-        <img src="~/images/ticket-booking-software.jpg" style="height:auto; width:100%; object-fit:cover" alt="" />
-        <h1 style="position: absolute; top:100px;text-align:center">Booking Details</h1>
+    <div style="height:40vh; width:100%; position:relative; display:flex; justify-content:center;align-items:center;  overflow:hidden">
+        <img src="~/images/sky.jpg" style="height:auto; width:100%; object-fit:cover" alt="booking image" />
+        <h1 style="position: absolute; top:100px;">Booking Details</h1>
 
     </div>
 
@@ -254,7 +243,6 @@
         <div class="container">
             <div class="row">
                 <div class="col text-center">
-                    @*<img src="https://upload.wikimedia.org/wikipedia/commons/3/36/Logo_placeholder.svg" width="100" alt="Placeholder Logo">*@
                     <p class="warning-message">Customer Details: Please fill in with valid information.</p>
                 </div>
             </div>
@@ -283,7 +271,7 @@
             <div class="col-md-8">
                 <div class="card booking-form">
                     <div class="card-header">
-                        Passenger 1: Ms (Primary Contact)
+                        Book Your Ticket
                     </div>
                     <div class="card-body">
                         <form asp-action="Booking" asp-controller="User" method="post">
@@ -291,13 +279,12 @@
 
                             <input type="hidden" name="flightId" value="@Model.FlightId" />
 
-                            <input type="text" class="form-control" name="user" placeholder="Enter Name" required />
+                            <input type="text" class="form-control" name="fullName" placeholder="Full Name" required />
+                            <input type="text" class="form-control" name="age" placeholder="Enter Your Age" required />
+                            <input type="text" class="form-control" name="gender" placeholder="Male/Female" required />
+                            <input type="text" class="form-control" name="passportNumber" placeholder="e.g.X12345678" required />
 
-                            <div class="input-group">
-                                <input type="date" name="departureTime" value="@Model.DepartureTime" class="form-control" required />
-                            </div>
-
-                            <button type="submit" class="btn btn-info">Book Now</button>
+                            <button type="submit" class="btn " style="background-color:#0b132b ;color:white">Book Now</button>
                         </form>
 
                     </div>
@@ -311,22 +298,29 @@
                         Booking Info
                     </div>
                     <div class="card-body">
-
-                        <p><strong>@Model.Source-@Model.Destination</strong><br><small> @Model.DepartureTime-@Model.ArrivalTime</small></p>
+                        @{
+    var departureTime = Model.DepartureTime.HasValue ? Model.DepartureTime.Value.ToString("h:mm tt") : "N/A";
+    var arrivalTime = Model.ArrivalTime.HasValue ? Model.ArrivalTime.Value.ToString("h:mm tt") : "N/A";
+                        }
+                        <p><strong style="font-size:18px ; padding:0px 0">@Model.Source-@Model.Destination</strong><br><small> @departureTime-@arrivalTime</small></p>
 
                         <div class="input-group mb-3">
                             <input type="text" class="form-control" placeholder="Enter Discount Code">
-                            <button class="btn btn-warning btn-rounded">Apply</button>
+                            <button class="" style="background-color: #0b132b; color:white; border:none;">Apply</button>
                         </div>
 
                         <h6 class="mt-4">Your Preferred Bank</h6>
                         <div class="payment-icons mb-3">
-                            <img src="https://img.icons8.com/color/48/000000/paypal.png" class="payment-logo" style="height: 50px; width: auto;" title="PayPal" />
-                            <img src="https://img.icons8.com/color/48/000000/visa.png" class="payment-logo" style="height: 50px; width: auto;" title="Visa" />
-                            <img src="https://img.icons8.com/color/48/000000/mastercard.png" class="payment-logo" style="height: 50px; width: auto;" title="MasterCard" />
-                            <img src="https://img.icons8.com/color/48/000000/hsbc.png" class="payment-logo" style="height: 50px; width: auto;" title="HSBC" />
-                            <img src="https://img.icons8.com/color/48/000000/ebay.png" class="payment-logo" style="height: 50px; width: auto;" title="eBay" />
+                            @*<img src="https://img.icons8.com/color/48/000000/paypal.png" class="payment-logo" style="height: 50px; width: auto;" title="PayPal" />*@
+                            @*<img src="https://img.icons8.com/color/48/000000/visa.png" class="payment-logo" style="height: 50px; width: auto;" title="Visa" />*@
+                            @*<img src="https://img.icons8.com/color/48/000000/mastercard.png" class="payment-logo" style="height: 50px; width: auto;" title="MasterCard" />*@
+                            @*<img src="https://img.icons8.com/color/48/000000/hsbc.png" class="payment-logo" style="height: 50px; width: auto;" title="HSBC" />*@
+                            @*<img src="https://img.icons8.com/color/48/000000/ebay.png" class="payment-logo" style="height: 50px; width: auto;" title="eBay" />*@
                             @*<img src="https://img.icons8.com/color/48/000000/western-union.png" title="Western Union" />*@
+                            <img src="https://img.icons8.com/color/48/000000/paypal.png" class="payment-logo selectable-payment" data-method="PayPal" title="PayPal" />
+                            <img src="https://img.icons8.com/color/48/000000/visa.png" class="payment-logo selectable-payment" data-method="Visa" title="Visa" />
+                            <img src="https://img.icons8.com/color/48/000000/stripe.png" class="payment-logo selectable-payment" data-method="Visa" title="Visa" />
+
                         </div>
 
                         <h6 class="mt-4">Price Summary</h6>
@@ -341,7 +335,11 @@
                         </table>
                     </div>
                     <div class="card-footer bg-light text-end">
-                        <button class="btn btn-primary btn-rounded">Proceed to Payment</button>
+                        <input type="hidden" name="paymentMethod" id="paymentMethod" value="Cash on Delivery" />
+
+                        <a asp-action="Payment" asp-controller="Home" asp-route-id="@Model.FlightId" class="btn btn-primary btn-rounded" style="background-color:#0b132b">
+                            Proceed to Payment
+                        </a>
                     </div>
                 </div>
             </div>
@@ -359,6 +357,41 @@
                 el.style.boxShadow = 'none';
             });
         });
+
+
+            let selectedPayment = null;
+
+        document.querySelectorAll('.selectable-payment').forEach(img => {
+                img.addEventListener('click', () => {
+                    // Clear previous selection styles
+                    document.querySelectorAll('.selectable-payment').forEach(el => {
+                        el.style.border = 'none';
+                        el.style.filter = 'grayscale(100%)';
+                    });
+
+                    // Highlight selected
+                    img.style.border = '2px solid #730f1d';
+                    img.style.filter = 'none';
+
+                    // Update hidden input
+                    const method = img.getAttribute('data-method');
+                    document.getElementById('paymentMethod').value = method;
+                    selectedPayment = method;
+                });
+
+            // Set default style
+            img.style.cursor = 'pointer';
+            img.style.filter = 'grayscale(100%)';
+        });
+
+            // Optional: confirm the default if user submits without selecting
+            document.querySelector('form').addEventListener('submit', function () {
+            if (!selectedPayment) {
+                document.getElementById('paymentMethod').value = 'Cash on Delivery';
+            }
+        });
+
+
     </script>
 
 </body>

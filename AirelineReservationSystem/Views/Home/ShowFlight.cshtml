@@ -7,346 +7,370 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Flight Booking</title>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Arial">
-
+        <link rel="stylesheet"
+              href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
         <style>
-            body {
+            *{
                 margin: 0;
-                background-color: #f0f2f5;
-                font-family: Arial, sans-serif;
+                padding:0;
+                box-sizing:border-box;
+            }
+
+            body {
+                background-color: #e0e1dd;
             }
 
             .header {
-                background-color: #0052cc;
+                background-image: linear-gradient(to right,#9fc2c0,#e0e1dd);
                 color: white;
-                padding: 20px;
+                padding: 10px;
                 text-align: center;
             }
 
-                .header a {
-                    color: #f5c518;
-                    margin: 0 10px;
-                    text-decoration: none;
-                }
+                        .tabs {
+                            display: flex;
+                            justify-content: center;
+                            background-color: #b3245e;
+                            flex-wrap: wrap;
+                        }
 
-            .tabs {
-                display: flex;
-                justify-content: center;
-                background-color: #b3245e;
-                flex-wrap: wrap;
-            }
+                        .tab {
+                            padding: 15px 30px;
+                            color: white;
+                            display: flex;
+                            align-items: center;
+                            cursor: pointer;
+                            gap: 10px;
+                        }
 
-            .tab {
-                padding: 15px 30px;
-                color: white;
-                display: flex;
-                align-items: center;
-                cursor: pointer;
-                gap: 10px;
-            }
+                            .tab.active {
+                                background-color: #f5c518;
+                                color: black;
+                            }
 
-                .tab.active {
-                    background-color: #f5c518;
-                    color: black;
-                }
+                            .tab img {
+                                width: 20px;
+                                filter: brightness(0) invert(1);
+                            }
 
-                .tab img {
-                    width: 20px;
-                    filter: brightness(0) invert(1);
-                }
+                            .tab.active img {
+                                filter: none;
+                            }
 
-                .tab.active img {
-                    filter: none;
-                }
+                        .content {
+                            max-width: 1200px;
+                            margin: 20px auto;
+                            background-color: white;
+                            padding: 20px;
+                            border-radius: 8px;
+                            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+                        }
 
-            .content {
-                max-width: 1200px;
-                margin: 20px auto;
-                background-color: white;
-                padding: 20px;
-                border-radius: 8px;
-                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            }
+                        .trip-options {
+                            display: flex;
+                            gap: 20px;
+                            margin-bottom: 20px;
+                        }
 
-            .trip-options {
-                display: flex;
-                gap: 20px;
-                margin-bottom: 20px;
-            }
+                            .trip-options label {
+                                display: flex;
+                                align-items: center;
+                                gap: 5px;
+                            }
 
-                .trip-options label {
-                    display: flex;
-                    align-items: center;
-                    gap: 5px;
-                }
+                        .form-grid {
+                            display: grid;
+                            grid-template-columns: repeat(4, 1fr);
+                            gap: 20px;
+                            margin-bottom: 20px;
+                        }
 
-            .form-grid {
-                display: grid;
-                grid-template-columns: repeat(4, 1fr);
-                gap: 20px;
-                margin-bottom: 20px;
-            }
+                            .form-grid input,
+                            .form-grid select {
+                                width: 100%;
+                                padding: 10px;
+                                border: 1px solid #ccc;
+                                border-radius: 4px;
+                            }
 
-                .form-grid input,
-                .form-grid select {
-                    width: 100%;
-                    padding: 10px;
-                    border: 1px solid #ccc;
-                    border-radius: 4px;
-                }
+                        input[type=radio] {
+                            color: #0b132b;
+                            background-color: #0b132b;
+                        }
 
-            .swap-icon {
-                text-align: center;
-                font-size: 20px;
-                color: #666;
-                padding-top: 30px;
-            }
+                        .form-grid input:focus {
+                            border: 1px solid #0b132b;
+                        }
 
-            .buttons {
-                display: flex;
-                justify-content: flex-end;
-                gap: 10px;
-            }
+                        .swap-icon {
+                            text-align: center;
+                            font-size: 20px;
+                            color: #666;
+                            padding-top: 30px;
+                        }
 
-            .promo-btn,
-            .show-flights-btn {
-                padding: 10px 20px;
-                border-radius: 4px;
-                cursor: pointer;
-            }
+                        .buttons {
+                            display: flex;
+                            justify-content: flex-end;
+                            gap: 10px;
+                        }
 
-            .promo-btn {
-                background-color: white;
-                border: 1px solid #f5c518;
-                color: #f5c518;
-            }
+                        .promo-btn,
+                        .show-flights-btn {
+                            padding: 10px 20px;
+                            border-radius: 4px;
+                            cursor: pointer;
+                        }
 
-            .show-flights-btn {
-                background-color: #f5c518;
-                border: none;
-                color: black;
-                display: flex;
-                align-items: center;
-                gap: 5px;
-            }
+                        .promo-btn {
+                            background-color: white;
+                            border: 1px solid #0b132b;
+                            color: #0b132b;
+                        }
 
-                .show-flights-btn img {
-                    width: 20px;
-                }
+                        .show-flights-btn {
+                            background-color: #0b132b;
+                            border: none;
+                            color: white;
+                            display: flex;
+                            align-items: center;
+                            gap: 5px;
+                        }
 
-            .row {
-                display: flex;
-                flex-wrap: wrap;
-                gap: 20px;
-                max-width: 1200px;
-                margin: 20px auto;
-            }
+                            .show-flights-btn img {
+                                width: 20px;
+                            }
+
+                        .row {
+                            display: flex;
+                            flex-wrap: wrap;
+                            gap: 10px;
+                            max-width: 1200px;
+                            margin: 20px auto;
+                        }
 
             .sidebar {
                 flex: 1 1 300px;
                 background-color: #fff;
                 padding: 25px;
-                border-radius: 12px;
-                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            }
-
-                .sidebar h2 {
-                    font-size: 1.4em;
-                    margin-bottom: 20px;
-                    color: #b3245e;
-                    border-bottom: 2px solid #f5c518;
-                    padding-bottom: 5px;
-                }
-
-                .sidebar h3 {
-                    margin-bottom: 10px;
-                    color: #333;
-                    font-size: 1.1em;
-                }
-
-                .sidebar input[type="range"] {
-                    width: 100%;
-                    margin: 10px 0;
-                    accent-color: #b3245e;
-                }
-
-                .sidebar .price {
-                    color: #38040e;
-                    font-weight: bold;
-                }
-
-            .filter-button {
-                background-color: #f5c518;
-                border: none;
-                padding: 8px 16px;
-                border-radius: 6px;
-                cursor: pointer;
-                margin-top: 10px;
-                color: #000;
-            }
-
-            .departure-grid {
-                display: grid;
-                grid-template-columns: repeat(2, 1fr);
-                gap: 10px;
-            }
-
-                .departure-grid div {
-                    background-color: #f8f9fa;
-                    padding: 10px;
-                    text-align: center;
-                    border-radius: 6px;
-                    border: 1px solid #ddd;
-                    cursor: pointer;
-                    transition: background-color 0.3s ease;
-                }
-
-                    .departure-grid div:hover {
-                        background-color: #f5c518;
-                        color: #000;
-                    }
-
-            .main-section {
-                flex: 3 1 600px;
-            }
-
-            .flight-card {
-                display: flex;
-                justify-content: space-between;
-                align-items: start;
-                background-color: #fff;
-                padding: 20px;
-                margin-bottom: 20px;
-                border-radius: 10px;
-                box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
-                transition: transform 0.5s ease, box-shadow 0.3s ease;
-            }
-
-                .flight-card:hover {
-                    transform: translateY(-3px);
-                    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.15);
-                }
-
-            .flight-info {
-                display: flex;
-                gap: 20px;
-                align-items: center;
-            }
-
-            .flight-card img {
-                width: 100px;
-                height: 100%;
-                object-fit: cover;
                 border-radius: 5px;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+                position: sticky;
+                top: 20px;  /*Distance from top of the viewport */
+                align-self: flex-start; /* Ensure sticky works inside a flex container */
+                height: fit-content;
+                z-index: 1;
             }
 
-            .flight-duration,
-            .operated-by {
-                font-size: 0.9em;
-                color: #555;
+                            .sidebar h2 {
+                                font-size: 1.4em;
+                                margin-bottom: 20px;
+                                color: #0b132b;
+                                border-bottom: 1px solid lightgrey;
+                                padding-bottom: 5px;
+                            }
+
+                            .sidebar h3 {
+                                margin-bottom: 10px;
+                                color: #0b132b;
+                                font-size: 1em;
+                            }
+
+                            .sidebar input[type="range"] {
+                                width: 100%;
+                                margin: 10px 0;
+                                accent-color: #0b132b;
+                            }
+
+                            .sidebar .price {
+                                color: #0b132b;
+                                font-weight: 500;
+                            }
+
+                        .filter-button {
+                            background-color: #0b132b;
+                            border: none;
+                            padding: 10px 50px;
+                            border-radius: 3px;
+                            cursor: pointer;
+                            margin: 10px 0;
+                            color: white;
+                        }
+
+                        .departure-grid {
+                            display: grid;
+                            grid-template-columns: repeat(2, 1fr);
+                            gap: 10px;
+                        }
+
+                            .departure-grid div {
+                                background-color: #f8f9fa;
+                                padding: 10px;
+                                text-align: center;
+                                border-radius: 6px;
+                                border: 1px solid #ddd;
+                                cursor: pointer;
+                                transition: background-color 0.3s ease;
+                            }
+
+                                .departure-grid div:hover {
+                                    background-color: #1d2b3c;
+                                    color: #fff;
+                                }
+
+                        .main-section {
+                            flex: 3 1 600px;
+                        }
+
+                        .flight-card {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: start;
+                            background-color: #fff;
+                            padding: 20px;
+                            margin-bottom: 20px;
+                            border-radius: 10px;
+                            box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+                            transition: transform 0.5s ease, box-shadow 0.3s ease;
+                        }
+
+                            .flight-card:hover {
+                                transform: translateY(-3px);
+                                box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.15);
+                            }
+
+                        .flight-info {
+                            display: flex;
+                            gap: 20px;
+                            align-items: center;
+                        }
+
+                        .flight-card img {
+                            width: 100px;
+                            height: 100%;
+                            object-fit: cover;
+                            border-radius: 5px;
+                        }
+
+                        .flight-duration,
+                        .operated-by {
+                            font-size: 0.9em;
+                            color: #555;
+                        }
+
+                        .flight-price {
+                            text-align: right;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: flex-end;
+                        }
+
+                        .price {
+                            color: #38040e;
+                            font-size: 1.2em;
+                            font-weight: 500;
+                        }
+
+                        .select-btn {
+                            background-color: #0b132b;
+                            color: #e9ecef;
+                            padding: 10px 20px;
+                            border: none;
+                            border-radius: 4px;
+                            margin-top: 8px;
+                            cursor: pointer;
+                            transition: .5s ease;
+                        }
+
+                            .select-btn img {
+                                width: 20px;
+                            }
+
+                            .select-btn:hover {
+                                background-color: #0b135b;
+                            }
+
+                        .tax-info {
+                            font-size: 0.75em;
+                            color: #999;
+                        }
+
+                        @@media (max-width: 768px) {
+                            .form-grid {
+                                grid-template-columns: 1fr;
+                            }
+
+                            .row {
+                                flex-direction: column;
+                            }
+
+                            .flight-card {
+                                flex-direction: column;
+                                align-items: flex-start;
+                            }
+
+                            .flight-price {
+                                align-items: flex-start;
+                                text-align: left;
+                            }
+                        }
+
+                        .toggle-btn {
+                            border: none;
+                            padding: 6px 12px;
+                            border-radius: 4px;
+                            cursor: pointer;
+                            margin-top: 10px;
+                            color: black;
+                        }
+
+
+
+            .hidden {
+                display: none;
             }
 
-            .flight-price {
-                text-align: right;
-                display: flex;
-                flex-direction: column;
-                align-items: flex-end;
-            }
-
-            .price {
-                color: #38040e;
-                font-size: 1.2em;
-                font-weight: 500;
-            }
-
-            .select-btn {
-                background-color: #656d4a;
-                color: #e9ecef;
-                padding: 10px 20px;
-                border: none;
-                border-radius: 4px;
-                margin-top: 8px;
-                cursor: pointer;
-            }
-
-                .select-btn:hover {
-                    background-color: #333d29;
-                }
-
-            .tax-info {
-                font-size: 0.75em;
-                color: #999;
-            }
-
-            @@media (max-width: 768px) {
-                .form-grid {
-                    grid-template-columns: 1fr;
-                }
-
-                .row {
-                    flex-direction: column;
-                }
-
-                .flight-card {
-                    flex-direction: column;
-                    align-items: flex-start;
-                }
-
-                .flight-price {
-                    align-items: flex-start;
-                    text-align: left;
-                }
-            }
-
-            .toggle-btn {
-                border: none;
-                padding: 6px 12px;
-                border-radius: 4px;
-                cursor: pointer;
-                margin-top: 10px;
-                color: black;
-            }
-
-            
         </style>
     </head>
     <body>
         <div class="header">
-            <h1>Search Flight</h1>
+
+            <h1 class="animate__animated animate__pulse" style="color: #023e8a; font-size:30px">Search Flight <img src="~/images/search_flight-icon.jpg" style="width:100px" alt="Airplane Icon"></h1>
         </div>
 
-        <div class="tabs">
+        @*<div class="tabs">
             <div class="tab active"><img src="https://img.icons8.com/ios-filled/50/airplane-take-off.png"> AIR BOOKING</div>
             <div class="tab"><img src="https://img.icons8.com/ios-filled/50/suitcase.png"> MY TRIPS</div>
             <div class="tab"><img src="https://img.icons8.com/ios-filled/50/check.png"> CHECK-IN</div>
             <div class="tab"><img src="https://img.icons8.com/ios-filled/50/pin.png"> FLIGHT STATUS</div>
-        </div>
+        </div>*@
 
-        
+
         @*/*  Search Flight */*@
-    <div class="content">
-        <form method="get">
+        <div class="content">
+            <form method="get">
 
-            <div class="trip-options">
-                <label><input type="radio" name="trip-type" value="one-way" checked> <span>One-way</span></label>
-                <label><input type="radio" name="trip-type" value="roundtrip"> <span>Roundtrip</span></label>
-                <label><input type="radio" name="trip-type" value="multi-city" > <span>Multi-city</span></label>
-            </div>
+                <div class="trip-options">
+                    <label><input type="radio" name="trip-type" value="one-way" checked> <span>One-way</span></label>
+                    <label><input type="radio" name="trip-type" value="roundtrip"> <span>Roundtrip</span></label>
+                    <label><input type="radio" name="trip-type" value="multi-city"> <span>Multi-city</span></label>
+                </div>
 
-            <div class="form-grid">
-                <div><label>From</label><input type="text" name="source" placeholder="From" />                </div>
-                <div class="swap-icon">↔</div>
-                <div><label>To</label><input type="text" name="destination" placeholder="To"></div>
-                <div><label>Depart</label><input type="date"  value="@DateTime.Today.ToString("yyyy-MM-dd")" required min="@DateTime.Today.ToString("yyyy-MM-dd")"></div>
-                <div><label>Return</label><input type="date" value="@DateTime.Today.AddDays(1).ToString("yyyy-MM-dd")" min="@DateTime.Today.AddDays(1).ToString("yyyy-MM-dd")"></div>
-                <div><label>Passenger/Class</label><input type="text" value="1 Passenger, Economy" readonly></div>
-            </div>
+                <div class="form-grid">
+                    <div><label>From</label><input type="text" name="source" placeholder="Enter city or airport" />                </div>
+                    <div class="swap-icon">↔</div>
+                    <div><label>To</label><input type="text" name="destination" placeholder="Enter city or airport"></div>
+                    <div><label>Depart</label><input type="date" value="@DateTime.Today.ToString("yyyy-MM-dd")" required min="@DateTime.Today.ToString("yyyy-MM-dd")"></div>
+                    <div><label>Return</label><input type="date" value="@DateTime.Today.AddDays(1).ToString("yyyy-MM-dd")" min="@DateTime.Today.AddDays(1).ToString("yyyy-MM-dd")"></div>
+                    <div><label>Passenger/Class</label><input type="text" value="1 Passenger, Economy" readonly></div>
+                </div>
 
-            <div class="buttons">
-                <button class="promo-btn">+ ADD PROMO CODE</button>
-                <button typeof="submit" class="show-flights-btn">SHOW FLIGHTS <img src="https://img.icons8.com/ios-filled/50/airplane-take-off.png" alt="Airplane Icon"></button>
-            </div>
-        </form>
-    </div>
+                <div class="buttons">
+                    <button class="promo-btn">+ ADD PROMO CODE</button>
+                    <button typeof="submit" class="show-flights-btn">SHOW FLIGHTS <img src="https://img.icons8.com/ios-filled/50/airplane-take-off.png" alt="Airplane Icon"></button>
+                </div>
+            </form>
+        </div>
 
 
         <div class="row">
@@ -371,12 +395,21 @@
             </aside>
 
             <section class="main-section">
+
+                @{ int index = 0; }
+
+
+
+
+
                 @if (Model != null && Model.Any())
             {
                 foreach (var flight in Model)
                 {
-               
-                <div class="flight-card">
+
+                <div class="flight-card flight-card-item @(index >= 4 ? "hidden" : "")">
+                    <!-- Existing flight card content -->
+                    @*<div class="flight-card">*@
                     <img src="~/images/@flight.FlightPic" alt="Flight Image" />
                     <div class="flight-info">
                         <div>
@@ -397,26 +430,38 @@
                     </div>
                     <div class="flight-price">
                         <p class="price">US$@flight.Price</p>
-                        @*<p class="price">@flight.FlightId ID</p>*@
-                        @*<button class="select-btn">Select ✈️</button>*@
                         <form asp-action="Booking" asp-controller="Home" method="get" asp-route-id="@flight.FlightId">
-                            <button type="submit" class="select-btn">Select ✈️</button>
+                            <button type="submit" class="select-btn">Select <img src="https://img.icons8.com/ios-filled/50/airplane-take-off.png" alt="Airplane Icon"></button>
                         </form>
 
                         <p class="tax-info">Incl. taxes & fees</p>
                     </div>
+                    @*</div>*@
                 </div>
-
+index++;
                 }
             }
             else
             {
                 <p>No flights available at the moment.</p>
             }
+
+                <div class="load-more-container" style="text-align:center; margin-top:20px;">
+                    <button id="loadMoreBtn" class="select-btn">Load More</button>
+                </div>
+
             </section>
         </div>
+
+
+        @*<footer style="padding:30px; text-align:center; background-color:#444444;color:#ffffff">
+
+            2025 All rights reserved
+        </footer>*@
+
         <script>
             document.addEventListener("DOMContentLoaded", function () {
+                // Toggle flight details
                 document.querySelectorAll(".toggle-btn").forEach(button => {
                     button.addEventListener("click", function () {
                         const details = this.previousElementSibling;
@@ -429,7 +474,32 @@
                         }
                     });
                 });
+
+                // Load More functionality
+                const loadMoreBtn = document.getElementById("loadMoreBtn");
+                let cards = document.querySelectorAll(".flight-card-item.hidden");
+                let currentIndex = 0;
+                const itemsPerClick = 4;
+
+                function showMoreCards() {
+                    let shown = 0;
+                    for (let i = currentIndex; i < cards.length && shown < itemsPerClick; i++, shown++) {
+                        cards[i].classList.remove("hidden");
+                    }
+                    currentIndex += itemsPerClick;
+                    if (currentIndex >= cards.length) {
+                        loadMoreBtn.style.display = "none";
+                    }
+                }
+
+                if (!cards.length) {
+                    loadMoreBtn.style.display = "none";
+                }
+
+                loadMoreBtn?.addEventListener("click", showMoreCards);
             });
+
+
         </script>
 
     </body>

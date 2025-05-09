@@ -36,10 +36,10 @@
             background-color: #0b132b;
             color: white;
             padding: 10px 20px;
-            font-size: 16px;
+            font-size: 15px;
             border: none;
             cursor: pointer;
-            border-radius: 4px;
+            border-radius: 5px;
         }
 
         .dropdown-content {
@@ -91,14 +91,13 @@
                             <a class="nav-link @(currentController == "Home" && currentAction == "Index" ? "active" : "")"
                                asp-controller="Home" asp-action="Index">Home</a>
                         </li>
+
                         <li class="nav-item">
-                            <a class="nav-link @(currentController == "Home" && currentAction == "Privacy" ? "active" : "")"
-                               asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link @(currentController == "Home" && currentAction == "Booking" ? "active" : "")"
-                               asp-controller="Home" asp-action="Booking">Booking</a>
-                        </li>
+            <a class="nav-link @(currentController == "Home" && currentAction == "About" ? "active" : "")"
+               asp-controller="Home" asp-action="About">About</a>
+        </li>
+                      
+
                         <li class="nav-item">
                             <a class="nav-link @(currentController == "Home" && currentAction == "ShowFlight" ? "active" : "")"
                                asp-controller="Home" asp-action="ShowFlight">Flights</a>

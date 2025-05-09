@@ -38,6 +38,11 @@ public class HomeController : Controller
     // {
     //     return View();
     // }
+    
+    public IActionResult About()
+    {
+        return View();
+    }
 
     public IActionResult Dashboard()
     {
@@ -55,6 +60,15 @@ public class HomeController : Controller
 
         return View(flight);
     }
+
+    [Route("Home/Booking/Payment/{id}")]
+    public IActionResult Payment(int id)
+    {
+        var flight = _context.Flights.FirstOrDefault(f => f.FlightId == id);
+        return View(flight);
+
+    }
+
 
     public IActionResult Flights()
     {

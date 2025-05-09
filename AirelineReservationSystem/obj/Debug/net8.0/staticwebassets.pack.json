@@ -117,6 +117,10 @@
       "PackagePath": "staticwebassets\\images\\fe2ee4e7-835e-4263-8bde-151e212abf23.jpg"
     },
     {
+      "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\flight-booking.jpg",
+      "PackagePath": "staticwebassets\\images\\flight-booking.jpg"
+    },
+    {
       "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\followers-icon.png",
       "PackagePath": "staticwebassets\\images\\followers-icon.png"
     },
@@ -167,6 +171,14 @@
     {
       "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\roma-best-italy-tour-1.jpg",
       "PackagePath": "staticwebassets\\images\\roma-best-italy-tour-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\search_flight-icon.jpg",
+      "PackagePath": "staticwebassets\\images\\search_flight-icon.jpg"
+    },
+    {
+      "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\sky.jpg",
+      "PackagePath": "staticwebassets\\images\\sky.jpg"
     },
     {
       "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\ticket-booking-software.jpg",
