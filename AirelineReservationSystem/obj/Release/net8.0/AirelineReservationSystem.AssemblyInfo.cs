@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AirelineReservationSystem")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2878b44bdb96afd4ca27531d043939bb2bae7aea")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+725515f6bd241d9fad30744f1958978e53261341")]
 [assembly: System.Reflection.AssemblyProductAttribute("AirelineReservationSystem")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AirelineReservationSystem")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

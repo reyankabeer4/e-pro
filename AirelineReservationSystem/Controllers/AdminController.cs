@@ -26,6 +26,13 @@ public class AdminController : Controller
         return View(flight);
     }
 
+
+    public IActionResult ShowFlight()
+    {
+        var flight = _context.Flights.ToList();
+        return View(flight);
+    }
+
     // POST: Save Flight
     [HttpPost]
     public async Task<IActionResult> Flight(Flight flight, IFormFile flight_pic)

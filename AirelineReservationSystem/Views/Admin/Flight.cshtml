@@ -99,26 +99,35 @@
         <div class="sideBar d-flex flex-column p-3">
             <a href="" class="text-decoration-none h2 my-5">ARS</a>
             <ul class="navbar-nav gap-3">
-                <li class="nav-item p-2">
+                <li class="nav-item p-2 ">
                     <a asp-controller="Admin" asp-action="Dashboard" class="nav-link">Dashboard</a>
                 </li>
+
                 <li class="nav-item p-2 active-nav">
-                    <a href="flight" class="nav-link">Flights</a>
+                    <a class="nav-link " data-bs-toggle="collapse" data-bs-target="#extraMenu" role="button" aria-expanded="false" aria-controls="extraMenu">
+                        Flights
+                    </a>
+                    <div class="collapse ps-3" id="extraMenu">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a asp-controller="Admin" asp-action="Flight" class="nav-link">Add Flights</a>
+                            </li>
+                            <li class="nav-item">
+                                <a asp-controller="Admin" asp-action="ShowFlight" class="nav-link">Show Flights</a>
+                            </li>
+
+                        </ul>
+                    </div>
                 </li>
 
-                <li class="nav-item p-2">
-                    <a href="" class="nav-link">Component</a>
-                </li>
-                <li class="nav-item p-2">
-                    <a href="" class="nav-link">Extra Component</a>
-                </li>
+
                 <li class="nav-item p-2"><a href="" class="nav-link">Layout</a></li>
                 <li class="nav-item p-2"><a href="" class="nav-link">Sign Out</a></li>
             </ul>
         </div>
         <!-- Main content -->
         <div class="mainContent d-flex justify-content-center align-items-center bg-light flex-grow-1 min-vh-100 p-4">
-           
+
             <form class="booking-form" method="post" enctype="multipart/form-data" asp-controller="Admin" asp-action="Flight">
 
                 <h2>Add New Flight</h2>
@@ -183,23 +192,23 @@
                     </div>
                 </div>
 
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="totalSeats">Total Seats*</label>
-                            <input type="number" id="totalSeats" name="TotalSeats" min="1" required />
-                        </div>
-                        <div class="form-group">
-                            <label for="availableSeats">Available Seats*</label>
-                            <input type="number" id="availableSeats" name="AvailableSeats" min="1" required />
-                        </div>
-                    </div>
-
+                <div class="form-row">
                     <div class="form-group">
-                        <label for="price">Price (USD)*</label>
-                        <input type="number" id="price" name="Price" step="0.01" placeholder="e.g. 499.99" required />
+                        <label for="totalSeats">Total Seats*</label>
+                        <input type="number" id="totalSeats" name="TotalSeats" min="1" required />
                     </div>
+                    <div class="form-group">
+                        <label for="availableSeats">Available Seats*</label>
+                        <input type="number" id="availableSeats" name="AvailableSeats" min="1" required />
+                    </div>
+                </div>
 
-                    <button type="submit" class="submit-btn mt-2">Add Flight</button>
+                <div class="form-group">
+                    <label for="price">Price (USD)*</label>
+                    <input type="number" id="price" name="Price" step="0.01" placeholder="e.g. 499.99" required />
+                </div>
+
+                <button type="submit" class="submit-btn mt-2">Add Flight</button>
             </form>
 
 

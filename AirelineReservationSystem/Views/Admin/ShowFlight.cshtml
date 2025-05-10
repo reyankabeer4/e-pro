@@ -1,0 +1,191 @@
+﻿@model  List<AirelineReservationSystem.Models.Flight>;
+
+    @{
+    ViewData["Title"] = "Show Flight";
+    }
+
+    @*<!DOCTYPE html>
+
+        <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+        <head>
+            <meta charset="utf-8" />
+            <title></title>
+        </head>
+        <body>
+            <h1>Show Flight</h1>
+        </body>
+        </html>*@
+
+
+
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Dashboard</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+              rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+        <style>
+            .active-nav {
+                background-color: #5f1899;
+                padding: 10px 0;
+                border-radius: 5px;
+                color: white;
+            }
+
+            .sideBar {
+                width: 300px;
+                background-color: #f0f0f0;
+            }
+
+            .shadow-sm {
+                box-shadow: 10px 10px 10px 10px grey;
+            }
+
+            .booking-form {
+                background-color: white;
+                padding: 30px 40px;
+                border-radius: 10px;
+                max-width: 700px;
+                width: 100%;
+                box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            }
+
+                .booking-form h2 {
+                    text-align: center;
+                    margin-bottom: 25px;
+                }
+
+            .form-row {
+                display: flex;
+                gap: 20px;
+                margin-bottom: 20px;
+            }
+
+            .form-group {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+            }
+
+            label {
+                margin-bottom: 5px;
+                font-weight: 600;
+            }
+
+            input, select {
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 6px;
+                font-size: 14px;
+            }
+
+            .recaptcha {
+                margin: 20px 0;
+            }
+
+            .submit-btn {
+                width: 100%;
+                background-color: #0a3c57;
+                color: white;
+                padding: 12px;
+                font-size: 16px;
+                border: none;
+                border-radius: 6px;
+                cursor: pointer;
+            }
+
+                .submit-btn:hover {
+                    background-color: #062c42;
+                }
+        </style>
+
+
+
+
+    </head>
+    <body class="m-0 p-0">
+        <div class="d-flex">
+            <!-- Sidebar -->
+            <div class="sideBar d-flex flex-column p-3">
+                <a href="" class="text-decoration-none h2 my-5">ARS</a>
+                <ul class="navbar-nav gap-3">
+                    <li class="nav-item p-2 ">
+                        <a asp-controller="Admin" asp-action="Dashboard" class="nav-link">Dashboard</a>
+                    </li>
+
+                    <li class="nav-item p-2 active-nav">
+                        <a class="nav-link " data-bs-toggle="collapse" data-bs-target="#extraMenu" role="button" aria-expanded="false" aria-controls="extraMenu">
+                            Flights
+                        </a>
+                        <div class="collapse ps-3" id="extraMenu">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a asp-controller="Admin" asp-action="Flight" class="nav-link">Add Flights</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a asp-controller="Admin" asp-action="ShowFlight" class="nav-link">Show Flights</a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </li>
+
+
+                    <li class="nav-item p-2"><a href="" class="nav-link">Layout</a></li>
+                    <li class="nav-item p-2"><a href="" class="nav-link">Sign Out</a></li>
+                </ul>
+            </div>
+            <!-- Main content -->
+            <div class="mainContent d-flex justify-content-center align-items-center bg-light flex-grow-1 min-vh-100 p-4">
+
+                <table class="table">
+                    <thead>
+                    <th>Id</th>
+                    <th>Flight Name</th>
+                    <th>Flight Number</th>
+                    <th>Departure Time</th>
+                    <th>Arrival Time</th>
+                    <th>Seats</th>
+                    <th>Available Seats</th>
+                    <th>Action</th>
+                    </thead>
+                    <tbody>
+                        @foreach (var flight in Model)
+{
+                        <tr>
+                            <td>@flight.FlightId</td>
+                            <td>@flight.AirlineName</td>
+                            <td>@flight.FlightNumber</td>
+                            <td>@flight.DepartureTime?.ToString("g")</td>
+                            <td>@flight.ArrivalTime?.ToString("g")</td>
+                            <td>@flight.TotalSeats</td>
+                            <td>@flight.AvailableSeats</td>
+                            <td>
+                                <!-- Add edit/delete buttons if needed -->
+                                <a asp-action="EditFlight" asp-route-id="@flight.FlightId" class="btn btn-sm btn-primary">Edit</a>
+                                <a asp-action="DeleteFlight" asp-route-id="@flight.FlightId" class="btn btn-sm btn-danger">Delete</a>
+                            </td>
+                        </tr>
+}
+                    </tbody>
+
+
+                </table>
+
+
+            </div>
+        </div>
+        <!-- Add Chart.js CDN BEFORE your own script -->
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+        <!-- reCAPTCHA script (you must replace "your-site-key" with an actual site key) -->
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>
+
