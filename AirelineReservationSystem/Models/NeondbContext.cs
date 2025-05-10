@@ -13,6 +13,7 @@ public partial class NeondbContext : DbContext
     public NeondbContext(DbContextOptions<NeondbContext> options)
         : base(options)
     {
+
     }
 
     public virtual DbSet<Booking> Bookings { get; set; }

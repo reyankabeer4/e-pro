@@ -1,3 +1,5 @@
+@model List<AirelineReservationSystem.Models.Booking>;
+
 @{
     ViewData["Title"] = "User Dashboard";
    var currentAction = ViewContext.RouteData.Values["action"]?.ToString();
@@ -95,31 +97,7 @@
                 color: #7f8c8d;
             }
 
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            background-color: white;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        th, td {
-            padding: 12px;
-            text-align: left;
-            border-bottom: 1px solid #ddd;
-        }
-
-        th {
-            background-color: #3498db;
-            color: white;
-        }
-
-        tr:nth-child(even) {
-            background-color: #f8f9fa;
-        }
-
-        tr:hover {
-            background-color: #e9ecef;
-        }
+       
 
         .status-pending {
             color: red;
@@ -162,35 +140,43 @@
                 <p>Pending Orders</p>
             </div>
         </div>
-        <table>
-            <tr>
-                <th>Order ID</th>
+        <table class="table">
+                <thead style="background-color:#1d2b3c">
+
+            <tr class="p-3" style="background-color:#1d2b3c">
+                <th>Booking ID</th>
+                <th>Full Name</th>
+                <th>Flight Name</th>
                 <th>Date</th>
                 <th>Amount</th>
                 <th>Status</th>
                 <th>Action</th>
             </tr>
+                </thead>
+            <tbody>
+
+
+            @foreach (var booking in Model)
+            {
             <tr>
-                <td>#1001</td>
-                <td>01 May 2025</td>
-                <td>$45.00</td>
-                <td class="status-pending">Pending</td>
-                <td><button>View</button></td>
+                <td>@booking.BookingId</td>
+                <td>
+                    @foreach (var passenger in booking.Passengers)
+    {
+                    <div>@passenger.FullName</div>
+    }
+                </td>
+
+                <td>@booking.Flight.AirlineName</td>  
+                <td>@booking.BookingDate</td>
+                <td>$@booking.TotalAmount</td>
+                <td class="@(booking.Status == "Pending" ? "status-pending" : "status-delivered")">@booking.Status</td>
+                <td><button class="btn btn-danger">Cancel Booking</button></td>
             </tr>
-            <tr>
-                <td>#1002</td>
-                <td>28 Apr 2025</td>
-                <td>$65.00</td>
-                <td class="status-delivered">Delivered</td>
-                <td><button>View</button></td>
-            </tr>
-            <tr>
-                <td>#1003</td>
-                <td>25 Apr 2025</td>
-                <td>$40.00</td>
-                <td class="status-delivered">Delivered</td>
-                <td><button>View</button></td>
-            </tr>
+            }
+            </tbody>
+
+
         </table>
     </div>
 </body>

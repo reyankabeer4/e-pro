@@ -18,9 +18,23 @@ public class UserController : Controller
         _context = context;
     }
 
+    //public IActionResult Dashboard()
+    //{
+    //    var bookings = _context.Bookings.Include(b=>b.Flight).Include(b => b.Passenger).Where(id=>id.User.Id).ToList();
+    //    return View(bookings);
+    //}
+
     public IActionResult Dashboard()
     {
-        return View();
+        int userId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value ?? "0");
+
+        var bookings = _context.Bookings
+            .Where(b => b.UserId == userId)
+            .Include(b => b.Flight)
+            .Include(b => b.Passengers)
+            .ToList();
+
+        return View(bookings);
     }
 
 
