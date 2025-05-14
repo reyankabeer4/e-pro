@@ -276,17 +276,17 @@
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-flwjzKOYHAiXk8CgRvEyKxZMYWtx8yOgZiCMgjRNMBs="}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"18380"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022flwjzKOYHAiXk8CgRvEyKxZMYWtx8yOgZiCMgjRNMBs=\u0022"},{"Name":"Last-Modified","Value":"Mon, 12 May 2025 18:00:54 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/AirelineReservationSystem/images/about-us.1agpk07uzv.jpg">
-      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\about-us.jpg'))</AssetFile>
+    <StaticWebAssetEndpoint Include="_content/AirelineReservationSystem/images/about-us.iwmv3unncd.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\about-us.png'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"1agpk07uzv"},{"Name":"integrity","Value":"sha256-qaK2K9isbcZ5YKFkDpW\u002Bz0m7L0b1XjIltgeDRdkKzvg="},{"Name":"label","Value":"_content/AirelineReservationSystem/images/about-us.jpg"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"19138"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022qaK2K9isbcZ5YKFkDpW\u002Bz0m7L0b1XjIltgeDRdkKzvg=\u0022"},{"Name":"Last-Modified","Value":"Wed, 14 May 2025 15:42:27 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"iwmv3unncd"},{"Name":"integrity","Value":"sha256-stBkVRhEteE78G8ik5Ve9Z5f7jTebzGqBN1RsnaEQm4="},{"Name":"label","Value":"_content/AirelineReservationSystem/images/about-us.png"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"212630"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022stBkVRhEteE78G8ik5Ve9Z5f7jTebzGqBN1RsnaEQm4=\u0022"},{"Name":"Last-Modified","Value":"Wed, 14 May 2025 17:09:15 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/AirelineReservationSystem/images/about-us.jpg">
-      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\about-us.jpg'))</AssetFile>
+    <StaticWebAssetEndpoint Include="_content/AirelineReservationSystem/images/about-us.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\about-us.png'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-qaK2K9isbcZ5YKFkDpW\u002Bz0m7L0b1XjIltgeDRdkKzvg="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"19138"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022qaK2K9isbcZ5YKFkDpW\u002Bz0m7L0b1XjIltgeDRdkKzvg=\u0022"},{"Name":"Last-Modified","Value":"Wed, 14 May 2025 15:42:27 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-stBkVRhEteE78G8ik5Ve9Z5f7jTebzGqBN1RsnaEQm4="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"212630"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022stBkVRhEteE78G8ik5Ve9Z5f7jTebzGqBN1RsnaEQm4=\u0022"},{"Name":"Last-Modified","Value":"Wed, 14 May 2025 17:09:15 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/AirelineReservationSystem/images/airplane.jpg">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\airplane.jpg'))</AssetFile>
@@ -371,6 +371,18 @@
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"qcgbzj7c10"},{"Name":"integrity","Value":"sha256-isZ40LecIQEwRqpYWXW2GaXoaUL\u002BATuY63xpAiowRM4="},{"Name":"label","Value":"_content/AirelineReservationSystem/images/Banner-en-plane.jpg"}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"130613"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022isZ40LecIQEwRqpYWXW2GaXoaUL\u002BATuY63xpAiowRM4=\u0022"},{"Name":"Last-Modified","Value":"Mon, 28 Apr 2025 18:58:50 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/AirelineReservationSystem/images/contact-us.gq9yn8puzm.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\contact-us.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"gq9yn8puzm"},{"Name":"integrity","Value":"sha256-yAzanE76GzJIEhiBjaN\u002Bj9h6sUuSj0gnihma6LLnikU="},{"Name":"label","Value":"_content/AirelineReservationSystem/images/contact-us.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"45226"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022yAzanE76GzJIEhiBjaN\u002Bj9h6sUuSj0gnihma6LLnikU=\u0022"},{"Name":"Last-Modified","Value":"Wed, 14 May 2025 17:15:56 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/AirelineReservationSystem/images/contact-us.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\contact-us.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-yAzanE76GzJIEhiBjaN\u002Bj9h6sUuSj0gnihma6LLnikU="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"45226"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022yAzanE76GzJIEhiBjaN\u002Bj9h6sUuSj0gnihma6LLnikU=\u0022"},{"Name":"Last-Modified","Value":"Wed, 14 May 2025 17:15:56 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/AirelineReservationSystem/images/default-avatar-profile.38uc3yjcz0.jpg">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\default-avatar-profile.jpg'))</AssetFile>

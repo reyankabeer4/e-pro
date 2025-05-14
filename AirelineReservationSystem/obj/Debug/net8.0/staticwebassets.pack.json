@@ -137,8 +137,8 @@
       "PackagePath": "staticwebassets\\images\\Times_Square_(Tall).jpg"
     },
     {
-      "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\about-us.jpg",
-      "PackagePath": "staticwebassets\\images\\about-us.jpg"
+      "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\about-us.png",
+      "PackagePath": "staticwebassets\\images\\about-us.png"
     },
     {
       "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\airplane.jpg",
@@ -159,6 +159,10 @@
     {
       "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\baggage.jpg",
       "PackagePath": "staticwebassets\\images\\baggage.jpg"
+    },
+    {
+      "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\contact-us.jpg",
+      "PackagePath": "staticwebassets\\images\\contact-us.jpg"
     },
     {
       "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\default-avatar-profile.jpg",

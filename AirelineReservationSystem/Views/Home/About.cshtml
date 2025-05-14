@@ -12,19 +12,39 @@
             background-color:#fefefe;
         }
         .img{
-                height:200px;
+                height:150px;
                 width:100%;
                 object-fit:cover;
         }
         h2{
             text-align:center;
         }
+        .about-container{
+            height:100%;
+            width:100%;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            flex-direction:column;
+            padding: 0px 100px;
+            padding-top:50px;
+        }
+
+        .about-container p{
+            line-height:2;
+            color:#333;
+            border-left:3px solid black;
+            font-size:18px;
+            padding-left:20px;
+        }
+
     </style>
 </head>
 <body>
-<img src="~/images/about-us.jpg" class="img" alt=""/>
-<h2 class="text-center p-3">@ViewData["Title"]</h2>
-
+<img src="~/images/about-us.png" class="img" alt=""/>
+    <div class="about-container">
+        <p>An airline reservation system is a computerized platform used to manage flight bookings, ticketing, and related operations for airlines and travelers. It allows customers to search for available flights, compare fares, book tickets, and receive confirmation details—all in real-time. For airlines, it streamlines the management of schedules, seat availability, passenger information, and pricing. The system often integrates with payment gateways for secure transactions and may also offer features such as flight rescheduling, cancellations, and customer account management. Overall, an airline reservation system enhances efficiency, reduces manual work, and delivers a smooth travel booking experience for both users and airline staff.</p>
+    </div>
 </body>
 </html>
 
