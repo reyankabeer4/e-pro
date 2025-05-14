@@ -28,8 +28,16 @@ build_property._RazorSourceGeneratorDebug =
 build_property.EffectiveAnalysisLevelStyle = 8.0
 build_property.EnableCodeStyleSeverity = 
 
+[C:/Users/affan/Source/Repos/e-proj/AirelineReservationSystem/Views/Admin/Bookings.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQm9va2luZ3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/affan/Source/Repos/e-proj/AirelineReservationSystem/Views/Admin/Dashboard.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRGFzaGJvYXJkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/affan/Source/Repos/e-proj/AirelineReservationSystem/Views/Admin/EditFlight.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRWRpdEZsaWdodC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/affan/Source/Repos/e-proj/AirelineReservationSystem/Views/Admin/Flight.cshtml]
@@ -38,6 +46,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/affan/Source/Repos/e-proj/AirelineReservationSystem/Views/Admin/ShowFlight.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cU2hvd0ZsaWdodC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/affan/Source/Repos/e-proj/AirelineReservationSystem/Views/Admin/Users.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cVXNlcnMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/affan/Source/Repos/e-proj/AirelineReservationSystem/Views/Auth/Login.cshtml]
@@ -90,6 +102,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/affan/Source/Repos/e-proj/AirelineReservationSystem/Views/User/AccountSettings.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxBY2NvdW50U2V0dGluZ3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/affan/Source/Repos/e-proj/AirelineReservationSystem/Views/User/Booking.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxCb29raW5nLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/affan/Source/Repos/e-proj/AirelineReservationSystem/Views/User/Dashboard.cshtml]

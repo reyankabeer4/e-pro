@@ -4,20 +4,6 @@
     ViewData["Title"] = "Show Flight";
     }
 
-    @*<!DOCTYPE html>
-
-        <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-        <head>
-            <meta charset="utf-8" />
-            <title></title>
-        </head>
-        <body>
-            <h1>Show Flight</h1>
-        </body>
-        </html>*@
-
-
-
 
     <!DOCTYPE html>
     <html lang="en">
@@ -28,6 +14,8 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
               rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+        @*<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" />*@
+
         <style>
             .active-nav {
                 background-color: #5f1899;
@@ -45,62 +33,11 @@
                 box-shadow: 10px 10px 10px 10px grey;
             }
 
-            .booking-form {
-                background-color: white;
-                padding: 30px 40px;
-                border-radius: 10px;
-                max-width: 700px;
+
+            .mainContent {
                 width: 100%;
-                box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+                overflow-x: auto;
             }
-
-                .booking-form h2 {
-                    text-align: center;
-                    margin-bottom: 25px;
-                }
-
-            .form-row {
-                display: flex;
-                gap: 20px;
-                margin-bottom: 20px;
-            }
-
-            .form-group {
-                flex: 1;
-                display: flex;
-                flex-direction: column;
-            }
-
-            label {
-                margin-bottom: 5px;
-                font-weight: 600;
-            }
-
-            input, select {
-                padding: 10px;
-                border: 1px solid #ccc;
-                border-radius: 6px;
-                font-size: 14px;
-            }
-
-            .recaptcha {
-                margin: 20px 0;
-            }
-
-            .submit-btn {
-                width: 100%;
-                background-color: #0a3c57;
-                color: white;
-                padding: 12px;
-                font-size: 16px;
-                border: none;
-                border-radius: 6px;
-                cursor: pointer;
-            }
-
-                .submit-btn:hover {
-                    background-color: #062c42;
-                }
         </style>
 
 
@@ -111,7 +48,7 @@
         <div class="d-flex">
             <!-- Sidebar -->
             <div class="sideBar d-flex flex-column p-3">
-                <a href="" class="text-decoration-none h2 my-5">ARS</a>
+                <a href="" class="text-decoration-none h2 my-2">ARS</a>
                 <ul class="navbar-nav gap-3">
                     <li class="nav-item p-2 ">
                         <a asp-controller="Admin" asp-action="Dashboard" class="nav-link">Dashboard</a>
@@ -133,49 +70,65 @@
                             </ul>
                         </div>
                     </li>
-
+                    <li class="nav-item p-2">
+                        <a asp-controller="Admin" asp-action="Bookings" class="nav-link">Bookings</a>
+                    </li>
+                    <li class="nav-item p-2">
+                        <a asp-controller="Admin" asp-action="Users" class="nav-link">Users</a>
+                    </li>
 
                     <li class="nav-item p-2"><a href="" class="nav-link">Layout</a></li>
                     <li class="nav-item p-2"><a href="" class="nav-link">Sign Out</a></li>
                 </ul>
             </div>
             <!-- Main content -->
-            <div class="mainContent d-flex justify-content-center align-items-center bg-light flex-grow-1 min-vh-100 p-4">
+            
+            <div class="mainContent d-flex justify-content-center align-items-center bg-light flex-grow-1 min-vh-100 p-4" style="width: 100%; overflow-x: auto;">
 
-                <table class="table">
-                    <thead>
-                    <th>Id</th>
-                    <th>Flight Name</th>
-                    <th>Flight Number</th>
-                    <th>Departure Time</th>
-                    <th>Arrival Time</th>
-                    <th>Seats</th>
-                    <th>Available Seats</th>
-                    <th>Action</th>
-                    </thead>
-                    <tbody>
-                        @foreach (var flight in Model)
+               
+
+                <div class="table-responsive" style="overflow-x:auto;">
+                    <table class="table" style="min-width: 1000px;">
+
+                        <thead>
+                            <tr>
+                                <th class="text-nowrap">Id</th>
+                                <th class="text-nowrap">Flight Name</th>
+                                <th class="text-nowrap">Flight Number</th>
+                                <th class="text-nowrap">Departure Time</th>
+                                <th class="text-nowrap">Arrival Time</th>
+                                <th class="text-nowrap">Seats</th>
+                                <th class="text-nowrap">Available Seats</th>
+                                <th class="text-nowrap">Price</th>
+                                <th class="text-nowrap">Flight Picture</th>
+                                <th class="text-nowrap">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var flight in Model)
 {
-                        <tr>
-                            <td>@flight.FlightId</td>
-                            <td>@flight.AirlineName</td>
-                            <td>@flight.FlightNumber</td>
-                            <td>@flight.DepartureTime?.ToString("g")</td>
-                            <td>@flight.ArrivalTime?.ToString("g")</td>
-                            <td>@flight.TotalSeats</td>
-                            <td>@flight.AvailableSeats</td>
-                            <td>
-                                <!-- Add edit/delete buttons if needed -->
-                                <a asp-action="EditFlight" asp-route-id="@flight.FlightId" class="btn btn-sm btn-primary">Edit</a>
-                                <a asp-action="DeleteFlight" asp-route-id="@flight.FlightId" class="btn btn-sm btn-danger">Delete</a>
-                            </td>
-                        </tr>
+                            <tr>
+                                <td class="text-nowrap">@flight.FlightId</td>
+                                <td class="text-nowrap">@flight.AirlineName</td>
+                                <td class="text-nowrap">@flight.FlightNumber</td>
+                                <td class="text-nowrap">@(flight.DepartureTime != null ? flight.DepartureTime.Value.ToString("ddd, dd MMM yyyy h:mmtt") : "0")</td>
+                                <td class="text-nowrap">@(flight.ArrivalTime != null ? flight.ArrivalTime.Value.ToString("ddd, dd MMM yyyy h:mmtt") : "0")</td>
+                                <td class="text-nowrap">@flight.TotalSeats</td>
+                                <td class="text-nowrap">@flight.AvailableSeats</td>
+                                <td class="text-nowrap">@flight.Price</td>
+                                <td class="text-nowrap"><img src="~/images/@flight.FlightPic" width="50" alt="flightPic" /></td>
+                                <td class="text-nowrap">
+                                    <a asp-action="EditFlight" asp-route-id="@flight.FlightId" class="btn btn-sm btn-primary">Edit</a>
+                                </td>
+                            </tr>
 }
-                    </tbody>
+                        </tbody>
 
 
-                </table>
+                    </table>
 
+                </div>
+                @*</div>*@
 
             </div>
         </div>

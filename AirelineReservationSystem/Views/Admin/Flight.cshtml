@@ -97,7 +97,7 @@
     <div class="d-flex">
         <!-- Sidebar -->
         <div class="sideBar d-flex flex-column p-3">
-            <a href="" class="text-decoration-none h2 my-5">ARS</a>
+            <a href="" class="text-decoration-none h2 my-2">ARS</a>
             <ul class="navbar-nav gap-3">
                 <li class="nav-item p-2 ">
                     <a asp-controller="Admin" asp-action="Dashboard" class="nav-link">Dashboard</a>
@@ -120,7 +120,12 @@
                     </div>
                 </li>
 
-
+                <li class="nav-item p-2">
+                    <a asp-controller="Admin" asp-action="Bookings" class="nav-link">Bookings</a>
+                </li>
+                <li class="nav-item p-2">
+                    <a asp-controller="Admin" asp-action="Users" class="nav-link">Users</a>
+                </li>
                 <li class="nav-item p-2"><a href="" class="nav-link">Layout</a></li>
                 <li class="nav-item p-2"><a href="" class="nav-link">Sign Out</a></li>
             </ul>
@@ -128,7 +133,7 @@
         <!-- Main content -->
         <div class="mainContent d-flex justify-content-center align-items-center bg-light flex-grow-1 min-vh-100 p-4">
 
-            <form class="booking-form" method="post" enctype="multipart/form-data" asp-controller="Admin" asp-action="Flight">
+            <form class="booking-form" method="post" enctype="multipart/form-data" asp-controller="Admin" asp-action="UpdateFlight">
 
                 <h2>Add New Flight</h2>
 
@@ -186,9 +191,7 @@
 
                     <div class="form-group">
                         <label for="numberOfStops">Number of Stops</label>
-                        <input type="number" id="numberOfStops" name="Numberofstops" class="form-control" value="@Model.Numberofstops" />
-
-                        @*<input type="number" id="numberOfStops" name="numberOfStops" class="form-control" value="@Model.NumberOfStops" />*@
+                        <input type="number" id="numberOfStops" name="Numberofstops" class="form-control" value="@(@Model.Numberofstops ?? 0)" />
                     </div>
                 </div>
 

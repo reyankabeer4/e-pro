@@ -5,6 +5,30 @@
       "PackagePath": "staticwebassets\\AirelineReservationSystem.zpauw08s9t.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\ProfilePictures\\1bcfd593-d7b3-42c9-b537-f66fb157e90d.jpg",
+      "PackagePath": "staticwebassets\\ProfilePictures\\1bcfd593-d7b3-42c9-b537-f66fb157e90d.jpg"
+    },
+    {
+      "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\ProfilePictures\\469dcd70-03fd-4ddb-b4a1-316a37cce658.jpg",
+      "PackagePath": "staticwebassets\\ProfilePictures\\469dcd70-03fd-4ddb-b4a1-316a37cce658.jpg"
+    },
+    {
+      "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\ProfilePictures\\65ca1e77-db21-498f-a4cb-17c1ac27e4dd.jpg",
+      "PackagePath": "staticwebassets\\ProfilePictures\\65ca1e77-db21-498f-a4cb-17c1ac27e4dd.jpg"
+    },
+    {
+      "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\ProfilePictures\\73c35ff6-b15c-4f9b-9048-f1e9941ca82d.png",
+      "PackagePath": "staticwebassets\\ProfilePictures\\73c35ff6-b15c-4f9b-9048-f1e9941ca82d.png"
+    },
+    {
+      "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\ProfilePictures\\9ed1730b-59d4-4a8f-b427-2cf57c232426.jpg",
+      "PackagePath": "staticwebassets\\ProfilePictures\\9ed1730b-59d4-4a8f-b427-2cf57c232426.jpg"
+    },
+    {
+      "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\ProfilePictures\\ee09cb21-c788-4982-9070-3e8aae11715a.jpg",
+      "PackagePath": "staticwebassets\\ProfilePictures\\ee09cb21-c788-4982-9070-3e8aae11715a.jpg"
+    },
+    {
       "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
@@ -13,44 +37,84 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\1.jpg",
-      "PackagePath": "staticwebassets\\images\\1.jpg"
+      "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\icons\\1.jpg",
+      "PackagePath": "staticwebassets\\icons\\1.jpg"
     },
     {
-      "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\11338040.png",
-      "PackagePath": "staticwebassets\\images\\11338040.png"
+      "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\icons\\2.jpg",
+      "PackagePath": "staticwebassets\\icons\\2.jpg"
     },
     {
-      "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\2.jpg",
-      "PackagePath": "staticwebassets\\images\\2.jpg"
+      "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\icons\\3.jpg",
+      "PackagePath": "staticwebassets\\icons\\3.jpg"
     },
     {
-      "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\3.jpg",
-      "PackagePath": "staticwebassets\\images\\3.jpg"
+      "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\icons\\4.jpg",
+      "PackagePath": "staticwebassets\\icons\\4.jpg"
     },
     {
-      "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\4.jpg",
-      "PackagePath": "staticwebassets\\images\\4.jpg"
+      "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\icons\\5.jpg",
+      "PackagePath": "staticwebassets\\icons\\5.jpg"
     },
     {
-      "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\5.jpg",
-      "PackagePath": "staticwebassets\\images\\5.jpg"
+      "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\icons\\6.jpg",
+      "PackagePath": "staticwebassets\\icons\\6.jpg"
     },
     {
-      "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\6.jpg",
-      "PackagePath": "staticwebassets\\images\\6.jpg"
+      "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\icons\\7.jpg",
+      "PackagePath": "staticwebassets\\icons\\7.jpg"
     },
     {
-      "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\7.jpg",
-      "PackagePath": "staticwebassets\\images\\7.jpg"
+      "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\icons\\8.jpg",
+      "PackagePath": "staticwebassets\\icons\\8.jpg"
     },
     {
-      "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\8.jpg",
-      "PackagePath": "staticwebassets\\images\\8.jpg"
+      "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\icons\\Turkish-Airlines-Logo.png",
+      "PackagePath": "staticwebassets\\icons\\Turkish-Airlines-Logo.png"
     },
     {
-      "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\9ba47bab-bf17-47ab-87ef-6894fb0cb5c1.jpg",
-      "PackagePath": "staticwebassets\\images\\9ba47bab-bf17-47ab-87ef-6894fb0cb5c1.jpg"
+      "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\icons\\airline-logo.jpg",
+      "PackagePath": "staticwebassets\\icons\\airline-logo.jpg"
+    },
+    {
+      "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\icons\\appointment.png",
+      "PackagePath": "staticwebassets\\icons\\appointment.png"
+    },
+    {
+      "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\icons\\booking-icon.png",
+      "PackagePath": "staticwebassets\\icons\\booking-icon.png"
+    },
+    {
+      "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\icons\\malaysia-airlines-logo.jpg",
+      "PackagePath": "staticwebassets\\icons\\malaysia-airlines-logo.jpg"
+    },
+    {
+      "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\icons\\pia-logo.jpg",
+      "PackagePath": "staticwebassets\\icons\\pia-logo.jpg"
+    },
+    {
+      "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\icons\\plane-logo.png",
+      "PackagePath": "staticwebassets\\icons\\plane-logo.png"
+    },
+    {
+      "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\icons\\qatar-airways-logo.jpg",
+      "PackagePath": "staticwebassets\\icons\\qatar-airways-logo.jpg"
+    },
+    {
+      "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\icons\\search_flight-icon.jpg",
+      "PackagePath": "staticwebassets\\icons\\search_flight-icon.jpg"
+    },
+    {
+      "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\icons\\user-icon.png",
+      "PackagePath": "staticwebassets\\icons\\user-icon.png"
+    },
+    {
+      "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\icons\\user.png",
+      "PackagePath": "staticwebassets\\icons\\user.png"
+    },
+    {
+      "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\33c7b601-9699-4041-a3b4-88b66aec557f.jpg",
+      "PackagePath": "staticwebassets\\images\\33c7b601-9699-4041-a3b4-88b66aec557f.jpg"
     },
     {
       "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\Bangkok-Boat-Tours.jpg",
@@ -61,24 +125,20 @@
       "PackagePath": "staticwebassets\\images\\Banner-en-plane.jpg"
     },
     {
-      "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\ChatGPT-Image.png",
-      "PackagePath": "staticwebassets\\images\\ChatGPT-Image.png"
-    },
-    {
       "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\Economy-seat-collection.jpg",
       "PackagePath": "staticwebassets\\images\\Economy-seat-collection.jpg"
+    },
+    {
+      "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\Emirate-airways.jpg",
+      "PackagePath": "staticwebassets\\images\\Emirate-airways.jpg"
     },
     {
       "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\Times_Square_(Tall).jpg",
       "PackagePath": "staticwebassets\\images\\Times_Square_(Tall).jpg"
     },
     {
-      "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\ad4d94ab-40d7-4a58-88b5-99ade40eb147.jpg",
-      "PackagePath": "staticwebassets\\images\\ad4d94ab-40d7-4a58-88b5-99ade40eb147.jpg"
-    },
-    {
-      "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\airline-logo.jpg",
-      "PackagePath": "staticwebassets\\images\\airline-logo.jpg"
+      "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\about-us.jpg",
+      "PackagePath": "staticwebassets\\images\\about-us.jpg"
     },
     {
       "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\airplane.jpg",
@@ -101,32 +161,16 @@
       "PackagePath": "staticwebassets\\images\\baggage.jpg"
     },
     {
-      "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\bbea814d-c3c5-4899-8368-c7d4e83ffbce.jpg",
-      "PackagePath": "staticwebassets\\images\\bbea814d-c3c5-4899-8368-c7d4e83ffbce.jpg"
-    },
-    {
       "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\default-avatar-profile.jpg",
       "PackagePath": "staticwebassets\\images\\default-avatar-profile.jpg"
     },
     {
-      "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\f255e748-d7fa-49db-9f52-4c13006966f9.jpg",
-      "PackagePath": "staticwebassets\\images\\f255e748-d7fa-49db-9f52-4c13006966f9.jpg"
-    },
-    {
-      "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\fe2ee4e7-835e-4263-8bde-151e212abf23.jpg",
-      "PackagePath": "staticwebassets\\images\\fe2ee4e7-835e-4263-8bde-151e212abf23.jpg"
+      "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\emirates-flight.jpg",
+      "PackagePath": "staticwebassets\\images\\emirates-flight.jpg"
     },
     {
       "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\flight-booking.jpg",
       "PackagePath": "staticwebassets\\images\\flight-booking.jpg"
-    },
-    {
-      "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\followers-icon.png",
-      "PackagePath": "staticwebassets\\images\\followers-icon.png"
-    },
-    {
-      "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\icon-follow.png",
-      "PackagePath": "staticwebassets\\images\\icon-follow.png"
     },
     {
       "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\image-turkey.jpg",
@@ -145,10 +189,6 @@
       "PackagePath": "staticwebassets\\images\\islamabad1.jpg"
     },
     {
-      "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\markus-winkler.jpg",
-      "PackagePath": "staticwebassets\\images\\markus-winkler.jpg"
-    },
-    {
       "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\mazarequaid-karachi.jpg",
       "PackagePath": "staticwebassets\\images\\mazarequaid-karachi.jpg"
     },
@@ -157,24 +197,12 @@
       "PackagePath": "staticwebassets\\images\\minar-e-pakistan.jpeg"
     },
     {
-      "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\photo-1553877522-43269d4ea984.avif",
-      "PackagePath": "staticwebassets\\images\\photo-1553877522-43269d4ea984.avif"
-    },
-    {
       "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\pre-book-meals.jpg",
       "PackagePath": "staticwebassets\\images\\pre-book-meals.jpg"
     },
     {
-      "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\premium_photo.png",
-      "PackagePath": "staticwebassets\\images\\premium_photo.png"
-    },
-    {
       "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\roma-best-italy-tour-1.jpg",
       "PackagePath": "staticwebassets\\images\\roma-best-italy-tour-1.jpg"
-    },
-    {
-      "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\search_flight-icon.jpg",
-      "PackagePath": "staticwebassets\\images\\search_flight-icon.jpg"
     },
     {
       "Id": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\wwwroot\\images\\sky.jpg",

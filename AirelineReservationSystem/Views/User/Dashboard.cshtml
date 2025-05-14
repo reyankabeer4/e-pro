@@ -83,13 +83,13 @@
 
             .overview-card i {
                 font-size: 24px;
-                color: #3498db;
+                color: #0b132b;
                 margin-bottom: 10px;
             }
 
             .overview-card h3 {
                 margin: 0;
-                color: #3498db;
+                color: #0b132b;
             }
 
             .overview-card p {
@@ -117,67 +117,115 @@
         <a asp-controller="User" asp-action="Profile" class="@(currentAction == "Profile" && currentController == "User" ? "active" : "")">
             <i class="fas fa-user"></i> Profile
         </a>
-        <a href="#"><i class="fas fa-ticket-alt"></i> Bookings</a>
+        <a asp-controller="User" asp-action="Booking"><i class="fas fa-ticket-alt"></i> Bookings</a>
         <a href="#"><i class="fas fa-headset"></i> Support</a>
-        <a href="#"><i class="fas fa-sign-out-alt"></i></i> Logout</a>
+        <a asp-controller="Auth" asp-action="Logout" onclick="return confirm('Are Your Sure You Want To Logout?')"><i class="fas fa-sign-out-alt"></i></i> Logout</a>
     </div>
     <div class="content">
-        <h1>Welcome, User</h1>
         <div class="overview">
             <div class="overview-card">
+                <h3>
                 <i class="fas fa-users"></i>
-                <h3>5</h3>
-                <p>Total Orders</p>
+                @Model.Count()</h3>
+                <p>Total Bookings</p>
             </div>
             <div class="overview-card">
-                <i class="fas fa-dollar-sign"></i>
-                <h3>$150.00</h3>
-                <p>Total Spent</p>
+                <h3>
+                    <i class="fas fa-ticket-alt"></i>
+                    @Model.Count(b=>b.Status == "Confirmed")
+                </h3>
+                <p>Confirm Bookings</p>
             </div>
             <div class="overview-card">
+                <h3>
                 <i class="fas fa-clock"></i>
-                <h3>2</h3>
-                <p>Pending Orders</p>
+                @Model.Count(b=>b.Status == "Cancelled")</h3>
+                <p>Cancel Bookings</p>
             </div>
         </div>
         <table class="table">
-                <thead style="background-color:#1d2b3c">
+            <thead style="padding: 10px;background-color:#1d2b3c">
 
-            <tr class="p-3" style="background-color:#1d2b3c">
-                <th>Booking ID</th>
-                <th>Full Name</th>
-                <th>Flight Name</th>
-                <th>Date</th>
-                <th>Amount</th>
-                <th>Status</th>
-                <th>Action</th>
-            </tr>
-                </thead>
+                <tr class="p-3" style="padding:10px;background-color:#1d2b3c">
+                    <th>#</th>
+                    <th>Full Name</th>
+                    <th>Flight Name</th>
+                    <th>Date</th>
+                    <th>Amount</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+
             <tbody>
 
+                @{
+                    var serialNo = 1;
 
-            @foreach (var booking in Model)
-            {
-            <tr>
-                <td>@booking.BookingId</td>
-                <td>
-                    @foreach (var passenger in booking.Passengers)
+                }
+
+                @if (Model != null && Model.Any())
+{
+    foreach (var booking in Model.Take(5))
     {
-                    <div>@passenger.FullName</div>
-    }
-                </td>
+                <tr>
+                        <td>@serialNo</td>
+                        @{
+                            serialNo++;
+                        }
 
-                <td>@booking.Flight.AirlineName</td>  
-                <td>@booking.BookingDate</td>
-                <td>$@booking.TotalAmount</td>
-                <td class="@(booking.Status == "Pending" ? "status-pending" : "status-delivered")">@booking.Status</td>
-                <td><button class="btn btn-danger">Cancel Booking</button></td>
-            </tr>
+                    <td>
+                        @foreach (var passenger in booking.Passengers)
+                {
+                        <div>@passenger.FullName</div>
+                }
+                    </td>
+                    <td>@booking.Flight.AirlineName</td>
+                    <td>@booking.BookingDate?.ToString("dddd, dd MMM h:mm tt")</td>
+                    <td>$@booking.TotalAmount</td>
+                    @if (booking.Status == "Confirmed")
+            {
+                    <td class="status-delivered" style="color:green">@booking.Status</td>
             }
+            else
+            {
+                    <td class="status-pending" style="color:red">@booking.Status</td>
+            }
+                    @if (booking.Status == "Cancelled")
+            {
+                    <td style="color:grey">Booking Cancelled</td>
+            }
+            else
+            {
+                    <td>
+                        <form asp-action="CancelBooking" asp-controller="User" method="post">
+                            <input type="hidden" name="id" value="@booking.BookingId" />
+                            <button type="submit" onclick="return confirm('Are you sure you want to cancel this booking?')" class="btn btn-danger">Cancel Booking</button>
+                        </form>
+                    </td>
+            }
+                </tr>
+    }
+}
+else
+{
+                <tr>
+                    <td colspan="7" class="text-center">No Bookings Yet</td>
+                </tr>
+}
             </tbody>
 
 
         </table>
+        @if(Model != null && Model.Count > 5)
+        {
+        <div style="text-align:right; margin-top: 10px;">
+            <a asp-action="Booking" asp-controller="User" class="btn btn-outline-secondary">
+                View More
+            </a>
+        </div>
+        }
+
     </div>
 </body>
 </html> 

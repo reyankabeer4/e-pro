@@ -351,8 +351,8 @@
             <form method="get">
 
                 <div class="trip-options">
-                    <label><input type="radio" name="trip-type" value="one-way" checked> <span>One-way</span></label>
                     <label><input type="radio" name="trip-type" value="roundtrip"> <span>Roundtrip</span></label>
+                    <label><input type="radio" name="trip-type" value="one-way" checked> <span>One-way</span></label>
                     <label><input type="radio" name="trip-type" value="multi-city"> <span>Multi-city</span></label>
                 </div>
 
@@ -415,6 +415,7 @@
                         <div>
                             <h3>@flight.AirlineName</h3>
                             <p class="flight-duration">@flight.Source → @flight.Destination</p>
+                            <p class="flight-duration">@flight.Destination → @flight.Source </p>
 
                             <div class="details-content" style="display:none;">
                                 <p class="operated-by">Operated by @flight.Operatingairline</p>

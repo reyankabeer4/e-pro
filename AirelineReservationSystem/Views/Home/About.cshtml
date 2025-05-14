@@ -1,36 +1,30 @@
 @{
 
-    ViewData["Title"] = "About Page";
-
-}
-
-@{
     ViewData["Title"] = "About Us";
+
 }
 
+
+<html>
+<head>
+    <style>
+        body{
+            background-color:#fefefe;
+        }
+        .img{
+                height:200px;
+                width:100%;
+                object-fit:cover;
+        }
+        h2{
+            text-align:center;
+        }
+    </style>
+</head>
+<body>
+<img src="~/images/about-us.jpg" class="img" alt=""/>
 <h2 class="text-center p-3">@ViewData["Title"]</h2>
 
-<div class="container bg-light mt-2" style="line-height:2">
-        <div class="card-body">
-            <h3 class="card-title">Welcome to FlyHigh - Airline Reservation System</h3>
-            <p class="card-text">
-                FlyHigh is a modern and reliable airline reservation platform designed to make air travel booking fast, simple, and secure.
-            </p>
-            <h4>Our Mission</h4>
-            <p>
-                To offer a seamless booking experience and empower passengers with tools to search, book, and manage their flights effortlessly.
-            </p>
-            <h4>Features</h4>
-            <ul>
-                <li>Easy flight search and booking</li>
-                <li>Real-time availability and pricing</li>
-                <li>Secure user authentication and profile management</li>
-                <li>Flight rescheduling and cancellation options</li>
-                <li>Admin dashboard for flight management</li>
-            </ul>
-            <h4>Contact Us</h4>
-            <p>
-                For inquiries or support, please email us at <strong>support@flyhighair.com</strong>
-            </p>
-        </div>
-    </div>
+</body>
+</html>
+

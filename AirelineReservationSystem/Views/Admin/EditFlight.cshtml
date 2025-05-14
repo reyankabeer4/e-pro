@@ -1,0 +1,239 @@
+﻿@model AirelineReservationSystem.Models.Flight;
+
+@{
+    ViewData["Title"] = "EditFlight Page";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+          rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        .active-nav {
+            background-color: #5f1899;
+            padding: 10px 0;
+            border-radius: 5px;
+            color: white;
+        }
+
+        .sideBar {
+            width: 300px;
+            background-color: #f0f0f0;
+        }
+
+        .shadow-sm {
+            box-shadow: 10px 10px 10px 10px grey;
+        }
+
+        .booking-form {
+            background-color: white;
+            padding: 30px 40px;
+            border-radius: 10px;
+            max-width: 700px;
+            width: 100%;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+            .booking-form h2 {
+                text-align: center;
+                margin-bottom: 25px;
+            }
+
+        .form-row {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+
+        input, select {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+
+        .recaptcha {
+            margin: 20px 0;
+        }
+
+        .submit-btn {
+            width: 100%;
+            background-color: #0a3c57;
+            color: white;
+            padding: 12px;
+            font-size: 16px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+            .submit-btn:hover {
+                background-color: #062c42;
+            }
+    </style>
+
+
+
+
+</head>
+<body class="m-0 p-0">
+    <div class="d-flex">
+        <!-- Sidebar -->
+        <div class="sideBar d-flex flex-column p-3">
+            <a href="" class="text-decoration-none h2 my-2">ARS</a>
+            <ul class="navbar-nav gap-3">
+                <li class="nav-item p-2 ">
+                    <a asp-controller="Admin" asp-action="Dashboard" class="nav-link">Dashboard</a>
+                </li>
+
+                <li class="nav-item p-2 active-nav">
+                    <a class="nav-link " data-bs-toggle="collapse" data-bs-target="#extraMenu" role="button" aria-expanded="false" aria-controls="extraMenu">
+                        Flights
+                    </a>
+                    <div class="collapse ps-3" id="extraMenu">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a asp-controller="Admin" asp-action="Flight" class="nav-link">Add Flights</a>
+                            </li>
+                            <li class="nav-item">
+                                <a asp-controller="Admin" asp-action="ShowFlight" class="nav-link">Show Flights</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="nav-item p-2">
+                    <a asp-controller="Admin" asp-action="Bookings" class="nav-link">Bookings</a>
+                </li>
+                <li class="nav-item p-2">
+                    <a asp-controller="Admin" asp-action="Users" class="nav-link">Users</a>
+                </li>
+                <li class="nav-item p-2"><a href="" class="nav-link">Layout</a></li>
+                <li class="nav-item p-2"><a href="" class="nav-link">Sign Out</a></li>
+            </ul>
+        </div>
+        <!-- Main content -->
+        <div class="mainContent d-flex justify-content-center align-items-center bg-light flex-grow-1 min-vh-100 p-4">
+
+            @*<form class="booking-form" method="post" enctype="multipart/form-data" asp-controller="Admin" asp-action="Flight">*@
+                <form class="booking-form" method="post" enctype="multipart/form-data" asp-controller="Admin" asp-action="UpdateFlight">
+                    <input type="hidden" name="id" value="@Model.FlightId" />
+
+
+                    <h2>Edit Flight # @Model.FlightId</h2>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="airlineName">Airline Name*</label>
+                            <input type="text" id="airlineName" name="AirlineName" placeholder="e.g. Qatar Airways" value="@Model.AirlineName" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="flightNumber">Flight Number*</label>
+                            <input type="text" id="flightNumber" name="FlightNumber" placeholder="e.g. QA123" value="@Model.FlightNumber" required />
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="source">Source*</label>
+                            <input type="text" id="source" name="Source" placeholder="e.g. New York" value="@Model.Source" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="destination">Destination*</label>
+                            <input type="text" id="destination" name="Destination" placeholder="e.g. London" value="@Model.Destination" required />
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="departureTime">Departure Time*</label>
+                            <input type="datetime-local" id="departureTime" name="DepartureTime" value="value="@(Model.DepartureTime.HasValue ? Model.DepartureTime.Value.ToString("yyyy-MM-ddTHH:mm") : "")"" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="arrivalTime">Arrival Time*</label>
+                            <input type="datetime-local" id="arrivalTime" name="ArrivalTime" value="value="@(Model.ArrivalTime.HasValue ? Model.ArrivalTime.Value.ToString("yyyy-MM-ddTHH:mm") : "")"" required />
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="FlightPicture">Flight Picture*</label>
+                            <input type="file" name="flight_pic" id="FlightPicture" />
+                            @if (!string.IsNullOrEmpty(Model.FlightPic))
+{
+                            <div class="mt-2">
+                                <p>Current Image:</p>
+                                <img src="@Url.Content("~/images/" + Model.FlightPic)" width="150" />
+                            </div>
+}
+
+                        </div>
+                        <div class="form-group">
+                            <label for="OperatingAirline">Operating Airline*</label>
+                            <input type="text" name="Operatingairline" id="OperatingAirline" value="@Model.Operatingairline" required />
+                        </div>
+                    </div>
+
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+                            <label for="flightDuration">Flight Duration</label>
+                            <input type="text" id="flightDuration" name="flightDuration" class="form-control" value="@(Model != null ? Model.GetFormattedDuration() : "")" readonly />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="numberOfStops">Number of Stops</label>
+                            <input type="number" id="numberOfStops" name="Numberofstops" class="form-control" value="@(@Model.Numberofstops ?? 0)" />
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="totalSeats">Total Seats*</label>
+                            <input type="number" id="totalSeats" name="TotalSeats" min="1" value="@Model.TotalSeats" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="availableSeats">Available Seats*</label>
+                            <input type="number" id="availableSeats" name="AvailableSeats" min="1" value="@Model.AvailableSeats" required />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="price">Price (USD)*</label>
+                        <input type="number" id="price" name="Price" step="0.01" placeholder="e.g. 499.99" value="@Model.Price" required />
+                    </div>
+
+                    <button type="submit" class="submit-btn mt-2">Update Flight</button>
+                </form>
+
+
+</div>
+    </div>
+    <!-- Add Chart.js CDN BEFORE your own script -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- reCAPTCHA script (you must replace "your-site-key" with an actual site key) -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+

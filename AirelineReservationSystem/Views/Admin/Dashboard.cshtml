@@ -1,3 +1,4 @@
+@model AdminDashboardViewModel;
 @{
     ViewData["Title"] = "Admin Dashboard";
 }
@@ -27,21 +28,21 @@
             box-shadow: 10px 10px 10px 10px grey;
         }
 
-        .user-img {
+/*        .user-img {
             border-radius: 50%;
-        }
+        }*/
     </style>
 </head>
 <body class="m-0 p-0">
     <div class="d-flex">
         <!-- Sidebar -->
         <div class="sideBar d-flex flex-column p-3">
-            <a href="" class="text-decoration-none h2 my-5">ARS</a>
+            <a href="" class="text-decoration-none h2 my-2">ARS</a>
             <ul class="navbar-nav gap-3">
                 <li class="nav-item p-2 active-nav">
                     <a asp-controller="Admin" asp-action="Dashboard" class="nav-link">Dashboard</a>
                 </li>
-                
+
                 <li class="nav-item p-2">
                     <a class="nav-link" data-bs-toggle="collapse" data-bs-target="#extraMenu" role="button" aria-expanded="false" aria-controls="extraMenu">
                         Flights
@@ -54,9 +55,15 @@
                             <li class="nav-item">
                                 <a asp-controller="Admin" asp-action="ShowFlight" class="nav-link">Show Flights</a>
                             </li>
-                          
+
                         </ul>
                     </div>
+                </li>
+                <li class="nav-item p-2">
+                    <a asp-controller="Admin" asp-action="Bookings" class="nav-link">Bookings</a>
+                </li>
+                <li class="nav-item p-2">
+                    <a asp-controller="Admin" asp-action="Users" class="nav-link">Users</a>
                 </li>
 
 
@@ -67,48 +74,38 @@
         <!-- Main content -->
         <div class="mainContent d-flex flex-column bg-light flex-grow-1 min-vh-100 p-4">
             <main class="flex-grow-1">
-                <h2 class="py-3">Profile Statistics</h2>
+                <h3 class="py-2">Profile Statistics</h3>
                 <div class="row g-2">
                     <!-- Your stats boxes here -->
-                    <div class="col bg-white text-black rounded shadow-sm m-1 p-3">
-                        <li class="d-flex">
-                            <img src="~/images/view_profile.png" class="user-img" height="50" alt="" />
-                            <div>
-                                <p>Profile View</p>
-                                <p>112.000</p>
-                            </div>
+                    <div class="col bg-white text-black rounded shadow-sm m-1 p-4">
+                        <li class="d-flex align-items-center  gap-2">
+                            <img src="~/icons/plane-logo.png" class="user-img" height="50" alt="" />
+                            <p>Total Flights</p>
+                            <p>10</p>
+
                         </li>
                     </div>
-                    <div class="col bg-white text-black rounded shadow-sm m-1 p-3">
-                        <li class="d-flex">
-                            <img src="~/images/followers-icon.png" class="user-img" height="50" alt="" />
-                            <div>
-                                <p>Followers</p>
-                                <p>183.000</p>
-                            </div>
+                    <div class="col bg-white text-black rounded shadow-sm m-1 p-4">
+                        <li class="d-flex align-items-center gap-2">
+                            <img src="~/icons/user.png" class="user-img" height="50" alt="" />
+
+                                <p>Total Customers</p>
+                                <p>@Model.TotalUsers</p>
+
                         </li>
                     </div>
-                    <div class="col bg-white text-black rounded shadow-sm m-1 p-3">
-                        <li class="d-flex">
-                            <img src="~/images/icon-follow.png" class="user-img" height="50" alt="" />
-                            <div>
-                                <p>Following</p>
-                                <p>80.000</p>
-                            </div>
+                    <div class="col bg-white text-black rounded shadow-sm m-1 p-4">
+                        <li class="d-flex align-items-center gap-2">
+                            <img src="~/icons/appointment.png" class="user-img" height="50" alt="" />
+
+                                <p>Total Bookings</p>
+                                <p>@Model.TotalBookings</p>
                         </li>
                     </div>
-                    <div class="col bg-white text-black rounded shadow-sm m-1 p-3">
-                        <li class="d-flex">
-                            <img src="~/images/save-post.png" class="user-img" height="40" alt="" />
-                            <div>
-                                <p>Save Post</p>
-                                <p>112</p>
-                            </div>
-                        </li>
-                    </div>
-                    <div class="d-flex gap-3 col bg-white text-black rounded shadow-sm m-1 p-3">
+                   
+                    <div class="d-flex gap-3 col bg-white text-black rounded shadow-sm m-1 p-4">
                         <img src="~/images/2.jpg" class="user-img" height="50" alt="" />
-                        <p>John Duck johnducky</p>
+                        <p>@Model.Username</p>
 
                     </div>
                 </div>
@@ -157,9 +154,9 @@
                 labels: ["January", "February", "March", "April", "May"],
                 datasets: [
                     {
-                        label: "Sales",
-                        data: [100, 150, 80, 200, 170],
-                        backgroundColor: "rgba(54, 162, 235, 0.7)",
+                        label: "Bookings",
+                        data: [400, 650, 680, 500, 670,630,700,],
+                        backgroundColor: "rgba(54, 162, 235, 0.5)",
                         borderColor: "rgba(54, 162, 235, 1)",
                         borderWidth: 1,
                     },

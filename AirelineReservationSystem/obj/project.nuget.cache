@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "2GycdJCwtE4=",
+  "dgSpecHash": "RCQKIj65xRA=",
   "success": true,
   "projectFilePath": "C:\\Users\\affan\\Source\\Repos\\e-proj\\AirelineReservationSystem\\AirelineReservationSystem.csproj",
   "expectedPackageFiles": [
@@ -186,7 +186,9 @@
     "C:\\Users\\affan\\.nuget\\packages\\system.text.json\\9.0.4\\system.text.json.9.0.4.nupkg.sha512",
     "C:\\Users\\affan\\.nuget\\packages\\system.threading.channels\\7.0.0\\system.threading.channels.7.0.0.nupkg.sha512",
     "C:\\Users\\affan\\.nuget\\packages\\system.threading.tasks.dataflow\\8.0.0\\system.threading.tasks.dataflow.8.0.0.nupkg.sha512",
-    "C:\\Users\\affan\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512"
+    "C:\\Users\\affan\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
+    "C:\\Users\\affan\\.nuget\\packages\\x.pagedlist\\10.5.7\\x.pagedlist.10.5.7.nupkg.sha512",
+    "C:\\Users\\affan\\.nuget\\packages\\x.pagedlist.mvc.core\\10.5.7\\x.pagedlist.mvc.core.10.5.7.nupkg.sha512"
   ],
   "logs": []
 }
